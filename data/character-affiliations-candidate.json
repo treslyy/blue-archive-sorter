@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "referenceDate": "2026-11-08",
-  "status": "affiliation-review",
+  "status": "partial-affiliation-review",
   "policy": {
     "sourceRoster": "data/user-roster-reference-ko.txt",
     "sourceRosterCount": 203,
@@ -1073,65 +1073,74 @@
     {
       "id": "roster-152",
       "name": "총학생회장",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "연방학생회",
+      "sourceName": "連邦生徒会長",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "기존 총학생회장. 프롤로그 시점 이후 행방불명 상태로 알려져 있으며, 가짜 총학생회장과는 별개의 인물."
     },
     {
       "id": "roster-153",
       "name": "칼학생회장",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "연방학생회",
+      "sourceName": "連邦生徒会長（金髪）",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "일본어 NPC 목록의 구분 표기는 連邦生徒会長（金髪）. 한국 팬덤 별명은 칼학생회장, 가짜 총학생회장. 기존 총학생회장과 별개의 금발 인물이며 본명은 불명."
     },
     {
       "id": "roster-154",
       "name": "나나가미 린",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "연방학생회",
+      "sourceName": "七神リン",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "통괄실 주석행정관"
     },
     {
       "id": "roster-155",
       "name": "시라누이 카야",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "연방학생회",
+      "sourceName": "不知火カヤ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "방위실장. NPC 명부 기준"
     },
     {
       "id": "roster-156",
       "name": "이와비츠 아유무",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "연방학생회",
+      "sourceName": "アユム",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "연방학생회 인물"
     },
     {
       "id": "roster-157",
       "name": "유라키 모모카",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "연방학생회",
+      "sourceName": "由良木モモカ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "교통실 소속"
     },
     {
       "id": "roster-158",
       "name": "오키 아오이",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "연방학생회",
+      "sourceName": "アオイ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "연방학생회 인물"
     },
     {
       "id": "roster-159",
       "name": "하이네",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "연방학생회",
+      "sourceName": "ハイネ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "체육실장. NPC 명부 기준"
     },
     {
       "id": "roster-160",
       "name": "스모모",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "연방학생회",
+      "sourceName": "スモモ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "연방학생회 인물"
     },
     {
       "id": "roster-161",
@@ -1143,296 +1152,345 @@
     {
       "id": "roster-162",
       "name": "쿠치나시 유메",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "아비도스",
+      "sourceName": "梔子ユメ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "메인 스토리 Vol.1 등장. 현재 실장 학생 명부와 중복 여부 재확인 필요"
     },
     {
       "id": "roster-163",
       "name": "후리하타 마유미",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "게헨나",
+      "sourceName": "マユミ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-164",
       "name": "묘라쿠 카렌",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "게헨나",
+      "sourceName": "カレン",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-165",
       "name": "이가라시 쇼코",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "게헨나",
+      "sourceName": "ショウコ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-166",
       "name": "아즈마 미라이",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "밀레니엄",
+      "sourceName": "ミライ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "NPC 명부 기준"
     },
     {
       "id": "roster-167",
       "name": "하네모토 츠바사",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "밀레니엄",
+      "sourceName": "ツバサ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "NPC 명부 기준"
     },
     {
       "id": "roster-168",
       "name": "쿠즈노하",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "백귀야행",
+      "sourceName": "クズノハ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "NPC 명부 기준"
     },
     {
       "id": "roster-169",
       "name": "나나카도 아야메",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "백귀야행",
+      "sourceName": "七稜アヤメ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "백화요란 전 위원장. 본체와 괴이 묘사 구분 필요"
     },
     {
       "id": "roster-170",
       "name": "코쿠리코",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "백귀야행",
+      "sourceName": "コクリコ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "NPC 명부 기준"
     },
     {
       "id": "roster-171",
       "name": "야부키 슈로",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "백귀야행",
+      "sourceName": "シュロ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "NPC 명부 기준"
     },
     {
       "id": "roster-172",
       "name": "하부 아자미",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "백귀야행",
+      "sourceName": "土生アザミ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "에비스 분교/화조풍월부 관련 인물"
     },
     {
       "id": "roster-173",
       "name": "아사쿠사 나츠키",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "백귀야행",
+      "sourceName": "ナツキ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-174",
       "name": "미야우치 카나에",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "산해경",
+      "sourceName": "カナエ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-175",
       "name": "우루시바라 카구야",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "산해경",
+      "sourceName": "漆原カグヤ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "경극부 부장. NPC 명부 기준"
     },
     {
       "id": "roster-176",
       "name": "신타니 카이",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "산해경",
+      "sourceName": "申谷カイ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "칠수인. NPC 명부 기준"
     },
     {
       "id": "roster-177",
       "name": "칸바라 미스즈",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "발키리",
+      "sourceName": "ミスズ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "교정국장. NPC 명부 기준"
     },
     {
       "id": "roster-178",
       "name": "시치도 유키노",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "SRT",
+      "sourceName": "七度ユキノ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "FOX 소대장. 2026-11-08 기준 미실장 후보"
     },
     {
       "id": "roster-179",
       "name": "타치기 마이아",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "아리우스",
+      "sourceName": "立木マイア",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "NPC 명부에 수록된 아리우스 관련 인물"
     },
     {
       "id": "roster-180",
       "name": "아사기리 스오우",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "하이랜더",
+      "sourceName": "朝霧スオウ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "하이랜더 감리실 관련 인물"
     },
     {
       "id": "roster-181",
       "name": "히로미",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "와일드헌트",
+      "sourceName": "ヒロミ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "NPC 명부 기준. 실장 여부 최신 재확인 필요"
     },
     {
       "id": "roster-182",
       "name": "키요스미 아키라",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "기타",
+      "sourceName": "清澄アキラ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "칠수인. 미리아는 잠입용 신분으로 통합"
     },
     {
       "id": "roster-183",
       "name": "우미지 미나토",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "오디세이아",
+      "sourceName": "ミナト",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-184",
       "name": "토모시타 아미",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "오디세이아",
+      "sourceName": "アミ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-185",
       "name": "코모리 스미카",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "오디세이아",
+      "sourceName": "スミカ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-186",
       "name": "센고쿠 미츠키",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "오디세이아",
+      "sourceName": "ミツキ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-187",
       "name": "후나모리 사나에",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "오디세이아",
+      "sourceName": "サナエ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-188",
       "name": "마키나",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "오디세이아",
+      "sourceName": "マキナ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-189",
       "name": "사유리",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "오디세이아",
+      "sourceName": "サユリ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-190",
       "name": "고노카미 나나미",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "오디세이아",
+      "sourceName": "ナナミ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-191",
       "name": "카자마키 마이",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "크로노스",
+      "sourceName": "マイ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-192",
       "name": "카와루 시논",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "크로노스",
+      "sourceName": "シノン",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-193",
       "name": "소라",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "기타",
+      "sourceName": "ソラ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-194",
       "name": "쿠리하마 아케미",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "기타",
+      "sourceName": "栗浜アケミ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "칠수인"
     },
     {
       "id": "roster-195",
       "name": "히죽히죽 교수",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "기타",
+      "sourceName": "ニヤニヤ教授",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "Sheside Outside에서 실존 인물로 직접 등장. 니야의 사칭과 별개의 인물. 사용자 명단에 포함됨."
     },
     {
       "id": "roster-196",
       "name": "타카노스 스이코",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "기타",
+      "sourceName": "スイコ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-197",
       "name": "이오쟈쿠 나고미",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "기타",
+      "sourceName": "ナゴミ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-198",
       "name": "우토 요코",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "기타",
+      "sourceName": "ヨウコ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
     },
     {
       "id": "roster-199",
       "name": "말쿠트",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "기타",
+      "sourceName": "マルクト",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "데카그라마톤 예언자"
     },
     {
       "id": "roster-200",
       "name": "아인",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "기타",
+      "sourceName": "アイン",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "아인·소프·오울은 서로 다른 외형이므로 각각 별도 항목"
     },
     {
       "id": "roster-201",
       "name": "소프",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "기타",
+      "sourceName": "ソフ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "아인·소프·오울은 서로 다른 외형이므로 각각 별도 항목"
     },
     {
       "id": "roster-202",
       "name": "오르",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "기타",
+      "sourceName": "オウル",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "사용자 확인: 오울과 오르는 동일 인물. 한국어 표기는 사용자 지정에 따라 오르로 통일"
     },
     {
       "id": "roster-203",
       "name": "아라타",
-      "affiliation": null,
-      "sourceName": null,
-      "reviewStatus": "pending"
+      "affiliation": "백귀야행",
+      "sourceName": "アラタ",
+      "reviewStatus": "provisional-from-existing-candidate",
+      "affiliationNote": "NPC 명부 기준"
     }
+  ],
+  "notes": [
+    "203개 원본 항목 중 기존 이름·소속 후보 자료와 정확히 일치한 51개 항목에 예비 소속을 입력함.",
+    "예비 소속은 NPC 분류를 의미하지 않으며, 플레이어블/NPC/미실장 구분을 하지 않음.",
+    "나머지 항목은 소속을 검증하기 전까지 미분류 상태로 유지함.",
+    "모브는 이번 작업 범위에서 제외함.",
+    "학교별 목록 참고: Game8 학교별 캐릭터 목록(2026-07-17 갱신), 神ゲー攻略 학교·부활동 목록(2026-09-09 갱신)."
   ]
 }

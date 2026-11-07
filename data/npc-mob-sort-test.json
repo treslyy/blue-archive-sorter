@@ -1,0 +1,764 @@
+{
+  "version": 1,
+  "updated": "2026-11-08",
+  "mode": "review-test",
+  "description": "NPC 및 모브 후보를 실제 소트 UI에서 검토하기 위한 임시 데이터. 정식 캐릭터 명단이 아님.",
+  "characters": [
+    {
+      "id": "npc-kuchinashi-yume",
+      "name": "쿠치나시 유메",
+      "school": "아비도스",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-tachiki-maia",
+      "name": "타치기 마이아",
+      "school": "아리우스",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-shichido-yukino",
+      "name": "시치도 유키노",
+      "school": "SRT",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-misuzu",
+      "name": "칸바라 미스즈",
+      "school": "발키리",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-shinatani-kai",
+      "name": "신타니 카이",
+      "school": "산해경",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-urushibara-kaguya",
+      "name": "우루시바라 카구야",
+      "school": "산해경",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-asagiri-sou",
+      "name": "아사기리 스오우",
+      "school": "하이랜더",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-habu-azami",
+      "name": "하부 아자미",
+      "school": "백귀야행",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-nanakado-ayame",
+      "name": "나나카도 아야메",
+      "school": "백귀야행",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-arata",
+      "name": "아라타",
+      "school": "백귀야행",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-kuzunoha",
+      "name": "쿠즈노하",
+      "school": "백귀야행",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-kokuriko",
+      "name": "코쿠리코",
+      "school": "백귀야행",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-shuro",
+      "name": "야부키 슈로",
+      "school": "백귀야행",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-tsubasa",
+      "name": "하네모토 츠바사",
+      "school": "밀레니엄",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-mirai",
+      "name": "아즈마 미라이",
+      "school": "밀레니엄",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-hiromi",
+      "name": "히로미",
+      "school": "와일드헌트",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-aoi",
+      "name": "오키 아오이",
+      "school": "총학생회",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-ayumu",
+      "name": "이와비츠 아유무",
+      "school": "총학생회",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-shiranui-kaya",
+      "name": "시라누이 카야",
+      "school": "총학생회",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-sumomo",
+      "name": "스모모",
+      "school": "총학생회",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-haine",
+      "name": "하이네",
+      "school": "총학생회",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-yuragi-momoka",
+      "name": "유라키 모모카",
+      "school": "총학생회",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-nanagami-rin",
+      "name": "나나가미 린",
+      "school": "총학생회",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-kiyozumi-akira",
+      "name": "키요스미 아키라",
+      "school": "기타/칠수인",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-kurihama-akemi",
+      "name": "쿠리하마 아케미",
+      "school": "기타/칠수인",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-ein",
+      "name": "아인",
+      "school": "기타/데카그라마톤",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-sof",
+      "name": "소프",
+      "school": "기타/데카그라마톤",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-owl",
+      "name": "오르",
+      "school": "기타/데카그라마톤",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-malkuth",
+      "name": "말쿠트",
+      "school": "기타/데카그라마톤",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-minato",
+      "name": "우미지 미나토",
+      "school": "오디세이아",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-ami",
+      "name": "토모시타 아미",
+      "school": "오디세이아",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-sumika",
+      "name": "코모리 스미카",
+      "school": "오디세이아",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-mitsuki",
+      "name": "센고쿠 미츠키",
+      "school": "오디세이아",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-sanae",
+      "name": "후나모리 사나에",
+      "school": "오디세이아",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-makina",
+      "name": "마키나",
+      "school": "오디세이아",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-sayuri",
+      "name": "사유리",
+      "school": "오디세이아",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-nanami",
+      "name": "고노카미 나나미",
+      "school": "오디세이아",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-mai",
+      "name": "카자마키 마이",
+      "school": "크로노스",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-shinon",
+      "name": "카와루 시논",
+      "school": "크로노스",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-mayumi",
+      "name": "후리하타 마유미",
+      "school": "게헨나",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-karen",
+      "name": "묘라쿠 카렌",
+      "school": "게헨나",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-shoko",
+      "name": "이가라시 쇼코",
+      "school": "게헨나",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-kanae",
+      "name": "미야우치 카나에",
+      "school": "산해경",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-natsuki",
+      "name": "아사쿠사 나츠키",
+      "school": "백귀야행",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-suiko",
+      "name": "타카노스 스이코",
+      "school": "기타",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-nagomi",
+      "name": "이오쟈쿠 나고미",
+      "school": "기타",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-yoko",
+      "name": "우토 요코",
+      "school": "기타",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-sora",
+      "name": "소라",
+      "school": "엔젤24",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-smiling-professor",
+      "name": "히죽히죽 교수",
+      "school": "기타/칠수인",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-federal-student-council-president",
+      "name": "총학생회장",
+      "school": "총학생회",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "npc-fake-federal-student-council-president",
+      "name": "칼학생회장",
+      "school": "총학생회",
+      "type": "npc",
+      "image": ""
+    },
+    {
+      "id": "mob-arius-student-1",
+      "name": "아리우스 학생 모브 1",
+      "school": "아리우스",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-arius-student-2",
+      "name": "아리우스 학생 모브 2",
+      "school": "아리우스",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-arius-student-3",
+      "name": "아리우스 학생 모브 3",
+      "school": "아리우스",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-justina-follower",
+      "name": "유스티나 성도",
+      "school": "기타/유스티나",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-justina-follower-swimsuit",
+      "name": "수영복 유스티나 성도",
+      "school": "기타/유스티나",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-valkyrie-student",
+      "name": "발키리 학생 모브",
+      "school": "발키리",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-valkyrie-coast-guard",
+      "name": "발키리 해양경찰 모브",
+      "school": "발키리",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-odyssey-student-1",
+      "name": "오디세이아 학생 모브 1",
+      "school": "오디세이아",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-odyssey-student-2",
+      "name": "오디세이아 학생 모브 2",
+      "school": "오디세이아",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-trident-member",
+      "name": "트라이던트 부원 모브",
+      "school": "오디세이아",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-cruise-staff",
+      "name": "크루즈 운영부 모브",
+      "school": "오디세이아",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-bunny-guard",
+      "name": "바니걸 가드",
+      "school": "기타/경비",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-gehenna-student",
+      "name": "게헨나 학생 모브",
+      "school": "게헨나",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-prefect-member",
+      "name": "풍기위원 모브",
+      "school": "게헨나",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-emergency-medicine-member",
+      "name": "응급의학부 모브",
+      "school": "게헨나",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-hot-spring-member",
+      "name": "온천개발부 모브",
+      "school": "게헨나",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-pandemonium-member",
+      "name": "판데모니움 모브",
+      "school": "게헨나",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-track-club-member",
+      "name": "육상부 모브",
+      "school": "게헨나",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-shanhaijing-student-1",
+      "name": "산해경 학생 모브 1",
+      "school": "산해경",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-shanhaijing-student-2",
+      "name": "산해경 학생 모브 2",
+      "school": "산해경",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-genbu-member",
+      "name": "현무상회 모브",
+      "school": "산해경",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-genryumon-member",
+      "name": "현룡문 모브",
+      "school": "산해경",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-opera-member-1",
+      "name": "경극부 모브 1",
+      "school": "산해경",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-opera-member-2",
+      "name": "경극부 모브 2",
+      "school": "산해경",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-trinity-student",
+      "name": "트리니티 학생 모브",
+      "school": "트리니티",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-tea-party-member-1",
+      "name": "티파티 모브 1",
+      "school": "트리니티",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-tea-party-member-2",
+      "name": "티파티 모브 2",
+      "school": "트리니티",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-justice-committee-member",
+      "name": "정의실현위원회 모브",
+      "school": "트리니티",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-justice-committee-gym",
+      "name": "정의실현위원회 체육복 모브",
+      "school": "트리니티",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-sisterhood-member",
+      "name": "시스터후드 모브",
+      "school": "트리니티",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-highlander-conductor-1",
+      "name": "하이랜더 열차 승무원 1",
+      "school": "하이랜더",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-highlander-conductor-2",
+      "name": "하이랜더 열차 승무원 2",
+      "school": "하이랜더",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-highlander-conductor-3",
+      "name": "하이랜더 열차 승무원 3",
+      "school": "하이랜더",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-hyakki-student-1",
+      "name": "백귀야행 학생 모브 1",
+      "school": "백귀야행",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-hyakki-student-2",
+      "name": "백귀야행 학생 모브 2",
+      "school": "백귀야행",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-hyakki-student-3",
+      "name": "백귀야행 학생 모브 3",
+      "school": "백귀야행",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-hyakki-student-swimsuit",
+      "name": "백귀야행 수영복 학생 모브",
+      "school": "백귀야행",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-chimi-ichiza-mg",
+      "name": "치미이치자 MG 모브",
+      "school": "백귀야행",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-chimi-ichiza-rl",
+      "name": "치미이치자 RL 모브",
+      "school": "백귀야행",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-millennium-student-1",
+      "name": "밀레니엄 학생 모브 1",
+      "school": "밀레니엄",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-millennium-student-2",
+      "name": "밀레니엄 학생 모브 2",
+      "school": "밀레니엄",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-redwinter-student",
+      "name": "붉은겨울 학생 모브",
+      "school": "붉은겨울",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-redwinter-guard",
+      "name": "붉은겨울 친위대 모브",
+      "school": "붉은겨울",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-redwinter-construction",
+      "name": "붉은겨울 공무부 모브",
+      "school": "붉은겨울",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-federal-admin-1",
+      "name": "연방학생회 행정관 모브 1",
+      "school": "총학생회",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-federal-admin-2",
+      "name": "연방학생회 행정관 모브 2",
+      "school": "총학생회",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-wildhunt-student",
+      "name": "와일드헌트 학생 모브",
+      "school": "와일드헌트",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-wildhunt-dorm-supervisor",
+      "name": "와일드헌트 사감대 모브",
+      "school": "와일드헌트",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-sukeban-mg",
+      "name": "스케반 MG 모브",
+      "school": "기타/불량학생",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-sukeban-smg",
+      "name": "스케반 SMG 모브",
+      "school": "기타/불량학생",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-sukeban-sr",
+      "name": "스케반 SR 모브",
+      "school": "기타/불량학생",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-seaside-sukeban-mg",
+      "name": "해변 스케반 MG 모브",
+      "school": "기타/불량학생",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-seaside-sukeban-smg",
+      "name": "해변 스케반 SMG 모브",
+      "school": "기타/불량학생",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-helmet-gang-officer",
+      "name": "헬멧단 간부 모브",
+      "school": "기타/불량학생",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-helmet-gang-member",
+      "name": "헬멧단 모브",
+      "school": "기타/불량학생",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-biker-boss",
+      "name": "폭주족 보스 모브",
+      "school": "기타/불량학생",
+      "type": "mob",
+      "image": ""
+    },
+    {
+      "id": "mob-biker-member",
+      "name": "폭주족 모브",
+      "school": "기타/불량학생",
+      "type": "mob",
+      "image": ""
+    }
+  ]
+}

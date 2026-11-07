@@ -99,10 +99,29 @@ function finishSort() {
   $("sortPanel").hidden=true;$("resultPanel").hidden=false;
   const total=rankedGroups.reduce((n,g)=>n+g.length,0);
   $("resultSummary").textContent=`${total}명의 정렬이 완료되었습니다. 공동 순위는 같은 순위로 표시됩니다.`;
+  $("topRanking").replaceChildren();
   $("rankingList").replaceChildren();
   let rank=1;
   rankedGroups.forEach(group=>{
-    group.forEach(c=>{const li=document.createElement("li");li.textContent=`${rank}위 · ${c.name}`;if(group.length>1)li.textContent+=` (공동 ${group.length}명)`;$("rankingList").append(li);});
+    group.forEach(c=>{
+      const li=document.createElement("li");
+      li.textContent=rank+"위 · "+c.name;
+      if(group.length>1)li.textContent+=" (공동 "+group.length+"명)";
+      $("rankingList").append(li);
+      if(rank<=10){
+        const card=document.createElement("article");card.className="top-card";
+        if(c.image){
+          const img=document.createElement("img");img.src=c.image;img.alt=c.name;img.loading="lazy";
+          img.onerror=()=>{const placeholder=document.createElement("div");placeholder.className="top-image-placeholder";placeholder.textContent="이미지 없음";img.replaceWith(placeholder);};
+          card.append(img);
+        }else{
+          const placeholder=document.createElement("div");placeholder.className="top-image-placeholder";placeholder.textContent="이미지 없음";card.append(placeholder);
+        }
+        const label=document.createElement("strong");label.textContent=rank+"위"+(group.length>1?" (공동 "+group.length+"명)":"");
+        const name=document.createElement("span");name.textContent=c.name;
+        card.append(label,name);$("topRanking").append(card);
+      }
+    });
     rank+=group.length;
   });
   localStorage.removeItem(STORAGE_KEY);$("resumeButton").hidden=true;

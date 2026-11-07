@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171923">
+  <title>블루 아카이브 캐릭터 소트</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="eyebrow">BLUE ARCHIVE · CHARACTER SORTER</p>
+      <h1>블루 아카이브 캐릭터 소트</h1>
+      <p class="subtitle">두 학생을 비교하고, 나만의 최애 순위를 만들어 보세요.</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <section id="setup" class="panel">
+      <h2>정렬 설정</h2>
+      <div class="filters">
+        <label>학교
+          <select id="schoolFilter"><option value="">전체</option></select>
+        </label>
+        <label>분류
+          <select id="typeFilter">
+            <option value="">전체</option><option value="student">학생</option><option value="npc">NPC</option><option value="mob">모브</option>
+          </select>
+        </label>
+        <label>이름 검색
+          <input id="searchInput" type="search" placeholder="캐릭터 이름">
+        </label>
+      </div>
+      <p id="rosterStatus" class="muted"></p>
+      <div class="actions">
+        <button id="startButton" class="primary" disabled>정렬 시작</button>
+        <button id="resumeButton" hidden>이어서 하기</button>
+        <button id="resetButton" class="quiet">진행 상황 초기화</button>
+      </div>
+      <details>
+        <summary>캐릭터 데이터 추가 방법</summary>
+        <p><code>characters.json</code> 파일에 캐릭터 정보를 추가한 뒤 GitHub 저장소에 반영하면 됩니다. 이미지 파일은 <code>images/</code> 폴더에 넣고, <code>image</code>에는 파일 경로를 적습니다.</p>
+        <pre>{"id":"yuuka","name":"하야세 유우카","school":"밀레니엄","type":"student","image":"images/yuuka.webp"}</pre>
+        <p>각 캐릭터의 <code>id</code>는 서로 달라야 합니다. 이미지가 없으면 이름이 대신 표시됩니다.</p>
+      </details>
+    </section>
+
+    <section id="sortPanel" class="panel" hidden>
+      <div class="progress-row"><span id="progressText">비교 준비</span><span id="progressCount"></span></div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <p class="instruction">더 좋아하는 캐릭터를 선택하세요.</p>
+      <div class="versus">
+        <button class="character-choice" id="leftChoice"></button>
+        <div class="vs">VS</div>
+        <button class="character-choice" id="rightChoice"></button>
+      </div>
+      <div class="actions centered">
+        <button id="tieButton">둘 다 좋아요 (동률)</button>
+        <button id="undoButton" class="quiet">이전 선택 취소</button>
+        <button id="stopButton" class="quiet">중단하고 저장</button>
+      </div>
+    </section>
+
+    <section id="resultPanel" class="panel" hidden>
+      <h2>정렬 결과</h2>
+      <p id="resultSummary" class="muted"></p>
+      <ol id="rankingList" class="ranking"></ol>
+      <div class="actions">
+        <button id="copyButton" class="primary">결과 링크 복사</button>
+        <button id="textButton">순위 텍스트 복사</button>
+        <button id="restartButton" class="quiet">처음으로</button>
+      </div>
+      <p id="copyStatus" class="muted" aria-live="polite"></p>
+    </section>
+    <footer><p>개인 취향 정렬 도구 · 데이터와 이미지는 별도로 관리됩니다.</p></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

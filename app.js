@@ -56,17 +56,22 @@ function beginSort(items) {
   if(current){mid=Math.floor((low+high)/2);showComparison();}else finishSort();
   saveProgress();
 }
-function showCharacter(id,c) {
+function showCharacter(id,c,group=null) {
   const b=$(id);b.replaceChildren();
   if(c.image){const img=document.createElement("img");img.src=c.image;img.alt=c.name;img.onerror=()=>img.remove();b.append(img);}
   const n=document.createElement("strong");n.textContent=c.name;b.append(n);
   if(c.school){const s=document.createElement("small");s.textContent=c.school;b.append(s);}
+  if(group && group.length>1){
+    const tie=document.createElement("small");tie.textContent=`공동 순위 · 총 ${group.length}명`;b.append(tie);
+    const names=document.createElement("small");names.textContent=group.map(member=>member.name).join(" / ");b.append(names);
+  }
 }
 function showComparison() {
-  showCharacter("leftChoice",rankedGroups[mid][0]);
+  const group=rankedGroups[mid];
+  showCharacter("leftChoice",group[0],group);
   showCharacter("rightChoice",current);
   $("progressText").textContent="캐릭터 비교 중";
-  $("progressCount").textContent=`비교 ${comparisonsDone}회 · 남은 캐릭터 ${pending.length+1}명 · 공동 순위 그룹 ${rankedGroups.length}개`;
+  $("progressCount").textContent=`비교 ${comparisonsDone}회 · 남은 캐릭터 ${pending.length+1}명 · 현재 공동 순위 그룹 ${group.length}명`;
   $("progressBar").style.width=Math.min(100,comparisonsDone/Math.max(1,activeCharacters.length*Math.ceil(Math.log2(activeCharacters.length)))*100)+"%";
 }
 function choose(side) {
@@ -137,7 +142,10 @@ $("copyButton").addEventListener("click",async()=>{
 });
 $("textButton").addEventListener("click",async()=>{
   let rank=1;const lines=[];
-  rankedGroups.forEach(group=>{group.forEach(c=>lines.push(`${rank}위. ${c.name}`));rank+=group.length;});
+  rankedGroups.forEach(group=>{
+    group.forEach(c=>lines.push(`${rank}위. ${c.name}${group.length>1?` (공동 ${group.length}명)`:""}`));
+    rank+=group.length;
+  });
   try{await navigator.clipboard.writeText(lines.join("\n"));$("copyStatus").textContent="순위 텍스트를 복사했습니다.";}catch{$("copyStatus").textContent="브라우저에서 클립보드 복사를 허용해 주세요.";}
 });
 loadData();

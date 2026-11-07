@@ -27,6 +27,12 @@
       "url": "https://bluearchive.fandom.com/wiki/Smiling_Professor",
       "checkedAt": "2026-11-08",
       "note": "히죽히죽 교수와 니야의 사칭이 별개 인물임을 확인하는 보조 자료"
+    },
+    {
+      "title": "총학생회장 및 가짜 총학생회장 관련 정리",
+      "url": "https://www.namu.moe/w/가짜 총학생회장",
+      "checkedAt": "2026-11-08",
+      "note": "두 인물이 별개이며 본명이 공개되지 않았고, 일본 팬덤에서 가짜 연방학생회장으로 지칭되는 점을 확인하는 보조 자료"
     }
   ],
   "inclusionRules": [
@@ -270,7 +276,7 @@
     },
     {
       "id": "yuragi-momoka",
-      "name": "유라기 모모카",
+      "name": "유라키 모모카",
       "school": "총학생회",
       "type": "named-student",
       "sourceName": "由良木モモカ",
@@ -292,7 +298,7 @@
     },
     {
       "id": "kiyozumi-akira",
-      "name": "키요즈미 아키라",
+      "name": "키요스미 아키라",
       "school": "기타/칠수인",
       "type": "named-student",
       "sourceName": "清澄アキラ",
@@ -575,6 +581,28 @@
       "note": "Sheside Outside에서 실존 인물로 직접 등장. 니야의 사칭과 별개의 인물. 사용자 명단에 포함됨.",
       "image": "",
       "reviewStatus": "needs-portrait-and-current-playable-check"
+    },
+    {
+      "id": "federal-student-council-president",
+      "name": "총학생회장",
+      "school": "총학생회",
+      "type": "named-student",
+      "sourceName": "連邦生徒会長",
+      "surnameStatus": "본명 불명, 직책으로 호칭",
+      "note": "기존 총학생회장. 프롤로그 시점 이후 행방불명 상태로 알려져 있으며, 가짜 총학생회장과는 별개의 인물.",
+      "image": "",
+      "reviewStatus": "needs-portrait-and-current-playable-check"
+    },
+    {
+      "id": "fake-federal-student-council-president",
+      "name": "칼학생회장",
+      "school": "총학생회",
+      "type": "named-student",
+      "sourceName": "偽連邦生徒会長",
+      "surnameStatus": "본명 불명, 통칭",
+      "note": "한국 팬덤 별명은 칼학생회장, 통칭 가짜 총학생회장. 기존 총학생회장과 별개의 금발 인물. 일본어로는 偽連邦生徒会長 등으로 지칭됨.",
+      "image": "",
+      "reviewStatus": "needs-portrait-and-current-playable-check"
     }
   ],
   "mobResearch": {
@@ -590,6 +618,7 @@
     "2026-11-08 추가 조사 1차: 2026-10-26 갱신 일본어 NPC一覧에서 사용자 기준 명단에 존재하는 추가 명명 NPC 19명을 후보에 추가함.",
     "추가 19명은 오디세이아 8명, 크로노스 2명, 게헨나 3명, 산해경 1명, 백귀야행 1명, 기타 학생 3명, 엔젤24 1명임.",
     "이번 추가는 후보 수집 단계이며, 플레이어블 실장 여부·여학생 여부·개별 스탠딩 일러스트 여부 확인 전까지 production 데이터로 가져오지 말 것.",
-    "2026-11-08 누락 보완: 히죽히죽 교수(ニヤニヤ教授)는 사용자의 기준 명단에 포함되어 있었으나 1차 확장 후보에서 누락되어 추가함. 니야와 동일 인물로 합치지 말 것."
+    "2026-11-08 누락 보완: 히죽히죽 교수(ニヤニヤ教授)는 사용자의 기준 명단에 포함되어 있었으나 1차 확장 후보에서 누락되어 추가함. 니야와 동일 인물로 합치지 말 것.",
+    "2026-11-08 추가 누락 보완: 총학생회장과 가짜 총학생회장(한국 팬덤 별명 칼학생회장)을 별개의 후보로 추가함. 두 인물 모두 본명 불명으로 직책/통칭을 사용하며, 일본 서버 기준 현행 플레이어블 여부와 개별 스탠딩 이미지 여부는 별도 확인 필요."
   ]
 }

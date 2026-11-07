@@ -72,23 +72,26 @@
     {
       "id": "roster-008",
       "name": "니키 안나",
-      "affiliation": null,
+      "affiliation": "붉은겨울",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-009",
       "name": "니키 에리나",
-      "affiliation": null,
+      "affiliation": "붉은겨울",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-010",
       "name": "후루하타 라나",
-      "affiliation": null,
+      "affiliation": "붉은겨울",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-011",
@@ -133,9 +136,10 @@
     {
       "id": "roster-016",
       "name": "모토미야 치아키",
-      "affiliation": null,
+      "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-017",
@@ -156,9 +160,10 @@
     {
       "id": "roster-019",
       "name": "미소노 미카",
-      "affiliation": null,
+      "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-020",
@@ -283,9 +288,10 @@
     {
       "id": "roster-035",
       "name": "스미 세리나",
-      "affiliation": null,
+      "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-036",
@@ -370,9 +376,10 @@
     {
       "id": "roster-046",
       "name": "아라마키 야쿠모",
-      "affiliation": null,
+      "affiliation": "붉은겨울",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-047",
@@ -417,9 +424,10 @@
     {
       "id": "roster-052",
       "name": "아사히나 피나",
-      "affiliation": null,
+      "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-053",
@@ -440,9 +448,10 @@
     {
       "id": "roster-055",
       "name": "아이키요 후우카",
-      "affiliation": null,
+      "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-056",
@@ -583,9 +592,10 @@
     {
       "id": "roster-073",
       "name": "와카바 히나타",
-      "affiliation": null,
+      "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-074",
@@ -678,9 +688,10 @@
     {
       "id": "roster-085",
       "name": "유토리 나츠",
-      "affiliation": null,
+      "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-086",
@@ -789,9 +800,10 @@
     {
       "id": "roster-099",
       "name": "츠키유키 미야코",
-      "affiliation": null,
+      "affiliation": "SRT",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-100",
@@ -836,16 +848,18 @@
     {
       "id": "roster-105",
       "name": "카야마 레이죠",
-      "affiliation": null,
+      "affiliation": "산해경",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-106",
       "name": "카와와 시즈코",
-      "affiliation": null,
+      "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-107",
@@ -858,9 +872,10 @@
     {
       "id": "roster-108",
       "name": "카케하시 스바루",
-      "affiliation": null,
+      "affiliation": "아리우스",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-109",
@@ -953,9 +968,10 @@
     {
       "id": "roster-120",
       "name": "쿠로다테 하루나",
-      "affiliation": null,
+      "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-121",
@@ -968,9 +984,10 @@
     {
       "id": "roster-122",
       "name": "쿠로사키 코유키",
-      "affiliation": null,
+      "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-123",
@@ -1087,9 +1104,10 @@
     {
       "id": "roster-137",
       "name": "토요미 코토리",
-      "affiliation": null,
+      "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-138",
@@ -1166,9 +1184,10 @@
     {
       "id": "roster-147",
       "name": "히노미야 치나츠",
-      "affiliation": null,
+      "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "pending"
+      "reviewStatus": "provisional-school-list-match",
+      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
     },
     {
       "id": "roster-148",
@@ -1625,6 +1644,7 @@
     "나머지 항목은 소속을 검증하기 전까지 미분류 상태로 유지함.",
     "모브는 이번 작업 범위에서 제외함.",
     "학교별 목록 참고: Game8 학교별 캐릭터 목록(2026-07-17 갱신), 神ゲー攻略 학교·부활동 목록(2026-09-09 갱신).",
-    "학교별 명부를 참고해 추가 133개 항목에 예비 소속을 입력함. 기존 51개와 합산한 분류 입력 수는 184/203개이며, 겹치는 항목은 중복 집계하지 않음."
+    "학교별 명부를 참고해 추가 133개 항목에 예비 소속을 입력함. 기존 51개와 합산한 분류 입력 수는 184/203개이며, 겹치는 항목은 중복 집계하지 않음.",
+    "2026-11-08 학교별 명부에서 남은 19개 항목의 소속을 추가 확인하여 입력함. 전체 203개 항목에 예비 소속값을 입력했으나, 일부 인물의 소속은 별도 단체/특수 설정에 해당할 수 있어 최종 검증 전 상태임."
   ]
 }

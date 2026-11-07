@@ -41,6 +41,7 @@ function restoreSnapshot(s) {
   low=x.low;high=x.high;mid=x.mid;comparisonsDone=x.comparisonsDone;
 }
 function saveProgress() {
+  if(!current){localStorage.removeItem(STORAGE_KEY);$("resumeButton").hidden=true;return;}
   try { localStorage.setItem(STORAGE_KEY,JSON.stringify({ids:activeCharacters.map(c=>c.id),state:snapshot()}));$("resumeButton").hidden=false; } catch {}
 }
 function beginSort(items) {

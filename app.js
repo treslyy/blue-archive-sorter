@@ -45,7 +45,7 @@ function restoreSnapshot(s) {
 }
 function saveProgress() {
   if(!current){localStorage.removeItem(STORAGE_KEY);$("resumeButton").hidden=true;return;}
-  try { localStorage.setItem(STORAGE_KEY,JSON.stringify({ids:activeCharacters.map(c=>c.id),state:snapshot()}));$("resumeButton").hidden=false; } catch {}
+  try { localStorage.setItem(STORAGE_KEY,JSON.stringify({ids:activeCharacters.map(c=>c.id),state:snapshot(),history}));$("resumeButton").hidden=false; } catch {}
 }
 function beginSort(items) {
   if(items.length<2)return;
@@ -77,8 +77,10 @@ function showComparison() {
 function choose(side) {
   if(!current)return;
   history.push(snapshot());
-  if(side==="left") { high=mid; comparisonsDone++; }
-  else if(side==="right") { low=mid+1; comparisonsDone++; }
+  // 왼쪽 캐릭터를 선택하면 현재 캐릭터는 그 그룹보다 낮은 순위이므로 뒤쪽을 탐색합니다.
+  // 오른쪽 캐릭터를 선택하면 현재 캐릭터가 더 높은 순위이므로 앞쪽을 탐색합니다.
+  if(side==="left") { low=mid+1; comparisonsDone++; }
+  else if(side==="right") { high=mid; comparisonsDone++; }
   else {
     rankedGroups[mid].push(current);
     comparisonsDone++;
@@ -111,7 +113,7 @@ function resumeSort() {
     activeCharacters=saved.ids.map(id=>{const c=map.get(id);if(!c)throw new Error();return c;});
     restoreSnapshot(saved.state);
     if(!current)throw new Error();
-    history=[];
+    history=Array.isArray(saved.history)?saved.history:[];
     $("setup").hidden=true;$("resultPanel").hidden=true;$("sortPanel").hidden=false;showComparison();
   } catch { alert("저장된 진행 상황을 불러오지 못했습니다. 캐릭터 데이터가 변경되었을 수 있습니다."); }
 }

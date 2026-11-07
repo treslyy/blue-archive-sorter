@@ -28,7 +28,9 @@ function getFiltered() {
 }
 function updateSetup() {
   activeCharacters=getFiltered();
-  $("rosterStatus").textContent=`선택된 캐릭터: ${activeCharacters.length}명 / 전체 ${allCharacters.length}명`;
+  $("rosterStatus").textContent = TEST_MODE
+    ? `검토용 테스트 데이터 · 선택 ${activeCharacters.length}명 / 전체 ${allCharacters.length}명 (NPC ${allCharacters.filter(c=>c.type==="npc").length}명 · 모브 ${allCharacters.filter(c=>c.type==="mob").length}종) · 정식 명단에는 반영되지 않습니다.`
+    : `선택된 캐릭터: ${activeCharacters.length}명 / 전체 ${allCharacters.length}명`;
   $("startButton").disabled=activeCharacters.length<2;
 }
 ["schoolFilter","typeFilter","searchInput"].forEach(id=>$ (id).addEventListener(id==="searchInput"?"input":"change",updateSetup));

@@ -364,399 +364,399 @@
     {
       "id": "mob-arius-student-1",
       "name": "아리우스 학생 모브 1",
-      "school": "아리우스",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-arius-student-2",
       "name": "아리우스 학생 모브 2",
-      "school": "아리우스",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-arius-student-3",
       "name": "아리우스 학생 모브 3",
-      "school": "아리우스",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-justina-follower",
       "name": "유스티나 성도",
-      "school": "기타/유스티나",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-justina-follower-swimsuit",
       "name": "수영복 유스티나 성도",
-      "school": "기타/유스티나",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-valkyrie-student",
       "name": "발키리 학생 모브",
-      "school": "발키리",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-valkyrie-coast-guard",
       "name": "발키리 해양경찰 모브",
-      "school": "발키리",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-odyssey-student-1",
       "name": "오디세이아 학생 모브 1",
-      "school": "오디세이아",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-odyssey-student-2",
       "name": "오디세이아 학생 모브 2",
-      "school": "오디세이아",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-trident-member",
       "name": "트라이던트 부원 모브",
-      "school": "오디세이아",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-cruise-staff",
       "name": "크루즈 운영부 모브",
-      "school": "오디세이아",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-bunny-guard",
       "name": "바니걸 가드",
-      "school": "기타/경비",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-gehenna-student",
       "name": "게헨나 학생 모브",
-      "school": "게헨나",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-prefect-member",
       "name": "풍기위원 모브",
-      "school": "게헨나",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-emergency-medicine-member",
       "name": "응급의학부 모브",
-      "school": "게헨나",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-hot-spring-member",
       "name": "온천개발부 모브",
-      "school": "게헨나",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-pandemonium-member",
       "name": "판데모니움 모브",
-      "school": "게헨나",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-track-club-member",
       "name": "육상부 모브",
-      "school": "게헨나",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-shanhaijing-student-1",
       "name": "산해경 학생 모브 1",
-      "school": "산해경",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-shanhaijing-student-2",
       "name": "산해경 학생 모브 2",
-      "school": "산해경",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-genbu-member",
       "name": "현무상회 모브",
-      "school": "산해경",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-genryumon-member",
       "name": "현룡문 모브",
-      "school": "산해경",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-opera-member-1",
       "name": "경극부 모브 1",
-      "school": "산해경",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-opera-member-2",
       "name": "경극부 모브 2",
-      "school": "산해경",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-trinity-student",
       "name": "트리니티 학생 모브",
-      "school": "트리니티",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-tea-party-member-1",
       "name": "티파티 모브 1",
-      "school": "트리니티",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-tea-party-member-2",
       "name": "티파티 모브 2",
-      "school": "트리니티",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-justice-committee-member",
       "name": "정의실현위원회 모브",
-      "school": "트리니티",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-justice-committee-gym",
       "name": "정의실현위원회 체육복 모브",
-      "school": "트리니티",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-sisterhood-member",
       "name": "시스터후드 모브",
-      "school": "트리니티",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-highlander-conductor-1",
       "name": "하이랜더 열차 승무원 1",
-      "school": "하이랜더",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-highlander-conductor-2",
       "name": "하이랜더 열차 승무원 2",
-      "school": "하이랜더",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-highlander-conductor-3",
       "name": "하이랜더 열차 승무원 3",
-      "school": "하이랜더",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-hyakki-student-1",
       "name": "백귀야행 학생 모브 1",
-      "school": "백귀야행",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-hyakki-student-2",
       "name": "백귀야행 학생 모브 2",
-      "school": "백귀야행",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-hyakki-student-3",
       "name": "백귀야행 학생 모브 3",
-      "school": "백귀야행",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-hyakki-student-swimsuit",
       "name": "백귀야행 수영복 학생 모브",
-      "school": "백귀야행",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-chimi-ichiza-mg",
       "name": "치미이치자 MG 모브",
-      "school": "백귀야행",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-chimi-ichiza-rl",
       "name": "치미이치자 RL 모브",
-      "school": "백귀야행",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-millennium-student-1",
       "name": "밀레니엄 학생 모브 1",
-      "school": "밀레니엄",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-millennium-student-2",
       "name": "밀레니엄 학생 모브 2",
-      "school": "밀레니엄",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-redwinter-student",
       "name": "붉은겨울 학생 모브",
-      "school": "붉은겨울",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-redwinter-guard",
       "name": "붉은겨울 친위대 모브",
-      "school": "붉은겨울",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-redwinter-construction",
       "name": "붉은겨울 공무부 모브",
-      "school": "붉은겨울",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-federal-admin-1",
       "name": "연방학생회 행정관 모브 1",
-      "school": "총학생회",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-federal-admin-2",
       "name": "연방학생회 행정관 모브 2",
-      "school": "총학생회",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-wildhunt-student",
       "name": "와일드헌트 학생 모브",
-      "school": "와일드헌트",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-wildhunt-dorm-supervisor",
       "name": "와일드헌트 사감대 모브",
-      "school": "와일드헌트",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-sukeban-mg",
       "name": "스케반 MG 모브",
-      "school": "기타/불량학생",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-sukeban-smg",
       "name": "스케반 SMG 모브",
-      "school": "기타/불량학생",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-sukeban-sr",
       "name": "스케반 SR 모브",
-      "school": "기타/불량학생",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-seaside-sukeban-mg",
       "name": "해변 스케반 MG 모브",
-      "school": "기타/불량학생",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-seaside-sukeban-smg",
       "name": "해변 스케반 SMG 모브",
-      "school": "기타/불량학생",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-helmet-gang-officer",
       "name": "헬멧단 간부 모브",
-      "school": "기타/불량학생",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-helmet-gang-member",
       "name": "헬멧단 모브",
-      "school": "기타/불량학생",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-biker-boss",
       "name": "폭주족 보스 모브",
-      "school": "기타/불량학생",
+      "school": "모브",
       "type": "mob",
       "image": ""
     },
     {
       "id": "mob-biker-member",
       "name": "폭주족 모브",
-      "school": "기타/불량학생",
+      "school": "모브",
       "type": "mob",
       "image": ""
     }

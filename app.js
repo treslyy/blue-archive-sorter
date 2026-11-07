@@ -1,5 +1,6 @@
-const DATA_URL = "characters.json";
-const STORAGE_KEY = "ba-sorter-progress-v2";
+const TEST_MODE = new URLSearchParams(location.search).get("dataset") === "npc-mob-test";
+const DATA_URL = TEST_MODE ? "data/npc-mob-sort-test.json" : "characters.json";
+const STORAGE_KEY = TEST_MODE ? "ba-sorter-progress-npc-mob-test-v1" : "ba-sorter-progress-v2";
 const $ = id => document.getElementById(id);
 let allCharacters = [], activeCharacters = [], rankedGroups = [];
 let pending = [], current = null, low = 0, high = 0, mid = 0;

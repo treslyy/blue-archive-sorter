@@ -18,24 +18,24 @@
       "name": "고료 나구사",
       "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-002",
       "name": "나츠메 이로하",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-003",
       "name": "나카마사 이치카",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-004",
@@ -43,7 +43,7 @@
       "affiliation": "발키리",
       "sourceName": null,
       "reviewStatus": "source-crosschecked",
-      "affiliationNote": "Hoshiakari Archive 학생 명부에서 발키리/생활안전국으로 확인."
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-005",
@@ -51,55 +51,55 @@
       "affiliation": "발키리",
       "sourceName": null,
       "reviewStatus": "source-crosschecked",
-      "affiliationNote": "Hoshiakari Archive 학생 명부에서 발키리/생활안전국으로 확인."
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-006",
       "name": "네코즈카 히비키",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-007",
       "name": "노마사 레이",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-008",
       "name": "니키 안나",
       "affiliation": "붉은겨울",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-009",
       "name": "니키 에리나",
       "affiliation": "붉은겨울",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-010",
       "name": "후루하타 라나",
       "affiliation": "붉은겨울",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-011",
       "name": "렌카와 체리노",
       "affiliation": "붉은겨울",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-012",
@@ -107,47 +107,47 @@
       "affiliation": "산해경",
       "sourceName": null,
       "reviewStatus": "source-crosschecked",
-      "affiliationNote": "Hoshiakari Archive 학생 명부에서 산해경/현룡문으로 확인."
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-013",
       "name": "리쿠하치마 아루",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-014",
       "name": "마요이 시구레",
       "affiliation": "붉은겨울",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-015",
       "name": "모리즈키 스즈미",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-016",
       "name": "모토미야 치아키",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-017",
       "name": "무로카사 아카네",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-018",
@@ -162,8 +162,8 @@
       "name": "미소노 미카",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-020",
@@ -178,16 +178,16 @@
       "name": "미즈하 미모리",
       "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-022",
       "name": "미카모 네루",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-023",
@@ -202,24 +202,24 @@
       "name": "사이바 모모이",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-025",
       "name": "사이바 미도리",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-026",
       "name": "사쿠라이 미요",
       "affiliation": "와일드헌트",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-027",
@@ -234,24 +234,24 @@
       "name": "사토하마 우미카",
       "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-029",
       "name": "소라사키 히나",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-030",
       "name": "소라이 사키",
       "affiliation": "SRT",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-031",
@@ -266,96 +266,96 @@
       "name": "스나오오카미 시로코",
       "affiliation": "아비도스",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-033",
       "name": "스노하라 슌",
       "affiliation": "산해경",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-034",
       "name": "스노하라 코코나",
       "affiliation": "산해경",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-035",
       "name": "스미 세리나",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-036",
       "name": "시라스 아즈사",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-037",
       "name": "시라오 에리",
       "affiliation": "와일드헌트",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-038",
       "name": "시라이시 우타하",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-039",
       "name": "시로미 이오리",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-040",
       "name": "시마 코노카",
       "affiliation": "발키리",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-041",
       "name": "시모에 코하루",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-042",
       "name": "시모쿠라 메구",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-043",
       "name": "시시도우 이즈미",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-044",
@@ -370,96 +370,96 @@
       "name": "시즈야마 마시로",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-046",
       "name": "아라마키 야쿠모",
       "affiliation": "붉은겨울",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-047",
       "name": "아마미 노도카",
       "affiliation": "붉은겨울",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-048",
       "name": "아마우 아코",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-049",
       "name": "아마치 니야",
       "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-050",
       "name": "아사가오 하나에",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-051",
       "name": "아사기 무츠키",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-052",
       "name": "아사히나 피나",
       "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-053",
       "name": "아스마 토키",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-054",
       "name": "아오모리 미네",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-055",
       "name": "아이키요 후우카",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-056",
       "name": "아지타니 히후미",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-057",
@@ -474,80 +474,80 @@
       "name": "아케보시 히마리",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-059",
       "name": "아케시로 루미",
       "affiliation": "산해경",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-060",
       "name": "아키이즈미 모미지",
       "affiliation": "붉은겨울",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-061",
       "name": "야스모리 미노리",
       "affiliation": "붉은겨울",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-062",
       "name": "야쿠시 사야",
       "affiliation": "산해경",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-063",
       "name": "엔도우 시미코",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-064",
       "name": "오가타 칸나",
       "affiliation": "발키리",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-065",
       "name": "오노 츠쿠요",
       "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-066",
       "name": "오니카타 카요코",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-067",
       "name": "오마가리 하레",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-068",
@@ -570,32 +570,32 @@
       "name": "오토하나 스미레",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-071",
       "name": "와니부치 아카리",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-072",
       "name": "와라쿠 치세",
       "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-073",
       "name": "와카바 히나타",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-074",
@@ -610,8 +610,8 @@
       "name": "요시노 니코",
       "affiliation": "SRT",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-076",
@@ -626,40 +626,40 @@
       "name": "우라와 하나코",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-078",
       "name": "우스바 리츠",
       "affiliation": "와일드헌트",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-079",
       "name": "우시마키 주리",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-080",
       "name": "우시오 노아",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-081",
       "name": "우자와 레이사",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-082",
@@ -667,31 +667,31 @@
       "affiliation": "하이랜더",
       "sourceName": null,
       "reviewStatus": "source-crosschecked",
-      "affiliationNote": "Hoshiakari Archive 학생 명부에서 하이랜더/화물운송관리부로 확인."
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-083",
       "name": "우타즈미 사쿠라코",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-084",
       "name": "유리조노 세이아",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-085",
       "name": "유토리 나츠",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-086",
@@ -714,48 +714,48 @@
       "name": "이바라기 요시미",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-089",
       "name": "이사미 카에데",
       "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-090",
       "name": "이오치 마리",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-091",
       "name": "이자요이 노노미",
       "affiliation": "아비도스",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-092",
       "name": "이즈미모토 에이미",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-093",
       "name": "이치노세 아스나",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-094",
@@ -770,8 +770,8 @@
       "name": "이타가키 카노에",
       "affiliation": "와일드헌트",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-096",
@@ -779,7 +779,7 @@
       "affiliation": "아리우스",
       "sourceName": null,
       "reviewStatus": "source-crosschecked",
-      "affiliationNote": "Hoshiakari Archive 학생 명부에서 아리우스/아리우스 스쿼드로 확인."
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-097",
@@ -818,72 +818,72 @@
       "name": "카가미 치히로",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-102",
       "name": "카데노코지 유카리",
       "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-103",
       "name": "카스가 츠바키",
       "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-104",
       "name": "카스미자와 미유",
       "affiliation": "SRT",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-105",
       "name": "카야마 레이죠",
       "affiliation": "산해경",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-106",
       "name": "카와와 시즈코",
       "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-107",
       "name": "카제쿠라 모에",
       "affiliation": "SRT",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-108",
       "name": "카케하시 스바루",
       "affiliation": "아리우스",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-109",
       "name": "카쿠다테 카린",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-110",
@@ -898,32 +898,32 @@
       "name": "켄자키 츠루기",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-112",
       "name": "코노에 미나",
       "affiliation": "산해경",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-113",
       "name": "코누리 마키",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-114",
       "name": "코마카제 라브",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-115",
@@ -938,56 +938,56 @@
       "name": "코제키 우이",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-117",
       "name": "쿄고쿠 사츠키",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-118",
       "name": "쿄야마 카즈사",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-119",
       "name": "쿠다 이즈나",
       "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-120",
       "name": "쿠로다테 하루나",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-121",
       "name": "쿠로미 세리카",
       "affiliation": "아비도스",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-122",
       "name": "쿠로사키 코유키",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-123",
@@ -1000,58 +1000,58 @@
     {
       "id": "roster-124",
       "name": "쿠와카미 카호",
-      "affiliation": "산해경",
+      "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-125",
       "name": "키누가와 카스미",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-126",
       "name": "키누이 레나",
       "affiliation": "와일드헌트",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-127",
       "name": "키류 키쿄",
       "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-128",
       "name": "키리후지 나기사",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-129",
       "name": "타치바나 노조미",
       "affiliation": "하이랜더",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-130",
       "name": "타치바나 히카리",
       "affiliation": "하이랜더",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-131",
@@ -1066,32 +1066,32 @@
       "name": "타카쿠라 쿠루미",
       "affiliation": "SRT",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-133",
       "name": "탄가 이부키",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-134",
       "name": "텐도 아리스",
       "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-135",
       "name": "텐진야마 오토기",
       "affiliation": "SRT",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-136",
@@ -1122,16 +1122,16 @@
       "name": "하네카와 하스미",
       "affiliation": "트리니티",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-140",
       "name": "하누마 마코토",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-141",
@@ -1162,8 +1162,8 @@
       "name": "하타미 에리카",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-145",
@@ -1171,7 +1171,7 @@
       "affiliation": "백귀야행",
       "sourceName": null,
       "reviewStatus": "source-crosschecked",
-      "affiliationNote": "Hoshiakari Archive 학생 명부에서 백귀야행/백화요란으로 확인."
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-146",
@@ -1186,24 +1186,24 @@
       "name": "히노미야 치나츠",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부에서 소속 확인. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-148",
       "name": "히메키 메루",
       "affiliation": "붉은겨울",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-149",
       "name": "히무로 세나",
       "affiliation": "게헨나",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부(2026-10-30 갱신)의 소속 학원 항목과 교차 확인."
     },
     {
       "id": "roster-150",
@@ -1651,6 +1651,7 @@
     "2026-11-08 소속 교차검증: Hoshiakari Archive 2026-10-30 학생 명부로 10개 학생 소속을 확인·수정함. 콜라보 4명은 외부 콜라보 분류 자료와 사용자 지시를 반영함.",
     "2026-11-08 추가 소속 확인: 타카노스 스이코, 이오쟈쿠 나고미, 우토 요코는 병아리파 소속으로 확인되어 `병아리파` 그룹으로 분류함. 소속 학원은 불명으로 남아 있음.",
     "2026-11-08 사용자 지시 반영: 아로나와 프라나를 `샬레` 그룹으로 분류함.",
-    "2026-11-08 NPC 소속 2차 대조: 기존 NPC 후보 51명 중 일본어 NPC一覧의 학원/조직 분류와 대조 가능한 인물들의 소속을 재확인함. 키요스미 아키라는 와일드헌트 기숙사감독부 소속으로 분류하고, 칠수인 설정은 인물 메모에 남김. 신타니 카이는 산해경 소속으로 유지하되 칠수인·추방 이력은 별도 메모로 구분함."
+    "2026-11-08 NPC 소속 2차 대조: 기존 NPC 후보 51명 중 일본어 NPC一覧의 학원/조직 분류와 대조 가능한 인물들의 소속을 재확인함. 키요스미 아키라는 와일드헌트 기숙사감독부 소속으로 분류하고, 칠수인 설정은 인물 메모에 남김. 신타니 카이는 산해경 소속으로 유지하되 칠수인·추방 이력은 별도 메모로 구분함.",
+    "2026-11-08 플레이어블 학생 소속 추가 대조: Hoshiakari Archive 학생 명부(2026-10-30 갱신)와 120명의 소속을 대조하고 일치 여부를 확인함. 중복/이격은 한 인물로 취급함."
   ]
 }

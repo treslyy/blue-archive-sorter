@@ -6,7 +6,8 @@
       "id": "test-a",
       "name": "테스트 A (기준)",
       "school": "테스트",
-      "type": "student"
+      "type": "student",
+      "image": "images/test-a.png"
     },
     {
       "id": "test-b",

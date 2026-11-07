@@ -15,6 +15,12 @@
       "url": "https://game8.jp/blue-archive/655012",
       "checkedAt": "2026-11-08",
       "note": "2026-05-19 갱신. 오래된 미실장 목록이므로 현재 실장 여부 재확인 필요"
+    },
+    {
+      "title": "NPC一覧 - ブルーアーカイブ攻略 Wiki",
+      "url": "https://bluearchive.wikiru.jp/?cmd=read&page=NPC%E4%B8%80%E8%A6%A7",
+      "checkedAt": "2026-11-08",
+      "note": "2026-10-26 갱신 페이지. 기존 후보에서 빠진 학교별 명명 NPC 및 최신 분류를 추가 발굴하는 기준 자료"
     }
   ],
   "inclusionRules": [
@@ -343,6 +349,215 @@
       "note": "데카그라마톤 예언자",
       "image": "",
       "reviewStatus": "needs-current-roster-check"
+    },
+    {
+      "id": "minato",
+      "name": "우미지 미나토",
+      "school": "オデュッセイア",
+      "type": "named-student",
+      "sourceName": "ミナト",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "ami",
+      "name": "토모시타 아미",
+      "school": "オデュッセイア",
+      "type": "named-student",
+      "sourceName": "アミ",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "sumika",
+      "name": "코모리 스미카",
+      "school": "オデュッセイア",
+      "type": "named-student",
+      "sourceName": "スミカ",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "mitsuki",
+      "name": "센고쿠 미츠키",
+      "school": "オデュッセイア",
+      "type": "named-student",
+      "sourceName": "ミツキ",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "sanae",
+      "name": "후나모리 사나에",
+      "school": "オデュッセイア",
+      "type": "named-student",
+      "sourceName": "サナエ",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "makina",
+      "name": "마키나",
+      "school": "オデュッセイア",
+      "type": "named-student",
+      "sourceName": "マキナ",
+      "surnameStatus": "이름만 확인",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "sayuri",
+      "name": "사유리",
+      "school": "オデュッセイア",
+      "type": "named-student",
+      "sourceName": "サユリ",
+      "surnameStatus": "이름만 확인",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "nanami",
+      "name": "고노카미 나나미",
+      "school": "オデュッセイア",
+      "type": "named-student",
+      "sourceName": "ナナミ",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "mai",
+      "name": "카자마키 마이",
+      "school": "クロノス",
+      "type": "named-student",
+      "sourceName": "マイ",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "shinon",
+      "name": "카와루 시논",
+      "school": "クロノス",
+      "type": "named-student",
+      "sourceName": "シノン",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "mayumi",
+      "name": "후리하타 마유미",
+      "school": "ゲヘナ",
+      "type": "named-student",
+      "sourceName": "マユミ",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "karen",
+      "name": "묘라쿠 카렌",
+      "school": "ゲヘナ",
+      "type": "named-student",
+      "sourceName": "カレン",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "shoko",
+      "name": "이가라시 쇼코",
+      "school": "ゲヘナ",
+      "type": "named-student",
+      "sourceName": "ショウコ",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "kanae",
+      "name": "미야우치 카나에",
+      "school": "山海経",
+      "type": "named-student",
+      "sourceName": "カナエ",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "natsuki",
+      "name": "아사쿠사 나츠키",
+      "school": "百鬼夜行",
+      "type": "named-student",
+      "sourceName": "ナツキ",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "suiko",
+      "name": "타카노스 스이코",
+      "school": "その他",
+      "type": "named-student",
+      "sourceName": "スイコ",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "nagomi",
+      "name": "이오쟈쿠 나고미",
+      "school": "その他",
+      "type": "named-student",
+      "sourceName": "ナゴミ",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "yoko",
+      "name": "우토 요코",
+      "school": "その他",
+      "type": "named-student",
+      "sourceName": "ヨウコ",
+      "surnameStatus": "사용자 명단의 성+이름 표기 적용",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
+    },
+    {
+      "id": "sora",
+      "name": "소라",
+      "school": "エンジェル24",
+      "type": "named-student",
+      "sourceName": "ソラ",
+      "surnameStatus": "이름만 확인",
+      "note": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요",
+      "image": "",
+      "reviewStatus": "needs-playable-and-portrait-check"
     }
   ],
   "mobResearch": {
@@ -354,6 +569,9 @@
     "This file remains a candidate list, not a production-ready final NPC roster.",
     "2026-11-08 사용자 명단 대조 반영: 사용자 명단과 이름이 일치하는 후보는 유지하고, 사용자가 성을 포함해 적은 항목은 그 표기를 반영함.",
     "사용자 명단에 이름이 없는 미쿠리, 마나미, 미츠이 쿄코는 사용자 기준에 따라 후보에서 제외함.",
-    "오울은 사용자 확인에 따라 오르로 표기함."
+    "오울은 사용자 확인에 따라 오르로 표기함.",
+    "2026-11-08 추가 조사 1차: 2026-10-26 갱신 일본어 NPC一覧에서 사용자 기준 명단에 존재하는 추가 명명 NPC 19명을 후보에 추가함.",
+    "추가 19명은 오디세이아 8명, 크로노스 2명, 게헨나 3명, 산해경 1명, 백귀야행 1명, 기타 학생 3명, 엔젤24 1명임.",
+    "이번 추가는 후보 수집 단계이며, 플레이어블 실장 여부·여학생 여부·개별 스탠딩 일러스트 여부 확인 전까지 production 데이터로 가져오지 말 것."
   ]
 }

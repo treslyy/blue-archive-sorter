@@ -1208,18 +1208,18 @@
     {
       "id": "roster-150",
       "name": "아로나",
-      "affiliation": "기타",
+      "affiliation": "샬레",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "group-affiliation-crosschecked",
+      "affiliationNote": "샬레 소속의 시스템/AI 인물. 사용자 지시에 따라 샬레 그룹으로 분류."
     },
     {
       "id": "roster-151",
       "name": "프라나",
-      "affiliation": "기타",
+      "affiliation": "샬레",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "group-affiliation-crosschecked",
+      "affiliationNote": "샬레 소속의 시스템/AI 인물. 사용자 지시에 따라 샬레 그룹으로 분류."
     },
     {
       "id": "roster-152",
@@ -1649,6 +1649,7 @@
     "기타로 임시 입력했던 인물 중 소속 단체가 특정되는 11명은 토키와다이 중학교, 사쿠가와 중학교, 칠수인, 엔젤24, 데카그라마톤으로 세분화함. 남은 기타 항목은 소속 확인이 더 필요한 인물임.",
     "2026-11-08 사용자 지시 반영: 하츠네 미쿠, 미사카 미코토, 쇼쿠호 미사키, 사텐 루이코를 콜라보 그룹으로 이동.",
     "2026-11-08 소속 교차검증: Hoshiakari Archive 2026-10-30 학생 명부로 10개 학생 소속을 확인·수정함. 콜라보 4명은 외부 콜라보 분류 자료와 사용자 지시를 반영함.",
-    "2026-11-08 추가 소속 확인: 타카노스 스이코, 이오쟈쿠 나고미, 우토 요코는 병아리파 소속으로 확인되어 `병아리파` 그룹으로 분류함. 소속 학원은 불명으로 남아 있음."
+    "2026-11-08 추가 소속 확인: 타카노스 스이코, 이오쟈쿠 나고미, 우토 요코는 병아리파 소속으로 확인되어 `병아리파` 그룹으로 분류함. 소속 학원은 불명으로 남아 있음.",
+    "2026-11-08 사용자 지시 반영: 아로나와 프라나를 `샬레` 그룹으로 분류함."
   ]
 }

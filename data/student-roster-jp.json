@@ -7,7 +7,8 @@
     "This is a review draft of original playable students, with outfit/seasonal variants merged.",
     "Collaboration characters are excluded.",
     "Check the special derivative entries and the 2026-11-08 latest JP updates before importing into characters.json.",
-    "Image paths are intentionally blank until assets are collected."
+    "Image paths are intentionally blank until assets are collected.",
+    "Roster entries were cross-checked against the 2026-10-30 Korean student roster; verify against official JP additions after that date before production import."
   ],
   "students": [
     {
@@ -945,6 +946,69 @@
       "id": "jp-134",
       "name": "후치가미 코토네",
       "school": "오디세이아",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-135",
+      "name": "하야세 유우카",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-136",
+      "name": "아이키요 후우카",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-137",
+      "name": "시즈야마 마시로",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-138",
+      "name": "와카사 후유",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-139",
+      "name": "쿠와카미 카호",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-140",
+      "name": "시로미 이오리",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-141",
+      "name": "쿠다 이즈나",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-142",
+      "name": "아카시 준코",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-143",
+      "name": "토요미 코토리",
+      "school": "밀레니엄",
       "type": "student",
       "image": ""
     }

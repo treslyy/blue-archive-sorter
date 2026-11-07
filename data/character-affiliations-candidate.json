@@ -1,0 +1,1438 @@
+{
+  "schemaVersion": 1,
+  "referenceDate": "2026-11-08",
+  "status": "affiliation-review",
+  "policy": {
+    "sourceRoster": "data/user-roster-reference-ko.txt",
+    "sourceRosterCount": 203,
+    "includeOnlySourceRoster": true,
+    "classifyBy": "school-or-affiliation",
+    "distinguishPlayableNpcOrUnreleased": false,
+    "mergeAlternateCostumes": true,
+    "unknownAffiliation": "기타",
+    "mobs": "deferred"
+  },
+  "entries": [
+    {
+      "id": "roster-001",
+      "name": "고료 나구사",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-002",
+      "name": "나츠메 이로하",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-003",
+      "name": "나카마사 이치카",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-004",
+      "name": "나카츠카사 키리노",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-005",
+      "name": "네무가키 후부키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-006",
+      "name": "네코즈카 히비키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-007",
+      "name": "노마사 레이",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-008",
+      "name": "니키 안나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-009",
+      "name": "니키 에리나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-010",
+      "name": "후루하타 라나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-011",
+      "name": "렌카와 체리노",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-012",
+      "name": "류우게 키사키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-013",
+      "name": "리쿠하치마 아루",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-014",
+      "name": "마요이 시구레",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-015",
+      "name": "모리즈키 스즈미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-016",
+      "name": "모토미야 치아키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-017",
+      "name": "무로카사 아카네",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-018",
+      "name": "미사카 미코토",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-019",
+      "name": "미소노 미카",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-020",
+      "name": "미요시 타카네",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-021",
+      "name": "미즈하 미모리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-022",
+      "name": "미카모 네루",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-023",
+      "name": "사시로 토모에",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-024",
+      "name": "사이바 모모이",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-025",
+      "name": "사이바 미도리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-026",
+      "name": "사쿠라이 미요",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-027",
+      "name": "사텐 루이코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-028",
+      "name": "사토하마 우미카",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-029",
+      "name": "소라사키 히나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-030",
+      "name": "소라이 사키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-031",
+      "name": "쇼쿠호 미사키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-032",
+      "name": "스나오오카미 시로코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-033",
+      "name": "스노하라 슌",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-034",
+      "name": "스노하라 코코나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-035",
+      "name": "스미 세리나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-036",
+      "name": "시라스 아즈사",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-037",
+      "name": "시라오 에리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-038",
+      "name": "시라이시 우타하",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-039",
+      "name": "시로미 이오리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-040",
+      "name": "시마 코노카",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-041",
+      "name": "시모에 코하루",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-042",
+      "name": "시모쿠라 메구",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-043",
+      "name": "시시도우 이즈미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-044",
+      "name": "시이나 츠무기",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-045",
+      "name": "시즈야마 마시로",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-046",
+      "name": "아라마키 야쿠모",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-047",
+      "name": "아마미 노도카",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-048",
+      "name": "아마우 아코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-049",
+      "name": "아마치 니야",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-050",
+      "name": "아사가오 하나에",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-051",
+      "name": "아사기 무츠키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-052",
+      "name": "아사히나 피나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-053",
+      "name": "아스마 토키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-054",
+      "name": "아오모리 미네",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-055",
+      "name": "아이키요 후우카",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-056",
+      "name": "아지타니 히후미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-057",
+      "name": "아카시 준코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-058",
+      "name": "아케보시 히마리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-059",
+      "name": "아케시로 루미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-060",
+      "name": "아키이즈미 모미지",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-061",
+      "name": "야스모리 미노리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-062",
+      "name": "야쿠시 사야",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-063",
+      "name": "엔도우 시미코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-064",
+      "name": "오가타 칸나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-065",
+      "name": "오노 츠쿠요",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-066",
+      "name": "오니카타 카요코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-067",
+      "name": "오마가리 하레",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-068",
+      "name": "오쿠소라 아야네",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-069",
+      "name": "오토세 코타마",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-070",
+      "name": "오토하나 스미레",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-071",
+      "name": "와니부치 아카리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-072",
+      "name": "와라쿠 치세",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-073",
+      "name": "와카바 히나타",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-074",
+      "name": "와카사 후유",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-075",
+      "name": "요시노 니코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-076",
+      "name": "요자쿠라 키라라",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-077",
+      "name": "우라와 하나코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-078",
+      "name": "우스바 리츠",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-079",
+      "name": "우시마키 주리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-080",
+      "name": "우시오 노아",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-081",
+      "name": "우자와 레이사",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-082",
+      "name": "우츠미 아오바",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-083",
+      "name": "우타즈미 사쿠라코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-084",
+      "name": "유리조노 세이아",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-085",
+      "name": "유토리 나츠",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-086",
+      "name": "이구사 하루카",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-087",
+      "name": "이마시노 미사키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-088",
+      "name": "이바라기 요시미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-089",
+      "name": "이사미 카에데",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-090",
+      "name": "이오치 마리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-091",
+      "name": "이자요이 노노미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-092",
+      "name": "이즈미모토 에이미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-093",
+      "name": "이치노세 아스나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-094",
+      "name": "이케쿠라 마리나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-095",
+      "name": "이타가키 카노에",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-096",
+      "name": "조마에 사오리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-097",
+      "name": "츠치나가 히요리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-098",
+      "name": "츠카츠키 리오",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-099",
+      "name": "츠키유키 미야코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-100",
+      "name": "치도리 미치루",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-101",
+      "name": "카가미 치히로",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-102",
+      "name": "카데노코지 유카리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-103",
+      "name": "카스가 츠바키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-104",
+      "name": "카스미자와 미유",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-105",
+      "name": "카야마 레이죠",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-106",
+      "name": "카와와 시즈코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-107",
+      "name": "카제쿠라 모에",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-108",
+      "name": "카케하시 스바루",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-109",
+      "name": "카쿠다테 카린",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-110",
+      "name": "케이",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-111",
+      "name": "켄자키 츠루기",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-112",
+      "name": "코노에 미나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-113",
+      "name": "코누리 마키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-114",
+      "name": "코마카제 라브",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-115",
+      "name": "코사카 와카모",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-116",
+      "name": "코제키 우이",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-117",
+      "name": "쿄고쿠 사츠키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-118",
+      "name": "쿄야마 카즈사",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-119",
+      "name": "쿠다 이즈나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-120",
+      "name": "쿠로다테 하루나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-121",
+      "name": "쿠로미 세리카",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-122",
+      "name": "쿠로사키 코유키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-123",
+      "name": "쿠리무라 아이리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-124",
+      "name": "쿠와카미 카호",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-125",
+      "name": "키누가와 카스미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-126",
+      "name": "키누이 레나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-127",
+      "name": "키류 키쿄",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-128",
+      "name": "키리후지 나기사",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-129",
+      "name": "타치바나 노조미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-130",
+      "name": "타치바나 히카리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-131",
+      "name": "타카나시 호시노",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-132",
+      "name": "타카쿠라 쿠루미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-133",
+      "name": "탄가 이부키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-134",
+      "name": "텐도 아리스",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-135",
+      "name": "텐진야마 오토기",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-136",
+      "name": "토미 코코로",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-137",
+      "name": "토요미 코토리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-138",
+      "name": "하나오카 유즈",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-139",
+      "name": "하네카와 하스미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-140",
+      "name": "하누마 마코토",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-141",
+      "name": "하야세 유우카",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-142",
+      "name": "하츠네 미쿠",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-143",
+      "name": "하카리 아츠코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-144",
+      "name": "하타미 에리카",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-145",
+      "name": "후와 렌게",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-146",
+      "name": "후치가미 코토네",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-147",
+      "name": "히노미야 치나츠",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-148",
+      "name": "히메키 메루",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-149",
+      "name": "히무로 세나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-150",
+      "name": "아로나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-151",
+      "name": "프라나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-152",
+      "name": "총학생회장",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-153",
+      "name": "칼학생회장",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-154",
+      "name": "나나가미 린",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-155",
+      "name": "시라누이 카야",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-156",
+      "name": "이와비츠 아유무",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-157",
+      "name": "유라키 모모카",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-158",
+      "name": "오키 아오이",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-159",
+      "name": "하이네",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-160",
+      "name": "스모모",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-161",
+      "name": "스나오오카미 시로코(테러)",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-162",
+      "name": "쿠치나시 유메",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-163",
+      "name": "후리하타 마유미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-164",
+      "name": "묘라쿠 카렌",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-165",
+      "name": "이가라시 쇼코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-166",
+      "name": "아즈마 미라이",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-167",
+      "name": "하네모토 츠바사",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-168",
+      "name": "쿠즈노하",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-169",
+      "name": "나나카도 아야메",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-170",
+      "name": "코쿠리코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-171",
+      "name": "야부키 슈로",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-172",
+      "name": "하부 아자미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-173",
+      "name": "아사쿠사 나츠키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-174",
+      "name": "미야우치 카나에",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-175",
+      "name": "우루시바라 카구야",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-176",
+      "name": "신타니 카이",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-177",
+      "name": "칸바라 미스즈",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-178",
+      "name": "시치도 유키노",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-179",
+      "name": "타치기 마이아",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-180",
+      "name": "아사기리 스오우",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-181",
+      "name": "히로미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-182",
+      "name": "키요스미 아키라",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-183",
+      "name": "우미지 미나토",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-184",
+      "name": "토모시타 아미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-185",
+      "name": "코모리 스미카",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-186",
+      "name": "센고쿠 미츠키",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-187",
+      "name": "후나모리 사나에",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-188",
+      "name": "마키나",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-189",
+      "name": "사유리",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-190",
+      "name": "고노카미 나나미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-191",
+      "name": "카자마키 마이",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-192",
+      "name": "카와루 시논",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-193",
+      "name": "소라",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-194",
+      "name": "쿠리하마 아케미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-195",
+      "name": "히죽히죽 교수",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-196",
+      "name": "타카노스 스이코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-197",
+      "name": "이오쟈쿠 나고미",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-198",
+      "name": "우토 요코",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-199",
+      "name": "말쿠트",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-200",
+      "name": "아인",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-201",
+      "name": "소프",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-202",
+      "name": "오르",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    },
+    {
+      "id": "roster-203",
+      "name": "아라타",
+      "affiliation": null,
+      "sourceName": null,
+      "reviewStatus": "pending"
+    }
+  ]
+}

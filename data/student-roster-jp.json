@@ -1,0 +1,976 @@
+{
+  "schemaVersion": 1,
+  "sourceUpdated": "2026-10-30",
+  "compiledFor": "JP server",
+  "status": "review-draft",
+  "notes": [
+    "This is a review draft of original playable students, with outfit/seasonal variants merged.",
+    "Collaboration characters are excluded.",
+    "Check the special derivative entries and the 2026-11-08 latest JP updates before importing into characters.json.",
+    "Image paths are intentionally blank until assets are collected."
+  ],
+  "students": [
+    {
+      "id": "jp-001",
+      "name": "타카나시 호시노",
+      "school": "아비도스",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-002",
+      "name": "스나오오카미 시로코",
+      "school": "아비도스",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-003",
+      "name": "쿠로미 세리카",
+      "school": "아비도스",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-004",
+      "name": "이자요이 노노미",
+      "school": "아비도스",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-005",
+      "name": "오쿠소라 아야네",
+      "school": "아비도스",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-006",
+      "name": "하타미 에리카",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-007",
+      "name": "소라사키 히나",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-008",
+      "name": "쿠로다테 하루나",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-009",
+      "name": "리쿠하치마 아루",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-010",
+      "name": "오니카타 카요코",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-011",
+      "name": "하누마 마코토",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-012",
+      "name": "탄가 이부키",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-013",
+      "name": "쿄고쿠 사츠키",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-014",
+      "name": "시모쿠라 메구",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-015",
+      "name": "히무로 세나",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-016",
+      "name": "시시도우 이즈미",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-017",
+      "name": "이구사 하루카",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-018",
+      "name": "아사기 무츠키",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-019",
+      "name": "키누가와 카스미",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-020",
+      "name": "히노미야 치나츠",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-021",
+      "name": "우시마키 주리",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-022",
+      "name": "아마우 아코",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-023",
+      "name": "요자쿠라 키라라",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-024",
+      "name": "모토미야 치아키",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-025",
+      "name": "나츠메 이로하",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-026",
+      "name": "와니부치 아카리",
+      "school": "게헨나",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-027",
+      "name": "우라와 하나코",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-028",
+      "name": "쿠리무라 아이리",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-029",
+      "name": "스미 세리나",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-030",
+      "name": "시라스 아즈사",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-031",
+      "name": "시모에 코하루",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-032",
+      "name": "코제키 우이",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-033",
+      "name": "와카바 히나타",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-034",
+      "name": "우자와 레이사",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-035",
+      "name": "미소노 미카",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-036",
+      "name": "아사가오 하나에",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-037",
+      "name": "켄자키 츠루기",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-038",
+      "name": "키리후지 나기사",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-039",
+      "name": "이바라기 요시미",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-040",
+      "name": "모리즈키 스즈미",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-041",
+      "name": "이오치 마리",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-042",
+      "name": "유리조노 세이아",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-043",
+      "name": "우타즈미 사쿠라코",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-044",
+      "name": "하네카와 하스미",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-045",
+      "name": "아지타니 히후미",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-046",
+      "name": "엔도우 시미코",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-047",
+      "name": "유토리 나츠",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-048",
+      "name": "나카마사 이치카",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-049",
+      "name": "아오모리 미네",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-050",
+      "name": "코마카제 라브",
+      "school": "트리니티",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-051",
+      "name": "오토세 코타마",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-052",
+      "name": "카쿠다테 카린",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-053",
+      "name": "쿠로사키 코유키",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-054",
+      "name": "이치노세 아스나",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-055",
+      "name": "텐도 아리스",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-056",
+      "name": "무로카사 아카네",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-057",
+      "name": "네코즈카 히비키",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-058",
+      "name": "오마가리 하레",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-059",
+      "name": "우시오 노아",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-060",
+      "name": "카가미 치히로",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-061",
+      "name": "이즈미모토 에이미",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-062",
+      "name": "츠카츠키 리오",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-063",
+      "name": "코누리 마키",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-064",
+      "name": "노마사 레이",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-065",
+      "name": "하나오카 유즈",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-066",
+      "name": "아스마 토키",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-067",
+      "name": "미카모 네루",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-068",
+      "name": "오토하나 스미레",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-069",
+      "name": "시라이시 우타하",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-070",
+      "name": "사이바 모모이",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-071",
+      "name": "사이바 미도리",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-072",
+      "name": "아케보시 히마리",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-073",
+      "name": "아마치 니야",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-074",
+      "name": "카스가 츠바키",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-075",
+      "name": "치도리 미치루",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-076",
+      "name": "미즈하 미모리",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-077",
+      "name": "코사카 와카모",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-078",
+      "name": "오노 츠쿠요",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-079",
+      "name": "카데노코지 유카리",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-080",
+      "name": "사토하마 우미카",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-081",
+      "name": "카와와 시즈코",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-082",
+      "name": "이사미 카에데",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-083",
+      "name": "와라쿠 치세",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-084",
+      "name": "후와 렌게",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-085",
+      "name": "키류 키쿄",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-086",
+      "name": "고료 나구사",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-087",
+      "name": "아사히나 피나",
+      "school": "백귀야행",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-088",
+      "name": "마요이 시구레",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-089",
+      "name": "니키 에리나",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-090",
+      "name": "스노하라 슌",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-091",
+      "name": "아마미 노도카",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-092",
+      "name": "아라마키 야쿠모",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-093",
+      "name": "미요시 타카네",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-094",
+      "name": "야스모리 미노리",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-095",
+      "name": "아키이즈미 모미지",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-096",
+      "name": "이케쿠라 마리나",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-097",
+      "name": "사시로 토모에",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-098",
+      "name": "히메키 메루",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-099",
+      "name": "렌카와 체리노",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-100",
+      "name": "니키 안나",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-101",
+      "name": "후루하타 라나",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-102",
+      "name": "츠키유키 미야코",
+      "school": "SRT",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-103",
+      "name": "요시노 니코",
+      "school": "SRT",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-104",
+      "name": "소라이 사키",
+      "school": "SRT",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-105",
+      "name": "텐진야마 오토기",
+      "school": "SRT",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-106",
+      "name": "카스미자와 미유",
+      "school": "SRT",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-107",
+      "name": "카제쿠라 모에",
+      "school": "SRT",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-108",
+      "name": "타카쿠라 쿠루미",
+      "school": "SRT",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-109",
+      "name": "시마 코노카",
+      "school": "발키리",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-110",
+      "name": "오가타 칸나",
+      "school": "발키리",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-111",
+      "name": "네무가키 후부키",
+      "school": "발키리",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-112",
+      "name": "나카츠카사 키리노",
+      "school": "발키리",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-113",
+      "name": "야쿠시 사야",
+      "school": "산해경",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-114",
+      "name": "스노하라 코코나",
+      "school": "산해경",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-115",
+      "name": "류우게 키사키",
+      "school": "산해경",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-116",
+      "name": "카야마 레이죠",
+      "school": "산해경",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-117",
+      "name": "아케시로 루미",
+      "school": "산해경",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-118",
+      "name": "코노에 미나",
+      "school": "산해경",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-119",
+      "name": "츠치나가 히요리",
+      "school": "아리우스",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-120",
+      "name": "이마시노 미사키",
+      "school": "아리우스",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-121",
+      "name": "하카리 아츠코",
+      "school": "아리우스",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-122",
+      "name": "조마에 사오리",
+      "school": "아리우스",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-123",
+      "name": "카케하시 스바루",
+      "school": "아리우스",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-124",
+      "name": "우츠미 아오바",
+      "school": "하이랜더",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-125",
+      "name": "타치바나 히카리",
+      "school": "하이랜더",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-126",
+      "name": "타치바나 노조미",
+      "school": "하이랜더",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-127",
+      "name": "우스바 리츠",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-128",
+      "name": "사쿠라이 미요",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-129",
+      "name": "키누이 레나",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-130",
+      "name": "시라오 에리",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-131",
+      "name": "이타가키 카노에",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-132",
+      "name": "시이나 츠무기",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-133",
+      "name": "토우미 코코로",
+      "school": "오디세이아",
+      "type": "student",
+      "image": ""
+    },
+    {
+      "id": "jp-134",
+      "name": "후치가미 코토네",
+      "school": "오디세이아",
+      "type": "student",
+      "image": ""
+    }
+  ],
+  "specialDerivatives": [
+    {
+      "id": "special-kei",
+      "name": "케이",
+      "school": "밀레니엄",
+      "type": "special",
+      "note": "특수 파생형. 별도 소트 항목 여부 확인 필요"
+    },
+    {
+      "id": "special-shiroko-terror",
+      "name": "시로코*테러",
+      "school": "아비도스",
+      "type": "special",
+      "note": "특수 파생형. 별도 소트 항목 여부 확인 필요"
+    }
+  ],
+  "unreleased": [
+    {
+      "id": "unreleased-shichido-yukino",
+      "name": "시치도 유키노",
+      "school": "SRT",
+      "type": "unreleased"
+    }
+  ]
+}

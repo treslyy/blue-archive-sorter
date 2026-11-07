@@ -45,7 +45,7 @@ function saveProgress() {
 }
 function beginSort(items) {
   if(items.length<2)return;
-  activeCharacters=items.slice();ranked=[pending.shift()||activeCharacters.shift()];
+  activeCharacters=items.slice();ranked=[activeCharacters[0]];
   pending=activeCharacters.slice(1);current=pending.shift()||null;
   low=0;high=ranked.length;comparisonsDone=0;history=[];
   $("setup").hidden=true;$("resultPanel").hidden=true;$("sortPanel").hidden=false;
@@ -70,7 +70,7 @@ function choose(side) {
   history.push(snapshot());
   if(side==="left") high=mid;
   else if(side==="right") low=mid+1;
-  else { ranked.splice(mid,0,current); nextItem(); return; }
+  else { comparisonsDone++; ranked.splice(mid,0,current); nextItem(); saveProgress(); return; }
   comparisonsDone++;
   if(low>=high){ranked.splice(low,0,current);nextItem();}
   else {mid=Math.floor((low+high)/2);showComparison();}

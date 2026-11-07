@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 1,
+  "compiledFor": "JP server",
+  "referenceDate": "2026-11-08",
+  "status": "visual-review-required",
+  "source": {
+    "title": "Blue Archive Wiki - NPC一覧",
+    "url": "https://bluearchive.wikiru.jp/?cmd=read&page=NPC%E4%B8%80%E8%A6%A7",
+    "checkedAt": "2026-11-08",
+    "note": "일본 서버 NPC 분류표에서 모브 유형을 추출. 공식 자료가 아니며 성별·외형 차이는 게임 내 이미지로 재확인 필요"
+  },
+  "inclusionRules": [
+    "여학생으로 확인되는 모브만 최종 소트에 포함",
+    "동일 디자인이 반복 등장하면 하나로 통합",
+    "외형이 실제로 다른 경우에만 별도 항목으로 분리",
+    "무기 타입만 다른 경우라도 일러스트 외형이 다르면 별도 후보로 유지",
+    "인간형이 아닌 로봇·몬스터·남성 성인·일반 남성 NPC는 제외"
+  ],
+  "candidates": [
+    {
+      "id": "arius-student-a",
+      "name": "아리우스 학생 A",
+      "school": "아리우스",
+      "type": "student-mob",
+      "sourceName": "아리우스生徒",
+      "note": "아리우스 학생 모브의 개별 외형 1",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "arius-student-b",
+      "name": "아리우스 학생 B",
+      "school": "아리우스",
+      "type": "student-mob",
+      "sourceName": "아리우스生徒",
+      "note": "아리우스 학생 모브의 개별 외형 2",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "arius-student-c",
+      "name": "아리우스 학생 C",
+      "school": "아리우스",
+      "type": "student-mob",
+      "sourceName": "아리우스生徒",
+      "note": "아리우스 학생 모브의 개별 외형 3",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "justina-believer",
+      "name": "유스티나 성도",
+      "school": "아리우스/기타",
+      "type": "student-mob",
+      "sourceName": "ユスティナ信徒",
+      "note": "성도 디자인. 여성형 외관 확인 후 포함 확정",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "justina-swimsuit",
+      "name": "수영복 성도",
+      "school": "아리우스/기타",
+      "type": "student-mob",
+      "sourceName": "水着信徒",
+      "note": "기본 성도와 디자인이 다르면 별도 항목",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "hyakki-student-a",
+      "name": "백귀야행 학생 A",
+      "school": "백귀야행",
+      "type": "student-mob",
+      "sourceName": "百鬼夜行生徒",
+      "note": "백귀야행 학생 모브 외형 1",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "hyakki-student-b",
+      "name": "백귀야행 학생 B",
+      "school": "백귀야행",
+      "type": "student-mob",
+      "sourceName": "百鬼夜行生徒",
+      "note": "백귀야행 학생 모브 외형 2",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "hyakki-student-c",
+      "name": "백귀야행 학생 C",
+      "school": "백귀야행",
+      "type": "student-mob",
+      "sourceName": "百鬼夜行生徒",
+      "note": "백귀야행 학생 모브 외형 3",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "hyakki-student-swimsuit",
+      "name": "백귀야행 수영복 학생",
+      "school": "백귀야행",
+      "type": "student-mob",
+      "sourceName": "百鬼夜行生徒（水着）",
+      "note": "일반 학생과 복장·외형 차이가 있는지 확인",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "chimi-mg",
+      "name": "치미이치자 MG",
+      "school": "백귀야행",
+      "type": "student-mob",
+      "sourceName": "魑魅一座（MG）",
+      "note": "무기 분류별 디자인 확인",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "chimi-rl",
+      "name": "치미이치자 RL",
+      "school": "백귀야행",
+      "type": "student-mob",
+      "sourceName": "魑魅一座（RL）",
+      "note": "MG와 다른 디자인인지 확인",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "millennium-student-a",
+      "name": "밀레니엄 학생 A",
+      "school": "밀레니엄",
+      "type": "student-mob",
+      "sourceName": "ミレニアム生徒",
+      "note": "밀레니엄 학생 모브 외형 1",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "millennium-student-b",
+      "name": "밀레니엄 학생 B",
+      "school": "밀레니엄",
+      "type": "student-mob",
+      "sourceName": "ミレニアム生徒",
+      "note": "밀레니엄 학생 모브 외형 2",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "redwinter-student",
+      "name": "붉은겨울 학생",
+      "school": "붉은겨울",
+      "type": "student-mob",
+      "sourceName": "レッドウィンター生徒",
+      "note": "학생 외형 여부 확인",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "redwinter-guard",
+      "name": "붉은겨울 친위대원",
+      "school": "붉은겨울",
+      "type": "student-mob",
+      "sourceName": "親衛隊員",
+      "note": "여학생 디자인인지 확인",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "redwinter-construction",
+      "name": "붉은겨울 공무부원",
+      "school": "붉은겨울",
+      "type": "student-mob",
+      "sourceName": "工務部員",
+      "note": "여학생 디자인인지 확인",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "federal-administrator-a",
+      "name": "총학생회 행정관 A",
+      "school": "총학생회",
+      "type": "student-mob",
+      "sourceName": "行政官",
+      "note": "두 행정관 디자인의 차이를 확인",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "federal-administrator-b",
+      "name": "총학생회 행정관 B",
+      "school": "총학생회",
+      "type": "student-mob",
+      "sourceName": "行政官",
+      "note": "행정관 A와 다른 외형일 경우만 별도 유지",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "wildhunt-student",
+      "name": "와일드헌트 학생",
+      "school": "와일드헌트",
+      "type": "student-mob",
+      "sourceName": "ワイルドハント生徒",
+      "note": "학생 모브",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "wildhunt-dormitory",
+      "name": "와일드헌트 기숙사 감독관",
+      "school": "와일드헌트",
+      "type": "student-mob",
+      "sourceName": "寮監隊",
+      "note": "여학생 디자인인지 확인",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "sukeban-mg",
+      "name": "스케반 MG",
+      "school": "기타/불량학생",
+      "type": "student-mob",
+      "sourceName": "スケバン（MG）",
+      "note": "여성 모브. 무기 유형별 외형 구분",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "sukeban-smg",
+      "name": "스케반 SMG",
+      "school": "기타/불량학생",
+      "type": "student-mob",
+      "sourceName": "スケバン（SMG）",
+      "note": "여성 모브. 무기 유형별 외형 구분",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "sukeban-sr",
+      "name": "스케반 SR",
+      "school": "기타/불량학생",
+      "type": "student-mob",
+      "sourceName": "スケバン（SR）",
+      "note": "여성 모브. 무기 유형별 외형 구분",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "seaside-sukeban-mg",
+      "name": "해변 스케반 MG",
+      "school": "기타/불량학생",
+      "type": "student-mob",
+      "sourceName": "海辺のスケバン（MG）",
+      "note": "기본 스케반과 외형이 다르면 별도",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "seaside-sukeban-smg",
+      "name": "해변 스케반 SMG",
+      "school": "기타/불량학생",
+      "type": "student-mob",
+      "sourceName": "海辺のスケバン（SMG）",
+      "note": "기본 스케반과 외형이 다르면 별도",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "helmet-gang-leader",
+      "name": "헬멧단 간부",
+      "school": "기타/불량학생",
+      "type": "student-mob",
+      "sourceName": "ヘルメット団幹部",
+      "note": "여학생 외형인지 확인",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "helmet-gang",
+      "name": "헬멧단",
+      "school": "기타/불량학생",
+      "type": "student-mob",
+      "sourceName": "ヘルメット団",
+      "note": "서로 다른 디자인이 있는 경우 외형별 분리",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "motorcycle-gang-boss",
+      "name": "폭주족 보스",
+      "school": "기타/불량학생",
+      "type": "student-mob",
+      "sourceName": "暴走族ボス",
+      "note": "여학생 외형인지 확인",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    },
+    {
+      "id": "motorcycle-gang",
+      "name": "폭주족",
+      "school": "기타/불량학생",
+      "type": "student-mob",
+      "sourceName": "暴走族",
+      "note": "서로 다른 디자인이 있는 경우 외형별 분리",
+      "image": "",
+      "reviewStatus": "needs-visual-and-gender-check"
+    }
+  ]
+}

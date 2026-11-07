@@ -1576,26 +1576,26 @@
     {
       "id": "roster-196",
       "name": "타카노스 스이코",
-      "affiliation": "기타",
+      "affiliation": "병아리파",
       "sourceName": "スイコ",
-      "reviewStatus": "provisional-from-existing-candidate",
-      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
+      "reviewStatus": "group-affiliation-crosschecked",
+      "affiliationNote": "세 인물은 병아리파 구성원으로 확인됨. 현행 자료에서는 소속 학원은 불명으로 분류되므로, 학교 대신 확인 가능한 집단명인 병아리파를 그룹으로 사용."
     },
     {
       "id": "roster-197",
       "name": "이오쟈쿠 나고미",
-      "affiliation": "기타",
+      "affiliation": "병아리파",
       "sourceName": "ナゴミ",
-      "reviewStatus": "provisional-from-existing-candidate",
-      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
+      "reviewStatus": "group-affiliation-crosschecked",
+      "affiliationNote": "세 인물은 병아리파 구성원으로 확인됨. 현행 자료에서는 소속 학원은 불명으로 분류되므로, 학교 대신 확인 가능한 집단명인 병아리파를 그룹으로 사용."
     },
     {
       "id": "roster-198",
       "name": "우토 요코",
-      "affiliation": "기타",
+      "affiliation": "병아리파",
       "sourceName": "ヨウコ",
-      "reviewStatus": "provisional-from-existing-candidate",
-      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
+      "reviewStatus": "group-affiliation-crosschecked",
+      "affiliationNote": "세 인물은 병아리파 구성원으로 확인됨. 현행 자료에서는 소속 학원은 불명으로 분류되므로, 학교 대신 확인 가능한 집단명인 병아리파를 그룹으로 사용."
     },
     {
       "id": "roster-199",
@@ -1648,6 +1648,7 @@
     "2026-11-08 학교별 명부에서 남은 19개 항목의 소속을 추가 확인하여 입력함. 전체 203개 항목에 예비 소속값을 입력했으나, 일부 인물의 소속은 별도 단체/특수 설정에 해당할 수 있어 최종 검증 전 상태임.",
     "기타로 임시 입력했던 인물 중 소속 단체가 특정되는 11명은 토키와다이 중학교, 사쿠가와 중학교, 칠수인, 엔젤24, 데카그라마톤으로 세분화함. 남은 기타 항목은 소속 확인이 더 필요한 인물임.",
     "2026-11-08 사용자 지시 반영: 하츠네 미쿠, 미사카 미코토, 쇼쿠호 미사키, 사텐 루이코를 콜라보 그룹으로 이동.",
-    "2026-11-08 소속 교차검증: Hoshiakari Archive 2026-10-30 학생 명부로 10개 학생 소속을 확인·수정함. 콜라보 4명은 외부 콜라보 분류 자료와 사용자 지시를 반영함."
+    "2026-11-08 소속 교차검증: Hoshiakari Archive 2026-10-30 학생 명부로 10개 학생 소속을 확인·수정함. 콜라보 4명은 외부 콜라보 분류 자료와 사용자 지시를 반영함.",
+    "2026-11-08 추가 소속 확인: 타카노스 스이코, 이오쟈쿠 나고미, 우토 요코는 병아리파 소속으로 확인되어 `병아리파` 그룹으로 분류함. 소속 학원은 불명으로 남아 있음."
   ]
 }

@@ -38,7 +38,7 @@
     },
     {
       "id": "tachiki-maia",
-      "name": "타치키 마이아",
+      "name": "타치기 마이아",
       "school": "아리우스",
       "type": "named-student",
       "sourceName": "立木マイア",
@@ -60,7 +60,7 @@
     },
     {
       "id": "misuzu",
-      "name": "미스즈",
+      "name": "칸바라 미스즈",
       "school": "발키리",
       "type": "named-student",
       "sourceName": "ミスズ",
@@ -159,7 +159,7 @@
     },
     {
       "id": "shuro",
-      "name": "슈로",
+      "name": "야부키 슈로",
       "school": "백귀야행",
       "type": "named-student",
       "sourceName": "シュロ",
@@ -169,19 +169,8 @@
       "reviewStatus": "needs-current-roster-check"
     },
     {
-      "id": "mikuri",
-      "name": "미쿠리",
-      "school": "백귀야행",
-      "type": "named-student",
-      "sourceName": "ミクリ",
-      "surnameStatus": "이름만 확인",
-      "note": "NPC 명부 기준",
-      "image": "",
-      "reviewStatus": "needs-current-roster-check"
-    },
-    {
       "id": "tsubasa",
-      "name": "츠바사",
+      "name": "하네모토 츠바사",
       "school": "밀레니엄",
       "type": "named-student",
       "sourceName": "ツバサ",
@@ -192,7 +181,7 @@
     },
     {
       "id": "mirai",
-      "name": "미라이",
+      "name": "아즈마 미라이",
       "school": "밀레니엄",
       "type": "named-student",
       "sourceName": "ミライ",
@@ -213,19 +202,8 @@
       "reviewStatus": "needs-current-roster-check"
     },
     {
-      "id": "manami",
-      "name": "마나미",
-      "school": "와일드헌트",
-      "type": "named-student",
-      "sourceName": "マナミ",
-      "surnameStatus": "이름만 확인",
-      "note": "NPC 명부 기준",
-      "image": "",
-      "reviewStatus": "needs-current-roster-check"
-    },
-    {
       "id": "aoi",
-      "name": "아오이",
+      "name": "오키 아오이",
       "school": "총학생회",
       "type": "named-student",
       "sourceName": "アオイ",
@@ -236,7 +214,7 @@
     },
     {
       "id": "ayumu",
-      "name": "아유무",
+      "name": "이와비츠 아유무",
       "school": "총학생회",
       "type": "named-student",
       "sourceName": "アユム",
@@ -323,17 +301,6 @@
       "reviewStatus": "needs-current-roster-check"
     },
     {
-      "id": "mitsui-kyoko",
-      "name": "미츠이 쿄코",
-      "school": "기타/칠수인",
-      "type": "named-student",
-      "sourceName": "密井キョウコ",
-      "surnameStatus": "성씨 확인",
-      "note": "칠수인. 이름이 언급된 인물",
-      "image": "",
-      "reviewStatus": "needs-current-roster-check"
-    },
-    {
       "id": "ein",
       "name": "아인",
       "school": "기타/데카그라마톤",
@@ -357,12 +324,12 @@
     },
     {
       "id": "owl",
-      "name": "오울",
+      "name": "오르",
       "school": "기타/데카그라마톤",
       "type": "named-npc",
       "sourceName": "オウル",
       "surnameStatus": "단일 이름",
-      "note": "아인·소프·오울은 서로 다른 외형이므로 각각 별도 항목",
+      "note": "사용자 확인: 오울과 오르는 동일 인물. 한국어 표기는 사용자 지정에 따라 오르로 통일",
       "image": "",
       "reviewStatus": "needs-current-roster-check"
     },
@@ -384,6 +351,9 @@
   },
   "notes": [
     "33 initial candidates were reviewed against the playable-student draft; Komakaze Love was removed because she is already playable.",
-    "This file remains a candidate list, not a production-ready final NPC roster."
+    "This file remains a candidate list, not a production-ready final NPC roster.",
+    "2026-11-08 사용자 명단 대조 반영: 사용자 명단과 이름이 일치하는 후보는 유지하고, 사용자가 성을 포함해 적은 항목은 그 표기를 반영함.",
+    "사용자 명단에 이름이 없는 미쿠리, 마나미, 미츠이 쿄코는 사용자 기준에 따라 후보에서 제외함.",
+    "오울은 사용자 확인에 따라 오르로 표기함."
   ]
 }

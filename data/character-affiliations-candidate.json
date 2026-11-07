@@ -40,18 +40,18 @@
     {
       "id": "roster-004",
       "name": "나카츠카사 키리노",
-      "affiliation": "붉은겨울",
+      "affiliation": "발키리",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부에서 발키리/생활안전국으로 확인."
     },
     {
       "id": "roster-005",
       "name": "네무가키 후부키",
-      "affiliation": "붉은겨울",
+      "affiliation": "발키리",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부에서 발키리/생활안전국으로 확인."
     },
     {
       "id": "roster-006",
@@ -104,10 +104,10 @@
     {
       "id": "roster-012",
       "name": "류우게 키사키",
-      "affiliation": "백귀야행",
+      "affiliation": "산해경",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부에서 산해경/현룡문으로 확인."
     },
     {
       "id": "roster-013",
@@ -152,10 +152,10 @@
     {
       "id": "roster-018",
       "name": "미사카 미코토",
-      "affiliation": "토키와다이 중학교",
+      "affiliation": "콜라보",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "소속 단체/학교명을 별도 그룹으로 정리한 예비 분류. 최종 검증 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "어떤 과학의 초전자포 T 콜라보레이션 캐릭터. 사용자 지시에 따라 콜라보 그룹으로 분류."
     },
     {
       "id": "roster-019",
@@ -168,10 +168,10 @@
     {
       "id": "roster-020",
       "name": "미요시 타카네",
-      "affiliation": "산해경",
+      "affiliation": "붉은겨울",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부에서 붉은겨울/출판부로 확인."
     },
     {
       "id": "roster-021",
@@ -224,10 +224,10 @@
     {
       "id": "roster-027",
       "name": "사텐 루이코",
-      "affiliation": "사쿠가와 중학교",
+      "affiliation": "콜라보",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "소속 단체/학교명을 별도 그룹으로 정리한 예비 분류. 최종 검증 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "어떤 과학의 초전자포 T 콜라보레이션 캐릭터. 사용자 지시에 따라 콜라보 그룹으로 분류."
     },
     {
       "id": "roster-028",
@@ -256,10 +256,10 @@
     {
       "id": "roster-031",
       "name": "쇼쿠호 미사키",
-      "affiliation": "토키와다이 중학교",
+      "affiliation": "콜라보",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "소속 단체/학교명을 별도 그룹으로 정리한 예비 분류. 최종 검증 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "어떤 과학의 초전자포 T 콜라보레이션 캐릭터. 사용자 지시에 따라 콜라보 그룹으로 분류."
     },
     {
       "id": "roster-032",
@@ -600,10 +600,10 @@
     {
       "id": "roster-074",
       "name": "와카사 후유",
-      "affiliation": "백귀야행",
+      "affiliation": "와일드헌트",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부에서 와일드헌트/특수교역부로 확인."
     },
     {
       "id": "roster-075",
@@ -664,10 +664,10 @@
     {
       "id": "roster-082",
       "name": "우츠미 아오바",
-      "affiliation": "발키리",
+      "affiliation": "하이랜더",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부에서 하이랜더/화물운송관리부로 확인."
     },
     {
       "id": "roster-083",
@@ -776,10 +776,10 @@
     {
       "id": "roster-096",
       "name": "조마에 사오리",
-      "affiliation": "트리니티",
+      "affiliation": "아리우스",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부에서 아리우스/아리우스 스쿼드로 확인."
     },
     {
       "id": "roster-097",
@@ -928,10 +928,10 @@
     {
       "id": "roster-115",
       "name": "코사카 와카모",
-      "affiliation": "아리우스",
+      "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부에서 백귀야행 소속으로 확인."
     },
     {
       "id": "roster-116",
@@ -1112,10 +1112,10 @@
     {
       "id": "roster-138",
       "name": "하나오카 유즈",
-      "affiliation": "트리니티",
+      "affiliation": "밀레니엄",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부에서 밀레니엄/게임개발부로 확인."
     },
     {
       "id": "roster-139",
@@ -1144,10 +1144,10 @@
     {
       "id": "roster-142",
       "name": "하츠네 미쿠",
-      "affiliation": "기타",
+      "affiliation": "콜라보",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "외부 콜라보레이션 캐릭터. 사용자 지시에 따라 콜라보 그룹으로 분류."
     },
     {
       "id": "roster-143",
@@ -1168,10 +1168,10 @@
     {
       "id": "roster-145",
       "name": "후와 렌게",
-      "affiliation": "트리니티",
+      "affiliation": "백귀야행",
       "sourceName": null,
-      "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "reviewStatus": "source-crosschecked",
+      "affiliationNote": "Hoshiakari Archive 학생 명부에서 백귀야행/백화요란으로 확인."
     },
     {
       "id": "roster-146",
@@ -1646,6 +1646,8 @@
     "학교별 목록 참고: Game8 학교별 캐릭터 목록(2026-07-17 갱신), 神ゲー攻略 학교·부활동 목록(2026-09-09 갱신).",
     "학교별 명부를 참고해 추가 133개 항목에 예비 소속을 입력함. 기존 51개와 합산한 분류 입력 수는 184/203개이며, 겹치는 항목은 중복 집계하지 않음.",
     "2026-11-08 학교별 명부에서 남은 19개 항목의 소속을 추가 확인하여 입력함. 전체 203개 항목에 예비 소속값을 입력했으나, 일부 인물의 소속은 별도 단체/특수 설정에 해당할 수 있어 최종 검증 전 상태임.",
-    "기타로 임시 입력했던 인물 중 소속 단체가 특정되는 11명은 토키와다이 중학교, 사쿠가와 중학교, 칠수인, 엔젤24, 데카그라마톤으로 세분화함. 남은 기타 항목은 소속 확인이 더 필요한 인물임."
+    "기타로 임시 입력했던 인물 중 소속 단체가 특정되는 11명은 토키와다이 중학교, 사쿠가와 중학교, 칠수인, 엔젤24, 데카그라마톤으로 세분화함. 남은 기타 항목은 소속 확인이 더 필요한 인물임.",
+    "2026-11-08 사용자 지시 반영: 하츠네 미쿠, 미사카 미코토, 쇼쿠호 미사키, 사텐 루이코를 콜라보 그룹으로 이동.",
+    "2026-11-08 소속 교차검증: Hoshiakari Archive 2026-10-30 학생 명부로 10개 학생 소속을 확인·수정함. 콜라보 4명은 외부 콜라보 분류 자료와 사용자 지시를 반영함."
   ]
 }

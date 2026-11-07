@@ -152,10 +152,10 @@
     {
       "id": "roster-018",
       "name": "미사카 미코토",
-      "affiliation": "기타",
+      "affiliation": "토키와다이 중학교",
       "sourceName": null,
       "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "affiliationNote": "소속 단체/학교명을 별도 그룹으로 정리한 예비 분류. 최종 검증 필요."
     },
     {
       "id": "roster-019",
@@ -224,10 +224,10 @@
     {
       "id": "roster-027",
       "name": "사텐 루이코",
-      "affiliation": "기타",
+      "affiliation": "사쿠가와 중학교",
       "sourceName": null,
       "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "affiliationNote": "소속 단체/학교명을 별도 그룹으로 정리한 예비 분류. 최종 검증 필요."
     },
     {
       "id": "roster-028",
@@ -256,10 +256,10 @@
     {
       "id": "roster-031",
       "name": "쇼쿠호 미사키",
-      "affiliation": "기타",
+      "affiliation": "토키와다이 중학교",
       "sourceName": null,
       "reviewStatus": "provisional-school-list-match",
-      "affiliationNote": "학교별 명부 또는 기존 소속 자료를 기준으로 입력한 예비 분류. 최종 검토 필요."
+      "affiliationNote": "소속 단체/학교명을 별도 그룹으로 정리한 예비 분류. 최종 검증 필요."
     },
     {
       "id": "roster-032",
@@ -1464,10 +1464,10 @@
     {
       "id": "roster-182",
       "name": "키요스미 아키라",
-      "affiliation": "기타",
+      "affiliation": "칠수인",
       "sourceName": "清澄アキラ",
       "reviewStatus": "provisional-from-existing-candidate",
-      "affiliationNote": "칠수인. 미리아는 잠입용 신분으로 통합"
+      "affiliationNote": "소속 단체/학교명을 별도 그룹으로 정리한 예비 분류. 최종 검증 필요."
     },
     {
       "id": "roster-183",
@@ -1552,26 +1552,26 @@
     {
       "id": "roster-193",
       "name": "소라",
-      "affiliation": "기타",
+      "affiliation": "엔젤24",
       "sourceName": "ソラ",
       "reviewStatus": "provisional-from-existing-candidate",
-      "affiliationNote": "2026-10-26 갱신 일본어 NPC一覧에서 추가 발견. 사용자 명단 표기와 대조 완료; 학생 여부·개별 스탠딩 일러스트·현재 실장 여부 추가 검증 필요"
+      "affiliationNote": "소속 단체/학교명을 별도 그룹으로 정리한 예비 분류. 최종 검증 필요."
     },
     {
       "id": "roster-194",
       "name": "쿠리하마 아케미",
-      "affiliation": "기타",
+      "affiliation": "칠수인",
       "sourceName": "栗浜アケミ",
       "reviewStatus": "provisional-from-existing-candidate",
-      "affiliationNote": "칠수인"
+      "affiliationNote": "소속 단체/학교명을 별도 그룹으로 정리한 예비 분류. 최종 검증 필요."
     },
     {
       "id": "roster-195",
       "name": "히죽히죽 교수",
-      "affiliation": "기타",
+      "affiliation": "칠수인",
       "sourceName": "ニヤニヤ教授",
       "reviewStatus": "provisional-from-existing-candidate",
-      "affiliationNote": "Sheside Outside에서 실존 인물로 직접 등장. 니야의 사칭과 별개의 인물. 사용자 명단에 포함됨."
+      "affiliationNote": "소속 단체/학교명을 별도 그룹으로 정리한 예비 분류. 최종 검증 필요."
     },
     {
       "id": "roster-196",
@@ -1600,34 +1600,34 @@
     {
       "id": "roster-199",
       "name": "말쿠트",
-      "affiliation": "기타",
+      "affiliation": "데카그라마톤",
       "sourceName": "マルクト",
       "reviewStatus": "provisional-from-existing-candidate",
-      "affiliationNote": "데카그라마톤 예언자"
+      "affiliationNote": "소속 단체/학교명을 별도 그룹으로 정리한 예비 분류. 최종 검증 필요."
     },
     {
       "id": "roster-200",
       "name": "아인",
-      "affiliation": "기타",
+      "affiliation": "데카그라마톤",
       "sourceName": "アイン",
       "reviewStatus": "provisional-from-existing-candidate",
-      "affiliationNote": "아인·소프·오울은 서로 다른 외형이므로 각각 별도 항목"
+      "affiliationNote": "소속 단체/학교명을 별도 그룹으로 정리한 예비 분류. 최종 검증 필요."
     },
     {
       "id": "roster-201",
       "name": "소프",
-      "affiliation": "기타",
+      "affiliation": "데카그라마톤",
       "sourceName": "ソフ",
       "reviewStatus": "provisional-from-existing-candidate",
-      "affiliationNote": "아인·소프·오울은 서로 다른 외형이므로 각각 별도 항목"
+      "affiliationNote": "소속 단체/학교명을 별도 그룹으로 정리한 예비 분류. 최종 검증 필요."
     },
     {
       "id": "roster-202",
       "name": "오르",
-      "affiliation": "기타",
+      "affiliation": "데카그라마톤",
       "sourceName": "オウル",
       "reviewStatus": "provisional-from-existing-candidate",
-      "affiliationNote": "사용자 확인: 오울과 오르는 동일 인물. 한국어 표기는 사용자 지정에 따라 오르로 통일"
+      "affiliationNote": "소속 단체/학교명을 별도 그룹으로 정리한 예비 분류. 최종 검증 필요."
     },
     {
       "id": "roster-203",
@@ -1645,6 +1645,7 @@
     "모브는 이번 작업 범위에서 제외함.",
     "학교별 목록 참고: Game8 학교별 캐릭터 목록(2026-07-17 갱신), 神ゲー攻略 학교·부활동 목록(2026-09-09 갱신).",
     "학교별 명부를 참고해 추가 133개 항목에 예비 소속을 입력함. 기존 51개와 합산한 분류 입력 수는 184/203개이며, 겹치는 항목은 중복 집계하지 않음.",
-    "2026-11-08 학교별 명부에서 남은 19개 항목의 소속을 추가 확인하여 입력함. 전체 203개 항목에 예비 소속값을 입력했으나, 일부 인물의 소속은 별도 단체/특수 설정에 해당할 수 있어 최종 검증 전 상태임."
+    "2026-11-08 학교별 명부에서 남은 19개 항목의 소속을 추가 확인하여 입력함. 전체 203개 항목에 예비 소속값을 입력했으나, 일부 인물의 소속은 별도 단체/특수 설정에 해당할 수 있어 최종 검증 전 상태임.",
+    "기타로 임시 입력했던 인물 중 소속 단체가 특정되는 11명은 토키와다이 중학교, 사쿠가와 중학교, 칠수인, 엔젤24, 데카그라마톤으로 세분화함. 남은 기타 항목은 소속 확인이 더 필요한 인물임."
   ]
 }

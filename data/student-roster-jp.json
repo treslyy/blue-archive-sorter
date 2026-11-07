@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "sourceUpdated": "2026-10-30",
   "compiledFor": "JP server",
-  "status": "review-draft",
+  "status": "do-not-import-incomplete",
   "notes": [
-    "This is a review draft of original playable students, with outfit/seasonal variants merged.",
-    "Collaboration characters are excluded.",
-    "Check the special derivative entries and the 2026-11-08 latest JP updates before importing into characters.json.",
-    "Image paths are intentionally blank until assets are collected.",
-    "Roster entries were cross-checked against the 2026-10-30 Korean student roster; verify against official JP additions after that date before production import."
+    "IMPORTANT: This manually assembled draft is incomplete and contains entries that have not been individually verified.",
+    "Do not use this file as the production roster or as a source of truth.",
+    "Rebuild the playable-student roster from a current Japanese-server dataset, then cross-check each unique character against official JP announcements and the NPC list.",
+    "Merge outfit/seasonal variants into one character. Keep special alternate identities only if the user confirms they should be separate.",
+    "The third-party API page currently displays 278 outfit-inclusive records, while its API documentation sample reports 150 base students; these counts must not be treated as the final deduplicated JP roster without checking its actual endpoint and update date."
   ],
   "students": [
     {
@@ -1035,6 +1035,23 @@
       "name": "시치도 유키노",
       "school": "SRT",
       "type": "unreleased"
+    }
+  ],
+  "sourceNotes": [
+    {
+      "title": "Blue Archive API student database",
+      "url": "https://bluearchive-api.skyia.jp/",
+      "note": "Page shows 278 entries including costume variants."
+    },
+    {
+      "title": "Blue Archive API documentation",
+      "url": "https://bluearchive-api.skyia.jp/api-docs",
+      "note": "GET /api/students endpoint; documentation example indicates 150 records, so verify actual endpoint response before use."
+    },
+    {
+      "title": "Game8 school-by-school student list",
+      "url": "https://game8.jp/blue-archive/655057",
+      "note": "Last updated 2026-07-17; useful cross-check but stale for 2026-11-08."
     }
   ]
 }

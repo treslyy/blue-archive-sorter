@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "updated": "2026-11-08",
+  "characters": [
+    {
+      "id": "test-a",
+      "name": "테스트 A (기준)",
+      "school": "테스트",
+      "type": "student",
+      "image": "images/test-a.webp"
+    },
+    {
+      "id": "test-b",
+      "name": "테스트 B (A보다 낮음)",
+      "school": "테스트",
+      "type": "student"
+    },
+    {
+      "id": "test-c",
+      "name": "테스트 C (중간)",
+      "school": "테스트",
+      "type": "student"
+    },
+    {
+      "id": "test-d",
+      "name": "테스트 D (C와 동률)",
+      "school": "테스트",
+      "type": "student"
+    },
+    {
+      "id": "test-e",
+      "name": "테스트 E (최상위)",
+      "school": "테스트",
+      "type": "student"
+    }
+  ]
+}

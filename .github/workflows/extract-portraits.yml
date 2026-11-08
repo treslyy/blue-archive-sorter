@@ -1,0 +1,91 @@
+name: Import portrait ZIPs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Extract and validate portrait archives
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, zipfile
+          from pathlib import Path, PurePosixPath
+
+          repo = Path(".")
+          archives = [repo / "portrait-part-1.zip", repo / "portrait-part-2.zip"]
+          for archive in archives:
+              if not archive.is_file():
+                  raise SystemExit(f"Missing archive: {archive.name}")
+
+          output = repo / "assets" / "portraits"
+          output.mkdir(parents=True, exist_ok=True)
+          allowed = {".png", ".jpg", ".jpeg", ".webp"}
+          all_entries = []
+          seen = set()
+          total_images = 0
+          failures = 0
+
+          for archive in archives:
+              with zipfile.ZipFile(archive) as z:
+                  names = z.namelist()
+                  manifest_names = [n for n in names if PurePosixPath(n).name.lower() == "manifest.json"]
+                  if not manifest_names:
+                      raise SystemExit(f"{archive.name}: manifest.json not found")
+                  manifest = json.loads(z.read(manifest_names[0]).decode("utf-8"))
+                  chars = manifest.get("characters", [])
+                  failures += int(manifest.get("failed", 0) or 0)
+                  all_entries.extend(chars)
+
+                  for info in z.infolist():
+                      if info.is_dir():
+                          continue
+                      p = PurePosixPath(info.filename)
+                      if p.suffix.lower() not in allowed:
+                          continue
+                      name = p.name
+                      if not name or name in seen:
+                          raise SystemExit(f"Duplicate or invalid image filename: {name}")
+                      seen.add(name)
+                      (output / name).write_bytes(z.read(info))
+                      total_images += 1
+
+          if total_images == 0:
+              raise SystemExit("No portrait images were found in the ZIP archives.")
+
+          (output / "manifest.json").write_text(
+              json.dumps({
+                  "source": "portrait-part-1.zip + portrait-part-2.zip",
+                  "imageCount": total_images,
+                  "reportedFailures": failures,
+                  "characters": all_entries
+              }, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8"
+          )
+
+          print(f"Extracted images: {total_images}")
+          print(f"Manifest character records: {len(all_entries)}")
+          print(f"Reported download failures: {failures}")
+
+          # Remove the temporary archives only after successful extraction.
+          for archive in archives:
+              archive.unlink()
+          PY
+
+      - name: Commit extracted portraits
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/portraits portrait-part-1.zip portrait-part-2.zip
+          git commit -m "Import Blue Archive portrait images"
+          git push

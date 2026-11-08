@@ -154,6 +154,13 @@ $("resumeButton").addEventListener("click",resumeSort);
 $("leftChoice").addEventListener("click",()=>choose("left"));
 $("rightChoice").addEventListener("click",()=>choose("right"));
 $("tieButton").addEventListener("click",()=>choose("tie"));
+document.addEventListener("keydown",event=>{
+  if($("sortPanel").hidden || !current || event.altKey || event.ctrlKey || event.metaKey) return;
+  if(event.key==="ArrowLeft" || event.key==="ArrowRight" || event.key==="ArrowDown"){
+    event.preventDefault();
+    choose(event.key==="ArrowLeft"?"left":event.key==="ArrowRight"?"right":"tie");
+  }
+});
 $("undoButton").addEventListener("click",()=>{const s=history.pop();if(!s)return;restoreSnapshot(s);showComparison();saveProgress();});
 $("stopButton").addEventListener("click",()=>{$("sortPanel").hidden=true;$("setup").hidden=false;saveProgress();});
 $("resetButton").addEventListener("click",()=>{if(confirm("저장된 진행 상황을 삭제할까요?")){localStorage.removeItem(STORAGE_KEY);$("resumeButton").hidden=true;}});

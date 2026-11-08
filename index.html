@@ -19,15 +19,15 @@
     <section id="setup" class="panel">
       <h2>정렬 설정</h2>
       <div class="filters">
-        <label>학교
-          <select id="schoolFilter"><option value="">전체</option></select>
-        </label>
-        <label>분류
-          <select id="typeFilter">
-            <option value="">전체</option><option value="student">학생</option><option value="npc">NPC</option><option value="mob">모브</option>
-          </select>
-        </label>
-        <label>이름 검색
+        <fieldset class="school-filter">
+          <legend>학교 선택</legend>
+          <div class="school-filter-actions">
+            <button type="button" id="selectAllSchools" class="quiet">전체 선택</button>
+            <button type="button" id="clearSchools" class="quiet">전체 해제</button>
+          </div>
+          <div id="schoolCheckboxes" class="school-checkboxes"></div>
+        </fieldset>
+        <label class="search-filter">이름 검색
           <input id="searchInput" type="search" placeholder="캐릭터 이름">
         </label>
       </div>

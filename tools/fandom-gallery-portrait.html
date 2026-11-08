@@ -55,7 +55,7 @@ async function findGalleryPage(roman){
  const exact=roman.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ')+'/Gallery';
  const direct=await api({action:'query',titles:exact,prop:'info'});
  const directPage=Object.values(direct.query?.pages||{})[0];
- if(directPage&&!directPage.missing)return exact;
+ if(directPage&&!directPage.missing)return exact.replace(/\\/Gallery$/i,'');
  for(const q of [roman+' Portrait',roman+' Gallery',roman]){
   const d=await api({action:'query',list:'search',srnamespace:0,srsearch:q,srlimit:12});
   const hits=d.query?.search||[];

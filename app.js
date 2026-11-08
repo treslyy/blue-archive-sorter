@@ -150,16 +150,30 @@ function finishSort() {
   $("resultSummary").textContent=`${total}명의 정렬이 완료되었습니다. 공동 순위는 같은 순위로 표시됩니다.`;
   $("topRanking").replaceChildren();
   $("rankingList").replaceChildren();
-  let rank=1;
+  let rank=1, topCardCount=0, textColumn=null, textColumnCount=0;
   rankedGroups.forEach(group=>{
     group.forEach(c=>{
       if(rank>10){
+        if(!textColumn || textColumnCount>=40){
+          textColumn=document.createElement("ol");
+          textColumn.className="ranking";
+          $("rankingList").append(textColumn);
+          textColumnCount=0;
+        }
         const li=document.createElement("li");
         li.textContent=rank+"위 · "+c.name;
         if(group.length>1)li.textContent+=" (공동 "+group.length+"명)";
-        $("rankingList").append(li);
+        textColumn.append(li);
+        textColumnCount++;
       }
       if(rank<=10){
+        const columnIndex=Math.floor(topCardCount/5);
+        let column=$("topRanking").children[columnIndex];
+        if(!column){
+          column=document.createElement("div");
+          column.className="top-ranking-column";
+          $("topRanking").append(column);
+        }
         const card=document.createElement("article");card.className="top-card";
         if(c.image){
           const img=document.createElement("img");img.src=c.image;img.alt=c.name;img.loading="lazy";
@@ -170,7 +184,7 @@ function finishSort() {
         }
         const label=document.createElement("strong");label.textContent=rank+"위"+(group.length>1?" (공동 "+group.length+"명)":"");
         const name=document.createElement("span");name.textContent=c.name;
-        card.append(label,name);$("topRanking").append(card);
+        card.append(label,name);column.append(card);topCardCount++;
       }
     });
     rank+=group.length;

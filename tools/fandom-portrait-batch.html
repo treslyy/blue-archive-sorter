@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>블루 아카이브 포트레이트 일괄 검색</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#202124;background:#fafafa}body{max-width:1100px;margin:28px auto;padding:0 16px;line-height:1.55}h1{font-size:1.65rem}button{padding:9px 13px;border:1px solid #999;border-radius:8px;background:#fff;cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.bar{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.status{white-space:pre-wrap;background:#eee;padding:12px;border-radius:8px}.note{color:#555;font-size:.93rem}.item{display:grid;grid-template-columns:28px 110px minmax(170px,1fr) minmax(200px,1.4fr);gap:12px;align-items:center;padding:10px;border-bottom:1px solid #ddd;background:white}.item img{max-width:100px;max-height:170px;object-fit:contain;background:#eee}.muted{color:#777}.candidate{overflow-wrap:anywhere;font-size:.9rem}.tag{font-size:.8rem;border-radius:5px;background:#eee;padding:2px 6px}.item input{width:18px;height:18px}@media(max-width:650px){.item{grid-template-columns:25px 72px 1fr}.item img{max-width:68px}.candidate{grid-column:2/4}}
+</style>
+</head>
+<body>
+<h1>블루 아카이브 포트레이트 일괄 검색</h1>
+<p>기준 명단 203명을 Fandom 파일 검색 API로 조회합니다. 현재 명단에는 일본어 원문명이 없으므로, 우선 한국어 이름의 마지막 단어를 검색어로 사용합니다. 검색 결과는 후보일 뿐이며, <b>이 화면에서 선택한 파일만</b> 내려받습니다. 이름이 비슷하다는 이유만으로 자동 확정하지 않습니다.</p>
+<div class="bar">
+<button id="search">203명 검색 시작</button><button id="select">검색된 항목 선택</button><button id="clear">선택 해제</button><button id="download" disabled>선택 항목 다운로드</button>
+</div>
+<div id="status" class="status">대기 중입니다.</div>
+<p class="note">이미지 미리보기가 맞는지 확인한 뒤 체크해 주세요. 브라우저가 여러 파일 다운로드를 차단할 수 있습니다. 이 도구는 기존 명단과 production 캐릭터 데이터를 수정하지 않습니다.</p>
+<div id="results"></div>
+<script>
+const API='https://bluearchive.fandom.com/api.php';
+const ROSTER='https://raw.githubusercontent.com/treslyy/blue-archive-sorter/main/data/character-affiliations-candidate.json';
+const $=id=>document.getElementById(id), say=s=>$('status').textContent=s;
+let rows=[];
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+async function api(params){
+ const u=new URL(API); for(const [k,v] of Object.entries({...params,origin:'*',format:'json'}))u.searchParams.set(k,v);
+ const r=await fetch(u); if(!r.ok)throw new Error('HTTP '+r.status); return r.json();
+}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function render(){
+ $('results').innerHTML=rows.map((x,i)=>`<div class="item">
+ <input type="checkbox" data-i="${i}" ${x.selected?'checked':''} ${x.url?'':'disabled'} aria-label="선택">
+ <div>${x.url?`<img src="${esc(x.thumb||x.url)}" alt="">`:'<span class="muted">미리보기 없음</span>'}</div>
+ <div><b>${esc(x.name)}</b><br><span class="tag">${esc(x.affiliation)}</span><br><small class="muted">${esc(x.query)}</small></div>
+ <div class="candidate">${x.url?`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a><br><span class="muted">${x.width||'?'} × ${x.height||'?'} · ${esc(x.mime||'')}</span>`:'<span class="muted">'+esc(x.error||'검색 결과 없음')+'</span>'}</div>
+ </div>`).join('');
+ $('download').disabled=!rows.some(x=>x.selected&&x.url);
+}
+$('results').addEventListener('change',e=>{if(e.target.matches('input[type=checkbox]')){rows[+e.target.dataset.i].selected=e.target.checked;$('download').disabled=!rows.some(x=>x.selected&&x.url);}});
+$('search').onclick=async()=>{
+ $('search').disabled=true;$('results').replaceChildren();rows=[];say('명단 불러오는 중…');
+ try{
+  const rr=await fetch(ROSTER);if(!rr.ok)throw new Error('기준 명단을 불러오지 못했습니다.');const data=await rr.json();
+  rows=data.entries.map(e=>({name:e.name,affiliation:e.affiliation,query:e.name.trim().split(/\s+/).at(-1)+' Portrait',url:null,selected:false}));
+  render();let done=0,active=0,index=0;const total=rows.length;
+  async function worker(){while(index<total){const i=index++;const x=rows[i];try{
+    const s=await api({action:'query',list:'search',srnamespace:6,srsearch:x.query,srlimit:8});
+    const hits=(s.query?.search||[]).filter(h=>/portrait/i.test(h.title));
+    if(!hits.length){x.error='Portrait 파일 검색 결과 없음';}
+    else{
+      const chosen=hits[0];const info=await api({action:'query',prop:'imageinfo',iiprop:'url|size|mime',iiurlwidth:180,titles:chosen.title});
+      const page=Object.values(info.query?.pages||{})[0],ii=page?.imageinfo?.[0];
+      if(ii){x.title=chosen.title;x.url=ii.url;x.thumb=ii.thumburl||ii.url;x.width=ii.width;x.height=ii.height;x.mime=ii.mime;}
+      else x.error='이미지 원본 정보를 가져오지 못함';
+    }
+   }catch(err){x.error='조회 실패: '+err.message;}
+   done++;say('검색 진행: '+done+'/'+total+'명\n현재 결과 '+rows.filter(y=>y.url).length+'개 · 확인이 필요한 항목은 직접 미리보기와 파일명을 대조해 주세요.');render();
+  }}
+  await Promise.all(Array.from({length:4},worker));
+  say('검색 완료: '+done+'/'+total+'명\n파일 후보 '+rows.filter(x=>x.url).length+'개 / 결과 없음·오류 '+rows.filter(x=>!x.url).length+'개. 후보는 자동 검증된 정답이 아닙니다.');
+ }catch(e){say('오류: '+e.message);}
+ finally{$('search').disabled=false;}
+};
+$('select').onclick=()=>{rows.forEach(x=>{if(x.url)x.selected=true;});render();};
+$('clear').onclick=()=>{rows.forEach(x=>x.selected=false);render();};
+$('download').onclick=async()=>{
+ const selected=rows.filter(x=>x.selected&&x.url);if(!selected.length)return;
+ $('download').disabled=true;let n=0;
+ for(const x of selected){try{
+   const r=await fetch(x.url);if(!r.ok)throw new Error('다운로드 실패');
+   const blob=await r.blob(),a=document.createElement('a'),obj=URL.createObjectURL(blob);
+   a.href=obj;a.download=x.title.replace(/^File:/,'').replace(/[^a-z0-9._-]/gi,'_');document.body.append(a);a.click();a.remove();URL.revokeObjectURL(obj);n++;
+  }catch(e){window.open(x.url,'_blank','noopener');}
+  say('다운로드 요청: '+n+'/'+selected.length+'개');await sleep(450);
+ }
+ say('다운로드 요청 완료: '+n+'/'+selected.length+'개. 브라우저 다운로드 목록에서 실제 저장 여부를 확인해 주세요.');
+ $('download').disabled=false;
+};
+</script>
+</body>
+</html>

@@ -70,26 +70,36 @@ async function findGalleryPage(roman){
 async function galleryPortrait(title,roman){
  const preferred=title==='Kosaka Wakamo'?['Portrait (Unmask)','Portrait']:['Portrait'];
  async function imageInfoFromItem(item,label){
-   const links=[...item.querySelectorAll('a[href*="File:"],a[href*="/wiki/"]')];
-   const imgs=[...item.querySelectorAll('img')];
-   let file='';
-   for(const link of links){
-     const raw=link.getAttribute('href')||'';
-     const match=raw.match(/(?:File:|Special:Redirect\/file\/)([^?#]+)/i);
-     if(match){file=decodeURIComponent(match[1].replace(/_/g,' '));break;}
+   // 넓은 부모에 Icon과 Portrait가 함께 있을 수 있으므로, 파일명에 Portrait가 명시된 이미지부터 찾는다.
+   const candidates=[];
+   for(const img of [...item.querySelectorAll('img')]){
+     const metadata=[img.getAttribute('data-image-name'),img.getAttribute('data-file-name'),img.getAttribute('alt'),img.getAttribute('title')].filter(Boolean);
+     const src=img.getAttribute('data-src')||img.getAttribute('src')||'';
+     const srcMatch=src.match(/\/([^/?#]+\.(?:png|jpg|jpeg|webp))(?:[/?#]|$)/i);
+     if(srcMatch)metadata.push(decodeURIComponent(srcMatch[1]));
+     const link=img.closest('a[href]');
+     const href=link?.getAttribute('href')||'';
+     const fileMatch=href.match(/(?:File:|Special:Redirect\/file\/)([^?#]+)/i);
+     if(fileMatch)metadata.push(decodeURIComponent(fileMatch[1].replace(/_/g,' ')));
+     const file=metadata.find(v=>/\.(?:png|jpg|jpeg|webp)(?:$|[?#])/i.test(v))||metadata.find(v=>/portrait/i.test(v))||'';
+     if(!file||/\bicon\b/i.test(file)||!/portrait/i.test(file))continue;
+     candidates.push({file:file.replace(/^File:/i,'').trim()});
    }
-   if(!file){
-     for(const img of imgs){
-       file=img.getAttribute('data-image-name')||img.getAttribute('data-file-name')||'';
-       if(!file){const src=img.getAttribute('data-src')||img.getAttribute('src')||'';const m=src.match(/\/([^/]+\.(?:png|jpg|jpeg|webp))(?:\/|$)/i);if(m)file=decodeURIComponent(m[1]);}
-       if(file)break;
+   // img와 분리된 파일 링크도 보조적으로 확인한다.
+   if(!candidates.length){
+     for(const a of [...item.querySelectorAll('a[href*="File:"]')]){
+       const m=(a.getAttribute('href')||'').match(/File:([^?#]+)/i);
+       if(m){
+         const file=decodeURIComponent(m[1].replace(/_/g,' '));
+         if(/portrait/i.test(file)&&!/\bicon\b/i.test(file))candidates.push({file});
+       }
      }
    }
-   file=file.replace(/^File:/i,'').trim();
-   if(!file)return null;
-   const info=await api({action:'query',prop:'imageinfo',iiprop:'url|size|mime',iiurlwidth:180,titles:'File:'+file});
-   const imagePage=Object.values(info.query?.pages||{})[0],ii=imagePage?.imageinfo?.[0];
-   if(ii)return {file,url:ii.url,thumb:ii.thumburl||ii.url,width:ii.width,height:ii.height,matchType:label};
+   for(const candidate of candidates){
+     const info=await api({action:'query',prop:'imageinfo',iiprop:'url|size|mime',iiurlwidth:180,titles:'File:'+candidate.file});
+     const imagePage=Object.values(info.query?.pages||{})[0],ii=imagePage?.imageinfo?.[0];
+     if(ii)return {file:candidate.file,url:ii.url,thumb:ii.thumburl||ii.url,width:ii.width,height:ii.height,matchType:label};
+   }
    return null;
  }
  function normLabel(s){return (s||'').replace(/\[\s*\]/g,'').replace(/\s+/g,' ').trim().toLowerCase();}

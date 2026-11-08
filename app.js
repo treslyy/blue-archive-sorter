@@ -15,7 +15,20 @@ async function loadData() {
     const ids = allCharacters.map(c => c.id);
     if (new Set(ids).size !== ids.length) throw new Error("캐릭터 데이터에 중복된 id가 있습니다.");
     const schools = [...new Set(allCharacters.map(c => c.school).filter(Boolean))].sort();
-    schools.forEach(school => { const o=document.createElement("option");o.value=school;o.textContent=school;$("schoolFilter").append(o); });
+    const schoolContainer = $("schoolCheckboxes");
+    schools.forEach(school => {
+      const label = document.createElement("label");
+      label.className = "school-option";
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.value = school;
+      checkbox.checked = true;
+      checkbox.addEventListener("change", updateSetup);
+      const name = document.createElement("span");
+      name.textContent = school;
+      label.append(checkbox, name);
+      schoolContainer.append(label);
+    });
     updateSetup();
     $("resumeButton").hidden = !localStorage.getItem(STORAGE_KEY);
     if (!allCharacters.length) $("rosterStatus").textContent = "현재 캐릭터 데이터가 비어 있습니다. characters.json에 캐릭터를 추가하면 정렬할 수 있습니다.";
@@ -23,17 +36,26 @@ async function loadData() {
   } catch (e) { $("rosterStatus").textContent = e.message + " GitHub Pages 주소에서 접속해 주세요."; }
 }
 function getFiltered() {
-  const school=$("schoolFilter").value,type=$("typeFilter").value,q=$("searchInput").value.trim().toLowerCase();
-  return allCharacters.filter(c=>(!school||c.school===school)&&(!type||c.type===type)&&(!q||c.name.toLowerCase().includes(q)));
+  const selectedSchools = new Set([...document.querySelectorAll("#schoolCheckboxes input:checked")].map(input => input.value));
+  const q = $("searchInput").value.trim().toLowerCase();
+  return allCharacters.filter(c => selectedSchools.has(c.school) && (!q || c.name.toLowerCase().includes(q)));
 }
 function updateSetup() {
   activeCharacters=getFiltered();
   $("rosterStatus").textContent = TEST_MODE
-    ? `검토용 테스트 데이터 · 선택 ${activeCharacters.length}명 / 전체 ${allCharacters.length}명 (NPC ${allCharacters.filter(c=>c.type==="npc").length}명 · 모브 ${allCharacters.filter(c=>c.type==="mob").length}종) · 정식 명단에는 반영되지 않습니다.`
+    ? `검토용 테스트 데이터 · 선택 ${activeCharacters.length}명 / 전체 ${allCharacters.length}명 · 정식 명단에는 반영되지 않습니다.`
     : `선택된 캐릭터: ${activeCharacters.length}명 / 전체 ${allCharacters.length}명`;
   $("startButton").disabled=activeCharacters.length<2;
 }
-["schoolFilter","typeFilter","searchInput"].forEach(id=>$ (id).addEventListener(id==="searchInput"?"input":"change",updateSetup));
+$("searchInput").addEventListener("input", updateSetup);
+$("selectAllSchools").addEventListener("click", () => {
+  document.querySelectorAll("#schoolCheckboxes input").forEach(input => { input.checked = true; });
+  updateSetup();
+});
+$("clearSchools").addEventListener("click", () => {
+  document.querySelectorAll("#schoolCheckboxes input").forEach(input => { input.checked = false; });
+  updateSetup();
+});
 
 function snapshot() {
   return JSON.stringify({rankedGroups:rankedGroups.map(g=>g.map(c=>c.id)),pending:pending.map(c=>c.id),current:current?.id||null,low,high,mid,comparisonsDone});

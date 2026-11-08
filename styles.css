@@ -65,3 +65,7 @@ footer{text-align:center;padding:12px 0 30px;font-size:.85rem}
 .roster-viewer-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .roster-viewer-header h3{margin:0;color:var(--navy)}
 .roster-text{max-height:420px;overflow:auto;margin:12px 0 0;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65}
+
+
+/* Separate the TOP 10 gallery from the remaining text ranking */
+#rankingList{margin-top:14px}

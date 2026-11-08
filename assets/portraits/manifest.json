@@ -1,77 +1,7 @@
 {
   "source": "user-uploaded ZIP archives",
-  "imageCount": 203,
+  "imageCount": 204,
   "images": [
-    {
-      "file": "Ichika_Portrait.png",
-      "sourceArchive": "portrait-part-1.zip",
-      "bytes": 119214
-    },
-    {
-      "file": "Iori_Portrait.png",
-      "sourceArchive": "portrait-part-1.zip",
-      "bytes": 168308
-    },
-    {
-      "file": "Iroha_Portrait.png",
-      "sourceArchive": "portrait-part-1.zip",
-      "bytes": 90474
-    },
-    {
-      "file": "Izumi_Portrait.png",
-      "sourceArchive": "portrait-part-1.zip",
-      "bytes": 147924
-    },
-    {
-      "file": "Izuna_Portrait.png",
-      "sourceArchive": "portrait-part-1.zip",
-      "bytes": 185522
-    },
-    {
-      "file": "Junko_Portrait.png",
-      "sourceArchive": "portrait-part-1.zip",
-      "bytes": 297792
-    },
-    {
-      "file": "Juri_Portrait.png",
-      "sourceArchive": "portrait-part-1.zip",
-      "bytes": 114744
-    },
-    {
-      "file": "Kaede_Portrait.png",
-      "sourceArchive": "portrait-part-1.zip",
-      "bytes": 127484
-    },
-    {
-      "file": "Kaguya_Portrait.png",
-      "sourceArchive": "portrait-part-1.zip",
-      "bytes": 236302
-    },
-    {
-      "file": "Kaho_Portrait.png",
-      "sourceArchive": "portrait-part-1.zip",
-      "bytes": 155588
-    },
-    {
-      "file": "Kai_Portrait.png",
-      "sourceArchive": "portrait-part-1.zip",
-      "bytes": 121266
-    },
-    {
-      "file": "Kanae_Portrait.png",
-      "sourceArchive": "portrait-part-1.zip",
-      "bytes": 111782
-    },
-    {
-      "file": "Kanna_Portrait.png",
-      "sourceArchive": "portrait-part-1.zip",
-      "bytes": 82798
-    },
-    {
-      "file": "Kanoe_Portrait.png",
-      "sourceArchive": "portrait-part-1.zip",
-      "bytes": 99476
-    },
     {
       "file": "Airi_Portrait.png",
       "sourceArchive": "portrait-part-1.zip",
@@ -96,6 +26,11 @@
       "file": "Akira_Mask_Portrait.png",
       "sourceArchive": "portrait-part-1.zip",
       "bytes": 132970
+    },
+    {
+      "file": "Akira_Unmask_Portrait.webp",
+      "sourceArchive": "manual-upload",
+      "bytes": 174290
     },
     {
       "file": "Ako_Portrait.png",
@@ -336,6 +271,76 @@
       "file": "Ibuki_Portrait.png",
       "sourceArchive": "portrait-part-1.zip",
       "bytes": 331880
+    },
+    {
+      "file": "Ichika_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 119214
+    },
+    {
+      "file": "Iori_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 168308
+    },
+    {
+      "file": "Iroha_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 90474
+    },
+    {
+      "file": "Izumi_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 147924
+    },
+    {
+      "file": "Izuna_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 185522
+    },
+    {
+      "file": "Junko_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 297792
+    },
+    {
+      "file": "Juri_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 114744
+    },
+    {
+      "file": "Kaede_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 127484
+    },
+    {
+      "file": "Kaguya_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 236302
+    },
+    {
+      "file": "Kaho_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 155588
+    },
+    {
+      "file": "Kai_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 121266
+    },
+    {
+      "file": "Kanae_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 111782
+    },
+    {
+      "file": "Kanna_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 82798
+    },
+    {
+      "file": "Kanoe_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 99476
     },
     {
       "file": "Karen_Portrait.png",

@@ -81,7 +81,7 @@ async function galleryPortrait(title,roman){
      const href=link?.getAttribute('href')||'';
      const fileMatch=href.match(/(?:File:|Special:Redirect\/file\/)([^?#]+)/i);
      if(fileMatch)metadata.push(decodeURIComponent(fileMatch[1].replace(/_/g,' ')));
-     const file=metadata.find(v=>/\.(?:png|jpg|jpeg|webp)(?:$|[?#])/i.test(v))||metadata.find(v=>/portrait/i.test(v))||'';
+     const file=metadata.find(v=>/portrait/i.test(v)&&/\.(?:png|jpg|jpeg|webp)(?:$|[?#])/i.test(v))||metadata.find(v=>/\.(?:png|jpg|jpeg|webp)(?:$|[?#])/i.test(v))||'';
      if(!file||/\bicon\b/i.test(file)||!/portrait/i.test(file))continue;
      candidates.push({file:file.replace(/^File:/i,'').trim()});
    }

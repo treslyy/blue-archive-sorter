@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#edf8ff">
   <title>블루 아카이브 캐릭터 소트</title>
-  <link rel="stylesheet" href="styles.css?v=result-layout-2">
+  <link rel="stylesheet" href="styles.css?v=roster-view-1">
 </head>
 <body>
   <header class="site-header">
@@ -33,10 +33,19 @@
       </div>
       <p id="rosterStatus" class="muted"></p>
       <div class="actions">
+        <button type="button" id="showRosterButton">전체 학생 목록 보기</button>
         <button id="startButton" class="primary" disabled>정렬 시작</button>
         <button id="resumeButton" hidden>이어서 하기</button>
         <button id="resetButton" class="quiet">진행 상황 초기화</button>
       </div>
+      <section id="rosterViewer" class="roster-viewer" hidden aria-label="전체 학생 목록">
+        <div class="roster-viewer-header">
+          <h3>전체 학생 목록</h3>
+          <button type="button" id="hideRosterButton" class="quiet">닫기</button>
+        </div>
+        <p class="muted">학교별로 정리한 전체 학생 명단입니다. 이름은 한 줄에 하나씩 표시됩니다.</p>
+        <pre id="rosterText" class="roster-text"></pre>
+      </section>
       <details>
         <summary>캐릭터 데이터 추가 방법</summary>
         <p><code>characters.json</code> 파일에 캐릭터 정보를 추가한 뒤 GitHub 저장소에 반영하면 됩니다. 이미지 파일은 <code>images/</code> 폴더에 넣고, <code>image</code>에는 파일 경로를 적습니다.</p>
@@ -77,6 +86,6 @@
     </section>
     <footer><p>개인 취향 정렬 도구 · 데이터와 이미지는 별도로 관리됩니다.</p></footer>
   </main>
-  <script src="app.js?v=result-layout-2"></script>
+  <script src="app.js?v=roster-view-1"></script>
 </body>
 </html>

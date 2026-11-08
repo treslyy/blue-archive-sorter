@@ -68,47 +68,99 @@ async function findGalleryPage(roman){
  return null;
 }
 async function galleryPortrait(title,roman){
- // Gallery의 전체 이미지 목록이 아니라 Default 구역 안에서 캡션이 정확히 Portrait인 항목만 선택합니다.
- const pageTitle=title+'/Gallery';
- const parsed=await api({action:'parse',page:pageTitle,prop:'text'});
- const html=parsed.parse?.text?.['*'];
- if(!html)return null;
- const doc=new DOMParser().parseFromString(html,'text/html');
- const headings=[...doc.querySelectorAll('h2,h3,h4,h5,h6')];
- const cleanText=s=>(s||'').replace(/\[\s*\]/g,'').replace(/\s+/g,' ').trim().toLowerCase();
- const headingText=h=>{const c=h.cloneNode(true);c.querySelectorAll('.mw-editsection,.editsection').forEach(e=>e.remove());return cleanText(c.textContent);};
- const defaultHeading=headings.find(h=>headingText(h)==='default');
- if(!defaultHeading)return null;
- const level=Number(defaultHeading.tagName.slice(1));
- const section=[];
- for(let node=defaultHeading.nextElementSibling;node;node=node.nextElementSibling){
-   if(/^H[2-6]$/.test(node.tagName)&&Number(node.tagName.slice(1))<=level)break;
-   section.push(node);
- }
- const root=document.createElement('div');
- section.forEach(node=>root.append(node.cloneNode(true)));
- const candidates=[...root.querySelectorAll('figure,.gallerybox,.wikia-gallery-item,.gallery-item,li')];
- for(const item of candidates){
-   const caption=item.querySelector('figcaption,.gallerytext,.lightbox-caption,.caption')||item;
-   if(cleanText(caption.textContent)!=='portrait')continue;
-   const link=item.querySelector('a[href*="File:"],a[href*="/wiki/"]');
-   const img=item.querySelector('img');
+ const preferred=title==='Kosaka Wakamo'?['Portrait (Unmask)','Portrait']:['Portrait'];
+ async function imageInfoFromItem(item,label){
+   const links=[...item.querySelectorAll('a[href*="File:"],a[href*="/wiki/"]')];
+   const imgs=[...item.querySelectorAll('img')];
    let file='';
-   if(link){
+   for(const link of links){
      const raw=link.getAttribute('href')||'';
      const match=raw.match(/(?:File:|Special:Redirect\/file\/)([^?#]+)/i);
-     if(match)file=decodeURIComponent(match[1].replace(/_/g,' '));
+     if(match){file=decodeURIComponent(match[1].replace(/_/g,' '));break;}
    }
-   if(!file&&img){
-     file=img.getAttribute('data-image-name')||img.getAttribute('data-file-name')||'';
-     if(!file){const src=img.getAttribute('data-src')||img.getAttribute('src')||'';const m=src.match(/\/([^/]+\.(?:png|jpg|jpeg|webp))(?:\/|$)/i);if(m)file=decodeURIComponent(m[1]);}
+   if(!file){
+     for(const img of imgs){
+       file=img.getAttribute('data-image-name')||img.getAttribute('data-file-name')||'';
+       if(!file){const src=img.getAttribute('data-src')||img.getAttribute('src')||'';const m=src.match(/\/([^/]+\.(?:png|jpg|jpeg|webp))(?:\/|$)/i);if(m)file=decodeURIComponent(m[1]);}
+       if(file)break;
+     }
    }
    file=file.replace(/^File:/i,'').trim();
-   if(!file)continue;
+   if(!file)return null;
    const info=await api({action:'query',prop:'imageinfo',iiprop:'url|size|mime',iiurlwidth:180,titles:'File:'+file});
    const imagePage=Object.values(info.query?.pages||{})[0],ii=imagePage?.imageinfo?.[0];
-   if(ii)return {file,url:ii.url,thumb:ii.thumburl||ii.url,width:ii.width,height:ii.height,matchType:'Default / Portrait'};
+   if(ii)return {file,url:ii.url,thumb:ii.thumburl||ii.url,width:ii.width,height:ii.height,matchType:label};
+   return null;
  }
+ function normLabel(s){return (s||'').replace(/\[\s*\]/g,'').replace(/\s+/g,' ').trim().toLowerCase();}
+ async function extractFromHtml(html,mode){
+   if(!html)return null;
+   const doc=new DOMParser().parseFromString(html,'text/html');
+   let root=doc;
+   if(mode==='gallery'){
+     const headings=[...doc.querySelectorAll('h2,h3,h4,h5,h6')];
+     const headingText=h=>{const c=h.cloneNode(true);c.querySelectorAll('.mw-editsection,.editsection').forEach(e=>e.remove());return normLabel(c.textContent);};
+     const defaultHeading=headings.find(h=>headingText(h)==='default');
+     if(defaultHeading){
+       const level=Number(defaultHeading.tagName.slice(1)),section=[];
+       for(let node=defaultHeading.nextElementSibling;node;node=node.nextElementSibling){
+         if(/^H[2-6]$/.test(node.tagName)&&Number(node.tagName.slice(1))<=level)break;
+         section.push(node);
+       }
+       root=document.createElement('div');section.forEach(node=>root.append(node.cloneNode(true)));
+     }
+   }
+   const selectors='figure,.gallerybox,.wikia-gallery-item,.gallery-item,li,div,span';
+   const nodes=[...root.querySelectorAll(selectors)];
+   for(const wanted of preferred){
+     const matches=nodes.filter(item=>{
+       const caption=item.querySelector('figcaption,.gallerytext,.lightbox-caption,.caption')||item;
+       return normLabel(caption.textContent)===wanted.toLowerCase() && item.querySelector('img,a[href*="File:"]');
+     });
+     for(const item of matches){
+       const result=await imageInfoFromItem(item,wanted);
+       if(result)return result;
+     }
+   }
+   // Overview pages often place the label and image in adjacent infobox/tab markup rather than a gallery figure.
+   if(mode==='overview'){
+     const labels=[...root.querySelectorAll('*')].filter(el=>el.children.length===0&&preferred.some(p=>normLabel(el.textContent)===p.toLowerCase()));
+     for(const label of labels){
+       let parent=label;
+       for(let depth=0;depth<7&&parent;depth++,parent=parent.parentElement){
+         if(parent.querySelector('img,a[href*="File:"]')){
+           const result=await imageInfoFromItem(parent,normLabel(label.textContent));
+           if(result)return result;
+         }
+       }
+     }
+     const anchors=[...root.querySelectorAll('a[href*="File:"]')];
+     for(const a of anchors){
+       let parent=a;
+       for(let depth=0;depth<6&&parent;depth++,parent=parent.parentElement){
+         const txt=normLabel(parent.textContent);
+         if(txt==='portrait'||txt.startsWith('portrait ')){
+           const result=await imageInfoFromItem(parent,'Overview / Portrait');
+           if(result)return result;
+         }
+       }
+     }
+   }
+   return null;
+ }
+ // First try the Gallery page. If it has no Gallery section/portrait, fall back to the character overview page.
+ try{
+   const parsed=await api({action:'parse',page:title+'/Gallery',prop:'text'});
+   const html=parsed.parse?.text?.['*'];
+   const found=await extractFromHtml(html,'gallery');
+   if(found)return found;
+ }catch(e){}
+ try{
+   const parsed=await api({action:'parse',page:title,prop:'text'});
+   const html=parsed.parse?.text?.['*'];
+   const found=await extractFromHtml(html,'overview');
+   if(found)return found;
+ }catch(e){}
  return null;
 }
 $('run').onclick=async()=>{

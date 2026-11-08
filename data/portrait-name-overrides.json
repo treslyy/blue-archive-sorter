@@ -24,7 +24,7 @@
     "츠키유키 미야코": "tsukiyuki miyako",
     "카데노코지 유카리": "kadenokouji yukari",
     "카스가 츠바키": "kasuga tsubaki",
-    "카스미자와 미유": "kasmizawa miyu",
+    "카스미자와 미유": "kasumizawa miyu",
     "카제쿠라 모에": "kazekura moe",
     "케이": "tendou kei",
     "코사카 와카모": "kosaka wakamo",
@@ -36,11 +36,11 @@
     "토미 코코로": "toumi kokoro",
     "하나오카 유즈": "hanaoka yuzu",
     "하츠네 미쿠": "hatsune miku",
-    "총학생회장": "gsc president",
+    "총학생회장": "GSC President",
     "시라누이 카야": "shiranui kaya",
     "이와비츠 아유무": "iwabitsu ayumu",
     "스나오오카미 시로코(테러)": "shiroko terror",
-    "후리하타 마유미": "furuhata mayumi",
+    "후리하타 마유미": "Furihata mayumi",
     "묘라쿠 카렌": "myouraku karen",
     "이가라시 쇼코": "igarashi shouko",
     "아즈마 미라이": "azuma mirai",
@@ -57,10 +57,9 @@
     "타카노스 스이코": "takanosu suiko",
     "이오쟈쿠 나고미": "iojaku nagomi",
     "우토 요코": "utou youko",
-    "소프": "sof"
+    "소프": "sof",
+    "칼학생회장": "False President",
+    "미야우치 카나에": "Miyauchi Kanae"
   },
-  "unresolved": {
-    "칼학생회장": "Fandom에 적절한 자료가 없어 외부 출처 확인 필요",
-    "미야우치 카나에": "Fandom에 적절한 자료가 없어 외부 출처 확인 필요"
-  }
+  "unresolved": {}
 }

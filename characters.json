@@ -1349,14 +1349,14 @@
     {
       "id": "roster-193",
       "name": "소라",
-      "school": "엔젤24",
+      "school": "기타",
       "type": "student",
       "image": "assets/portraits/Sora_Portrait.png"
     },
     {
       "id": "roster-194",
       "name": "쿠리하마 아케미",
-      "school": "칠수인",
+      "school": "기타",
       "type": "student",
       "image": "assets/portraits/Akemi_Portrait.png"
     },
@@ -1370,21 +1370,21 @@
     {
       "id": "roster-196",
       "name": "타카노스 스이코",
-      "school": "병아리파",
+      "school": "기타",
       "type": "student",
       "image": "assets/portraits/Suiko_Portrait.png"
     },
     {
       "id": "roster-197",
       "name": "이오쟈쿠 나고미",
-      "school": "병아리파",
+      "school": "기타",
       "type": "student",
       "image": "assets/portraits/Nagomi_Portrait.png"
     },
     {
       "id": "roster-198",
       "name": "우토 요코",
-      "school": "병아리파",
+      "school": "기타",
       "type": "student",
       "image": "assets/portraits/Youko_Portrait.png"
     },

@@ -75,7 +75,8 @@ async function galleryPortrait(title,roman){
  const doc=new DOMParser().parseFromString(html,'text/html');
  const headings=[...doc.querySelectorAll('h2,h3,h4,h5,h6')];
  const cleanText=s=>(s||'').replace(/\[\s*\]/g,'').replace(/\s+/g,' ').trim().toLowerCase();
- const defaultHeading=headings.find(h=>cleanText(h.textContent)==='default');
+ const headingText=h=>{const c=h.cloneNode(true);c.querySelectorAll('.mw-editsection,.editsection').forEach(e=>e.remove());return cleanText(c.textContent);};
+ const defaultHeading=headings.find(h=>headingText(h)==='default');
  if(!defaultHeading)return null;
  const level=Number(defaultHeading.tagName.slice(1));
  const section=[];

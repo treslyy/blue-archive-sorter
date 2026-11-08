@@ -1,37 +1,1427 @@
 {
   "version": 1,
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "characters": [
     {
-      "id": "test-a",
-      "name": "테스트 A (기준)",
-      "school": "테스트",
+      "id": "roster-001",
+      "name": "고료 나구사",
+      "school": "백귀야행",
       "type": "student",
-      "image": "images/test-a.webp"
+      "image": "assets/portraits/Nagusa_Portrait.png"
     },
     {
-      "id": "test-b",
-      "name": "테스트 B (A보다 낮음)",
-      "school": "테스트",
-      "type": "student"
+      "id": "roster-002",
+      "name": "나츠메 이로하",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Iroha_Portrait.png"
     },
     {
-      "id": "test-c",
-      "name": "테스트 C (중간)",
-      "school": "테스트",
-      "type": "student"
+      "id": "roster-003",
+      "name": "나카마사 이치카",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Ichika_Portrait.png"
     },
     {
-      "id": "test-d",
-      "name": "테스트 D (C와 동률)",
-      "school": "테스트",
-      "type": "student"
+      "id": "roster-004",
+      "name": "나카츠카사 키리노",
+      "school": "발키리",
+      "type": "student",
+      "image": "assets/portraits/Kirino_Portrait.png"
     },
     {
-      "id": "test-e",
-      "name": "테스트 E (최상위)",
-      "school": "테스트",
-      "type": "student"
+      "id": "roster-005",
+      "name": "네무가키 후부키",
+      "school": "발키리",
+      "type": "student",
+      "image": "assets/portraits/Fubuki_Portrait.png"
+    },
+    {
+      "id": "roster-006",
+      "name": "네코즈카 히비키",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Hibiki_Portrait.png"
+    },
+    {
+      "id": "roster-007",
+      "name": "노마사 레이",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Rei_Portrait.png"
+    },
+    {
+      "id": "roster-008",
+      "name": "니키 안나",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": "assets/portraits/Anna_Portrait.png"
+    },
+    {
+      "id": "roster-009",
+      "name": "니키 에리나",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": "assets/portraits/Erina_Portrait.png"
+    },
+    {
+      "id": "roster-010",
+      "name": "후루하타 라나",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": "assets/portraits/Rana_Portrait.png"
+    },
+    {
+      "id": "roster-011",
+      "name": "렌카와 체리노",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": "assets/portraits/Cherino_Portrait.png"
+    },
+    {
+      "id": "roster-012",
+      "name": "류우게 키사키",
+      "school": "산해경",
+      "type": "student",
+      "image": "assets/portraits/Kisaki_Portrait.png"
+    },
+    {
+      "id": "roster-013",
+      "name": "리쿠하치마 아루",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Aru_Portrait.png"
+    },
+    {
+      "id": "roster-014",
+      "name": "마요이 시구레",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": "assets/portraits/Shigure_Portrait.png"
+    },
+    {
+      "id": "roster-015",
+      "name": "모리즈키 스즈미",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Suzumi_Portrait.png"
+    },
+    {
+      "id": "roster-016",
+      "name": "모토미야 치아키",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Chiaki_Portrait.png"
+    },
+    {
+      "id": "roster-017",
+      "name": "무로카사 아카네",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Akane_Portrait.png"
+    },
+    {
+      "id": "roster-018",
+      "name": "미사카 미코토",
+      "school": "콜라보",
+      "type": "student",
+      "image": "assets/portraits/Misaka_Mikoto_Portrait.png"
+    },
+    {
+      "id": "roster-019",
+      "name": "미소노 미카",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Mika_Portrait.png"
+    },
+    {
+      "id": "roster-020",
+      "name": "미요시 타카네",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": "assets/portraits/Takane_Portrait.png"
+    },
+    {
+      "id": "roster-021",
+      "name": "미즈하 미모리",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Mimori_Portrait.png"
+    },
+    {
+      "id": "roster-022",
+      "name": "미카모 네루",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Neru_Portrait.png"
+    },
+    {
+      "id": "roster-023",
+      "name": "사시로 토모에",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": "assets/portraits/Tomoe_Portrait.png"
+    },
+    {
+      "id": "roster-024",
+      "name": "사이바 모모이",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Momoi_Portrait.png"
+    },
+    {
+      "id": "roster-025",
+      "name": "사이바 미도리",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Midori_Portrait.png"
+    },
+    {
+      "id": "roster-026",
+      "name": "사쿠라이 미요",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": "assets/portraits/Miyo_Portrait.png"
+    },
+    {
+      "id": "roster-027",
+      "name": "사텐 루이코",
+      "school": "콜라보",
+      "type": "student",
+      "image": "assets/portraits/Saten_Ruiko_Portrait.png"
+    },
+    {
+      "id": "roster-028",
+      "name": "사토하마 우미카",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Umika_Portrait.png"
+    },
+    {
+      "id": "roster-029",
+      "name": "소라사키 히나",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Hina_Portrait.png"
+    },
+    {
+      "id": "roster-030",
+      "name": "소라이 사키",
+      "school": "SRT",
+      "type": "student",
+      "image": "assets/portraits/Saki_Portrait.png"
+    },
+    {
+      "id": "roster-031",
+      "name": "쇼쿠호 미사키",
+      "school": "콜라보",
+      "type": "student",
+      "image": "assets/portraits/Shokuhou_Misaki_Portrait.png"
+    },
+    {
+      "id": "roster-032",
+      "name": "스나오오카미 시로코",
+      "school": "아비도스",
+      "type": "student",
+      "image": "assets/portraits/Shiroko_Portrait.png"
+    },
+    {
+      "id": "roster-033",
+      "name": "스노하라 슌",
+      "school": "산해경",
+      "type": "student",
+      "image": "assets/portraits/Shun_Portrait.png"
+    },
+    {
+      "id": "roster-034",
+      "name": "스노하라 코코나",
+      "school": "산해경",
+      "type": "student",
+      "image": "assets/portraits/Kokona_Portrait.png"
+    },
+    {
+      "id": "roster-035",
+      "name": "스미 세리나",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Serina_Portrait.png"
+    },
+    {
+      "id": "roster-036",
+      "name": "시라스 아즈사",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Azusa_Portrait.png"
+    },
+    {
+      "id": "roster-037",
+      "name": "시라오 에리",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": "assets/portraits/Eri_Portrait.png"
+    },
+    {
+      "id": "roster-038",
+      "name": "시라이시 우타하",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Utaha_Portrait.png"
+    },
+    {
+      "id": "roster-039",
+      "name": "시로미 이오리",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Iori_Portrait.png"
+    },
+    {
+      "id": "roster-040",
+      "name": "시마 코노카",
+      "school": "발키리",
+      "type": "student",
+      "image": "assets/portraits/Konoka_Portrait.png"
+    },
+    {
+      "id": "roster-041",
+      "name": "시모에 코하루",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Koharu_Portrait.png"
+    },
+    {
+      "id": "roster-042",
+      "name": "시모쿠라 메구",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Megu_Portrait.png"
+    },
+    {
+      "id": "roster-043",
+      "name": "시시도우 이즈미",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Izumi_Portrait.png"
+    },
+    {
+      "id": "roster-044",
+      "name": "시이나 츠무기",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": "assets/portraits/Tsumugi_Portrait.png"
+    },
+    {
+      "id": "roster-045",
+      "name": "시즈야마 마시로",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Mashiro_Portrait.png"
+    },
+    {
+      "id": "roster-046",
+      "name": "아라마키 야쿠모",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": "assets/portraits/Yakumo_Portrait.png"
+    },
+    {
+      "id": "roster-047",
+      "name": "아마미 노도카",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": "assets/portraits/Nodoka_Portrait.png"
+    },
+    {
+      "id": "roster-048",
+      "name": "아마우 아코",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Ako_Portrait.png"
+    },
+    {
+      "id": "roster-049",
+      "name": "아마치 니야",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Niya_Portrait.png"
+    },
+    {
+      "id": "roster-050",
+      "name": "아사가오 하나에",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Hanae_Portrait.png"
+    },
+    {
+      "id": "roster-051",
+      "name": "아사기 무츠키",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Mutsuki_Portrait.png"
+    },
+    {
+      "id": "roster-052",
+      "name": "아사히나 피나",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Pina_Portrait.png"
+    },
+    {
+      "id": "roster-053",
+      "name": "아스마 토키",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Toki_Portrait.png"
+    },
+    {
+      "id": "roster-054",
+      "name": "아오모리 미네",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Mine_Portrait.png"
+    },
+    {
+      "id": "roster-055",
+      "name": "아이키요 후우카",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Fuuka_Portrait.png"
+    },
+    {
+      "id": "roster-056",
+      "name": "아지타니 히후미",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Hifumi_Portrait.png"
+    },
+    {
+      "id": "roster-057",
+      "name": "아카시 준코",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Junko_Portrait.png"
+    },
+    {
+      "id": "roster-058",
+      "name": "아케보시 히마리",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Himari_Portrait.png"
+    },
+    {
+      "id": "roster-059",
+      "name": "아케시로 루미",
+      "school": "산해경",
+      "type": "student",
+      "image": "assets/portraits/Rumi_Portrait.png"
+    },
+    {
+      "id": "roster-060",
+      "name": "아키이즈미 모미지",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": "assets/portraits/Momiji_Portrait.png"
+    },
+    {
+      "id": "roster-061",
+      "name": "야스모리 미노리",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": "assets/portraits/Minori_Portrait.png"
+    },
+    {
+      "id": "roster-062",
+      "name": "야쿠시 사야",
+      "school": "산해경",
+      "type": "student",
+      "image": "assets/portraits/Saya_Portrait.png"
+    },
+    {
+      "id": "roster-063",
+      "name": "엔도우 시미코",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Shimiko_Portrait.png"
+    },
+    {
+      "id": "roster-064",
+      "name": "오가타 칸나",
+      "school": "발키리",
+      "type": "student",
+      "image": "assets/portraits/Kanna_Portrait.png"
+    },
+    {
+      "id": "roster-065",
+      "name": "오노 츠쿠요",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Tsukuyo_Portrait.png"
+    },
+    {
+      "id": "roster-066",
+      "name": "오니카타 카요코",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Kayoko_Portrait.png"
+    },
+    {
+      "id": "roster-067",
+      "name": "오마가리 하레",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Hare_Portrait.png"
+    },
+    {
+      "id": "roster-068",
+      "name": "오쿠소라 아야네",
+      "school": "아비도스",
+      "type": "student",
+      "image": "assets/portraits/Ayane_Portrait.png"
+    },
+    {
+      "id": "roster-069",
+      "name": "오토세 코타마",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Kotama_Portrait.png"
+    },
+    {
+      "id": "roster-070",
+      "name": "오토하나 스미레",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Sumire_Portrait.png"
+    },
+    {
+      "id": "roster-071",
+      "name": "와니부치 아카리",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Akari_Portrait.png"
+    },
+    {
+      "id": "roster-072",
+      "name": "와라쿠 치세",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Chise_Portrait.png"
+    },
+    {
+      "id": "roster-073",
+      "name": "와카바 히나타",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Hinata_Portrait.png"
+    },
+    {
+      "id": "roster-074",
+      "name": "와카사 후유",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": "assets/portraits/Fuyu_Portrait.png"
+    },
+    {
+      "id": "roster-075",
+      "name": "요시노 니코",
+      "school": "SRT",
+      "type": "student",
+      "image": "assets/portraits/Niko_Portrait.png"
+    },
+    {
+      "id": "roster-076",
+      "name": "요자쿠라 키라라",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Kirara_Portrait.png"
+    },
+    {
+      "id": "roster-077",
+      "name": "우라와 하나코",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Hanako_Portrait.png"
+    },
+    {
+      "id": "roster-078",
+      "name": "우스바 리츠",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": "assets/portraits/Ritsu_Portrait.png"
+    },
+    {
+      "id": "roster-079",
+      "name": "우시마키 주리",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Juri_Portrait.png"
+    },
+    {
+      "id": "roster-080",
+      "name": "우시오 노아",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Noa_Portrait.png"
+    },
+    {
+      "id": "roster-081",
+      "name": "우자와 레이사",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Reisa_Portrait.png"
+    },
+    {
+      "id": "roster-082",
+      "name": "우츠미 아오바",
+      "school": "하이랜더",
+      "type": "student",
+      "image": "assets/portraits/Aoba_Portrait.png"
+    },
+    {
+      "id": "roster-083",
+      "name": "우타즈미 사쿠라코",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Sakurako_Portrait.png"
+    },
+    {
+      "id": "roster-084",
+      "name": "유리조노 세이아",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Seia_Portrait.png"
+    },
+    {
+      "id": "roster-085",
+      "name": "유토리 나츠",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Natsu_Portrait.png"
+    },
+    {
+      "id": "roster-086",
+      "name": "이구사 하루카",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Haruka_Portrait.png"
+    },
+    {
+      "id": "roster-087",
+      "name": "이마시노 미사키",
+      "school": "아리우스",
+      "type": "student",
+      "image": "assets/portraits/Misaki_Portrait.png"
+    },
+    {
+      "id": "roster-088",
+      "name": "이바라기 요시미",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Yoshimi_Portrait.png"
+    },
+    {
+      "id": "roster-089",
+      "name": "이사미 카에데",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Kaede_Portrait.png"
+    },
+    {
+      "id": "roster-090",
+      "name": "이오치 마리",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Mari_Portrait.png"
+    },
+    {
+      "id": "roster-091",
+      "name": "이자요이 노노미",
+      "school": "아비도스",
+      "type": "student",
+      "image": "assets/portraits/Nonomi_Portrait.png"
+    },
+    {
+      "id": "roster-092",
+      "name": "이즈미모토 에이미",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Eimi_Portrait.png"
+    },
+    {
+      "id": "roster-093",
+      "name": "이치노세 아스나",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Asuna_Portrait.png"
+    },
+    {
+      "id": "roster-094",
+      "name": "이케쿠라 마리나",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": "assets/portraits/Marina_Portrait.png"
+    },
+    {
+      "id": "roster-095",
+      "name": "이타가키 카노에",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": "assets/portraits/Kanoe_Portrait.png"
+    },
+    {
+      "id": "roster-096",
+      "name": "조마에 사오리",
+      "school": "아리우스",
+      "type": "student",
+      "image": "assets/portraits/Saori_Portrait.png"
+    },
+    {
+      "id": "roster-097",
+      "name": "츠치나가 히요리",
+      "school": "아리우스",
+      "type": "student",
+      "image": "assets/portraits/Hiyori_Portrait.png"
+    },
+    {
+      "id": "roster-098",
+      "name": "츠카츠키 리오",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Rio_Portrait.png"
+    },
+    {
+      "id": "roster-099",
+      "name": "츠키유키 미야코",
+      "school": "SRT",
+      "type": "student",
+      "image": "assets/portraits/Miyako_Portrait.png"
+    },
+    {
+      "id": "roster-100",
+      "name": "치도리 미치루",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Michiru_Portrait.png"
+    },
+    {
+      "id": "roster-101",
+      "name": "카가미 치히로",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Chihiro_Portrait.png"
+    },
+    {
+      "id": "roster-102",
+      "name": "카데노코지 유카리",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Yukari_Portrait.png"
+    },
+    {
+      "id": "roster-103",
+      "name": "카스가 츠바키",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Tsubaki_Portrait.png"
+    },
+    {
+      "id": "roster-104",
+      "name": "카스미자와 미유",
+      "school": "SRT",
+      "type": "student",
+      "image": "assets/portraits/Miyu_Portrait.png"
+    },
+    {
+      "id": "roster-105",
+      "name": "카야마 레이죠",
+      "school": "산해경",
+      "type": "student",
+      "image": "assets/portraits/Reijo_Portrait.png"
+    },
+    {
+      "id": "roster-106",
+      "name": "카와와 시즈코",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Shizuko_Portrait.png"
+    },
+    {
+      "id": "roster-107",
+      "name": "카제쿠라 모에",
+      "school": "SRT",
+      "type": "student",
+      "image": "assets/portraits/Moe_Portrait.png"
+    },
+    {
+      "id": "roster-108",
+      "name": "카케하시 스바루",
+      "school": "아리우스",
+      "type": "student",
+      "image": "assets/portraits/Subaru_Portrait.png"
+    },
+    {
+      "id": "roster-109",
+      "name": "카쿠다테 카린",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Karin_Portrait.png"
+    },
+    {
+      "id": "roster-110",
+      "name": "케이",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Kei_Portrait.png"
+    },
+    {
+      "id": "roster-111",
+      "name": "켄자키 츠루기",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Tsurugi_Portrait.png"
+    },
+    {
+      "id": "roster-112",
+      "name": "코노에 미나",
+      "school": "산해경",
+      "type": "student",
+      "image": "assets/portraits/Mina_Portrait.png"
+    },
+    {
+      "id": "roster-113",
+      "name": "코누리 마키",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Maki_Portrait.png"
+    },
+    {
+      "id": "roster-114",
+      "name": "코마카제 라브",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Rabu_Portrait.png"
+    },
+    {
+      "id": "roster-115",
+      "name": "코사카 와카모",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Wakamo_Unmask_Portrait.png"
+    },
+    {
+      "id": "roster-116",
+      "name": "코제키 우이",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Ui_Portrait.png"
+    },
+    {
+      "id": "roster-117",
+      "name": "쿄고쿠 사츠키",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Satsuki_Portrait.png"
+    },
+    {
+      "id": "roster-118",
+      "name": "쿄야마 카즈사",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Kazusa_Portrait.png"
+    },
+    {
+      "id": "roster-119",
+      "name": "쿠다 이즈나",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Izuna_Portrait.png"
+    },
+    {
+      "id": "roster-120",
+      "name": "쿠로다테 하루나",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Haruna_Portrait.png"
+    },
+    {
+      "id": "roster-121",
+      "name": "쿠로미 세리카",
+      "school": "아비도스",
+      "type": "student",
+      "image": "assets/portraits/Serika_Portrait.png"
+    },
+    {
+      "id": "roster-122",
+      "name": "쿠로사키 코유키",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Koyuki_Portrait.png"
+    },
+    {
+      "id": "roster-123",
+      "name": "쿠리무라 아이리",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Airi_Portrait.png"
+    },
+    {
+      "id": "roster-124",
+      "name": "쿠와카미 카호",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Kaho_Portrait.png"
+    },
+    {
+      "id": "roster-125",
+      "name": "키누가와 카스미",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Kasumi_Portrait.png"
+    },
+    {
+      "id": "roster-126",
+      "name": "키누이 레나",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": "assets/portraits/Rena_Portrait.png"
+    },
+    {
+      "id": "roster-127",
+      "name": "키류 키쿄",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Kikyou_Portrait.png"
+    },
+    {
+      "id": "roster-128",
+      "name": "키리후지 나기사",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Nagisa_Portrait.png"
+    },
+    {
+      "id": "roster-129",
+      "name": "타치바나 노조미",
+      "school": "하이랜더",
+      "type": "student",
+      "image": "assets/portraits/Nozomi_Portrait.png"
+    },
+    {
+      "id": "roster-130",
+      "name": "타치바나 히카리",
+      "school": "하이랜더",
+      "type": "student",
+      "image": "assets/portraits/Hikari_Portrait.png"
+    },
+    {
+      "id": "roster-131",
+      "name": "타카나시 호시노",
+      "school": "아비도스",
+      "type": "student",
+      "image": "assets/portraits/Hoshino_Portrait.png"
+    },
+    {
+      "id": "roster-132",
+      "name": "타카쿠라 쿠루미",
+      "school": "SRT",
+      "type": "student",
+      "image": "assets/portraits/Kurumi_Portrait.png"
+    },
+    {
+      "id": "roster-133",
+      "name": "탄가 이부키",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Ibuki_Portrait.png"
+    },
+    {
+      "id": "roster-134",
+      "name": "텐도 아리스",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Alice_Portrait.png"
+    },
+    {
+      "id": "roster-135",
+      "name": "텐진야마 오토기",
+      "school": "SRT",
+      "type": "student",
+      "image": "assets/portraits/Otogi_Portrait.png"
+    },
+    {
+      "id": "roster-136",
+      "name": "토미 코코로",
+      "school": "오디세이아",
+      "type": "student",
+      "image": "assets/portraits/Kokoro_Portrait.png"
+    },
+    {
+      "id": "roster-137",
+      "name": "토요미 코토리",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Kotori_Portrait.png"
+    },
+    {
+      "id": "roster-138",
+      "name": "하나오카 유즈",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Yuzu_Portrait.png"
+    },
+    {
+      "id": "roster-139",
+      "name": "하네카와 하스미",
+      "school": "트리니티",
+      "type": "student",
+      "image": "assets/portraits/Hasumi_Portrait.png"
+    },
+    {
+      "id": "roster-140",
+      "name": "하누마 마코토",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Makoto_Portrait.png"
+    },
+    {
+      "id": "roster-141",
+      "name": "하야세 유우카",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Yuuka_Portrait.png"
+    },
+    {
+      "id": "roster-142",
+      "name": "하츠네 미쿠",
+      "school": "콜라보",
+      "type": "student",
+      "image": "assets/portraits/Miku_Portrait.png"
+    },
+    {
+      "id": "roster-143",
+      "name": "하카리 아츠코",
+      "school": "아리우스",
+      "type": "student",
+      "image": "assets/portraits/Atsuko_Portrait.png"
+    },
+    {
+      "id": "roster-144",
+      "name": "하타미 에리카",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Erika_Portrait.png"
+    },
+    {
+      "id": "roster-145",
+      "name": "후와 렌게",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Renge_Portrait.png"
+    },
+    {
+      "id": "roster-146",
+      "name": "후치가미 코토네",
+      "school": "오디세이아",
+      "type": "student",
+      "image": "assets/portraits/Kotone_Portrait.png"
+    },
+    {
+      "id": "roster-147",
+      "name": "히노미야 치나츠",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Chinatsu_Portrait.png"
+    },
+    {
+      "id": "roster-148",
+      "name": "히메키 메루",
+      "school": "붉은겨울",
+      "type": "student",
+      "image": "assets/portraits/Meru_Portrait.png"
+    },
+    {
+      "id": "roster-149",
+      "name": "히무로 세나",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Sena_Portrait.png"
+    },
+    {
+      "id": "roster-150",
+      "name": "아로나",
+      "school": "샬레",
+      "type": "student",
+      "image": "assets/portraits/Arona_Portrait.png"
+    },
+    {
+      "id": "roster-151",
+      "name": "프라나",
+      "school": "샬레",
+      "type": "student",
+      "image": "assets/portraits/Plana_Portrait.png"
+    },
+    {
+      "id": "roster-152",
+      "name": "총학생회장",
+      "school": "연방학생회",
+      "type": "student",
+      "image": "assets/portraits/GSC_President_Portrait.png"
+    },
+    {
+      "id": "roster-153",
+      "name": "칼학생회장",
+      "school": "연방학생회",
+      "type": "student",
+      "image": "assets/portraits/False_President_Portrait.png"
+    },
+    {
+      "id": "roster-154",
+      "name": "나나가미 린",
+      "school": "연방학생회",
+      "type": "student",
+      "image": "assets/portraits/Rin_Portrait.png"
+    },
+    {
+      "id": "roster-155",
+      "name": "시라누이 카야",
+      "school": "연방학생회",
+      "type": "student",
+      "image": "assets/portraits/Kaya_Portrait.png"
+    },
+    {
+      "id": "roster-156",
+      "name": "이와비츠 아유무",
+      "school": "연방학생회",
+      "type": "student",
+      "image": "assets/portraits/Ayumu_Portrait.png"
+    },
+    {
+      "id": "roster-157",
+      "name": "유라키 모모카",
+      "school": "연방학생회",
+      "type": "student",
+      "image": "assets/portraits/Momoka_Portrait.png"
+    },
+    {
+      "id": "roster-158",
+      "name": "오키 아오이",
+      "school": "연방학생회",
+      "type": "student",
+      "image": "assets/portraits/Aoi_Portrait.png"
+    },
+    {
+      "id": "roster-159",
+      "name": "하이네",
+      "school": "연방학생회",
+      "type": "student",
+      "image": "assets/portraits/Haine_Portrait.png"
+    },
+    {
+      "id": "roster-160",
+      "name": "스모모",
+      "school": "연방학생회",
+      "type": "student",
+      "image": "assets/portraits/Sumomo_Portrait.png"
+    },
+    {
+      "id": "roster-161",
+      "name": "스나오오카미 시로코(테러)",
+      "school": "아비도스",
+      "type": "student",
+      "image": "assets/portraits/Shiroko_Terror_Portrait.png"
+    },
+    {
+      "id": "roster-162",
+      "name": "쿠치나시 유메",
+      "school": "아비도스",
+      "type": "student",
+      "image": "assets/portraits/Yume_Portrait.png"
+    },
+    {
+      "id": "roster-163",
+      "name": "후리하타 마유미",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Mayumi_Portrait.png"
+    },
+    {
+      "id": "roster-164",
+      "name": "묘라쿠 카렌",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Karen_Portrait.png"
+    },
+    {
+      "id": "roster-165",
+      "name": "이가라시 쇼코",
+      "school": "게헨나",
+      "type": "student",
+      "image": "assets/portraits/Shouko_Portrait.png"
+    },
+    {
+      "id": "roster-166",
+      "name": "아즈마 미라이",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Mirai_Portrait.png"
+    },
+    {
+      "id": "roster-167",
+      "name": "하네모토 츠바사",
+      "school": "밀레니엄",
+      "type": "student",
+      "image": "assets/portraits/Tsubasa_Portrait.png"
+    },
+    {
+      "id": "roster-168",
+      "name": "쿠즈노하",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Kuzunoha_Portrait.png"
+    },
+    {
+      "id": "roster-169",
+      "name": "나나카도 아야메",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Ayame_Portrait.png"
+    },
+    {
+      "id": "roster-170",
+      "name": "코쿠리코",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Kokuriko_Portrait.png"
+    },
+    {
+      "id": "roster-171",
+      "name": "야부키 슈로",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Shuro_Portrait.png"
+    },
+    {
+      "id": "roster-172",
+      "name": "하부 아자미",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Azami_Portrait.png"
+    },
+    {
+      "id": "roster-173",
+      "name": "아사쿠사 나츠키",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Natsuki_Portrait.png"
+    },
+    {
+      "id": "roster-174",
+      "name": "미야우치 카나에",
+      "school": "산해경",
+      "type": "student",
+      "image": "assets/portraits/Kanae_Portrait.png"
+    },
+    {
+      "id": "roster-175",
+      "name": "우루시바라 카구야",
+      "school": "산해경",
+      "type": "student",
+      "image": "assets/portraits/Kaguya_Portrait.png"
+    },
+    {
+      "id": "roster-176",
+      "name": "신타니 카이",
+      "school": "산해경",
+      "type": "student",
+      "image": "assets/portraits/Kai_Portrait.png"
+    },
+    {
+      "id": "roster-177",
+      "name": "칸바라 미스즈",
+      "school": "발키리",
+      "type": "student",
+      "image": "assets/portraits/Misuzu_Portrait.png"
+    },
+    {
+      "id": "roster-178",
+      "name": "시치도 유키노",
+      "school": "SRT",
+      "type": "student",
+      "image": "assets/portraits/Yukino_Portrait.png"
+    },
+    {
+      "id": "roster-179",
+      "name": "타치기 마이아",
+      "school": "아리우스",
+      "type": "student",
+      "image": "assets/portraits/Maia_Portrait.png"
+    },
+    {
+      "id": "roster-180",
+      "name": "아사기리 스오우",
+      "school": "하이랜더",
+      "type": "student",
+      "image": "assets/portraits/Suou_Portrait.png"
+    },
+    {
+      "id": "roster-181",
+      "name": "히로미",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": "assets/portraits/Hiromi_Portrait.png"
+    },
+    {
+      "id": "roster-182",
+      "name": "키요스미 아키라",
+      "school": "와일드헌트",
+      "type": "student",
+      "image": "assets/portraits/Akira_Unmask_Portrait.webp"
+    },
+    {
+      "id": "roster-183",
+      "name": "우미지 미나토",
+      "school": "오디세이아",
+      "type": "student",
+      "image": "assets/portraits/Minato_Portrait.png"
+    },
+    {
+      "id": "roster-184",
+      "name": "토모시타 아미",
+      "school": "오디세이아",
+      "type": "student",
+      "image": "assets/portraits/Ami_Portrait.png"
+    },
+    {
+      "id": "roster-185",
+      "name": "코모리 스미카",
+      "school": "오디세이아",
+      "type": "student",
+      "image": "assets/portraits/Sumika_Portrait.png"
+    },
+    {
+      "id": "roster-186",
+      "name": "센고쿠 미츠키",
+      "school": "오디세이아",
+      "type": "student",
+      "image": "assets/portraits/Mitsuki_Portrait.png"
+    },
+    {
+      "id": "roster-187",
+      "name": "후나모리 사나에",
+      "school": "오디세이아",
+      "type": "student",
+      "image": "assets/portraits/Sanae_Portrait.png"
+    },
+    {
+      "id": "roster-188",
+      "name": "마키나",
+      "school": "오디세이아",
+      "type": "student",
+      "image": "assets/portraits/Makina_Portrait.png"
+    },
+    {
+      "id": "roster-189",
+      "name": "사유리",
+      "school": "오디세이아",
+      "type": "student",
+      "image": "assets/portraits/Sayuri_Portrait.png"
+    },
+    {
+      "id": "roster-190",
+      "name": "고노카미 나나미",
+      "school": "오디세이아",
+      "type": "student",
+      "image": "assets/portraits/Nanami_Portrait.png"
+    },
+    {
+      "id": "roster-191",
+      "name": "카자마키 마이",
+      "school": "크로노스",
+      "type": "student",
+      "image": "assets/portraits/Mai_Portrait.png"
+    },
+    {
+      "id": "roster-192",
+      "name": "카와루 시논",
+      "school": "크로노스",
+      "type": "student",
+      "image": "assets/portraits/Shinon_Portrait.png"
+    },
+    {
+      "id": "roster-193",
+      "name": "소라",
+      "school": "엔젤24",
+      "type": "student",
+      "image": "assets/portraits/Sora_Portrait.png"
+    },
+    {
+      "id": "roster-194",
+      "name": "쿠리하마 아케미",
+      "school": "칠수인",
+      "type": "student",
+      "image": "assets/portraits/Akemi_Portrait.png"
+    },
+    {
+      "id": "roster-195",
+      "name": "히죽히죽 교수",
+      "school": "기타",
+      "type": "student",
+      "image": "assets/portraits/Smiling_Professor_Portrait.png"
+    },
+    {
+      "id": "roster-196",
+      "name": "타카노스 스이코",
+      "school": "병아리파",
+      "type": "student",
+      "image": "assets/portraits/Suiko_Portrait.png"
+    },
+    {
+      "id": "roster-197",
+      "name": "이오쟈쿠 나고미",
+      "school": "병아리파",
+      "type": "student",
+      "image": "assets/portraits/Nagomi_Portrait.png"
+    },
+    {
+      "id": "roster-198",
+      "name": "우토 요코",
+      "school": "병아리파",
+      "type": "student",
+      "image": "assets/portraits/Youko_Portrait.png"
+    },
+    {
+      "id": "roster-199",
+      "name": "말쿠트",
+      "school": "데카그라마톤",
+      "type": "student",
+      "image": "assets/portraits/Malkuth_Portrait.png"
+    },
+    {
+      "id": "roster-200",
+      "name": "아인",
+      "school": "데카그라마톤",
+      "type": "student",
+      "image": "assets/portraits/Ein_Portrait.png"
+    },
+    {
+      "id": "roster-201",
+      "name": "소프",
+      "school": "데카그라마톤",
+      "type": "student",
+      "image": "assets/portraits/Sof_Portrait.png"
+    },
+    {
+      "id": "roster-202",
+      "name": "오르",
+      "school": "데카그라마톤",
+      "type": "student",
+      "image": "assets/portraits/Ohr_Portrait.png"
+    },
+    {
+      "id": "roster-203",
+      "name": "아라타",
+      "school": "백귀야행",
+      "type": "student",
+      "image": "assets/portraits/Arata_Portrait.png"
     }
   ]
 }

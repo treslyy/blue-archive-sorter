@@ -61,7 +61,7 @@ jobs:
                   "source": "user-uploaded ZIP archives",
                   "imageCount": len(extracted),
                   "images": extracted
-              }, ensure_ascii=False, indent=2) + "\\n",
+              }, ensure_ascii=False, indent=2) + "\n",
               encoding="utf-8"
           )
 

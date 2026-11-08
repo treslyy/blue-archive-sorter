@@ -50,9 +50,18 @@ function saveProgress() {
   if(!current){localStorage.removeItem(STORAGE_KEY);$("resumeButton").hidden=true;return;}
   try { localStorage.setItem(STORAGE_KEY,JSON.stringify({ids:activeCharacters.map(c=>c.id),state:snapshot(),history}));$("resumeButton").hidden=false; } catch {}
 }
+function shuffleCharacters(items) {
+  const shuffled=items.slice();
+  for(let i=shuffled.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];
+  }
+  return shuffled;
+}
 function beginSort(items) {
   if(items.length<2)return;
-  activeCharacters=items.slice();rankedGroups=[[activeCharacters[0]]];
+  // 매번 새 소트를 시작할 때 비교 대상의 등장 순서를 무작위로 섞습니다.
+  activeCharacters=shuffleCharacters(items);rankedGroups=[[activeCharacters[0]]];
   pending=activeCharacters.slice(1);current=pending.shift()||null;
   low=0;high=rankedGroups.length;comparisonsDone=0;history=[];
   $("setup").hidden=true;$("resultPanel").hidden=true;$("sortPanel").hidden=false;

@@ -66,19 +66,29 @@ async function findGalleryPage(roman){
  }
  return null;
 }
-async function galleryPortrait(title){
- // Gallery HTML의 <img> 태그 구조에 의존하지 않고, MediaWiki API가 제공하는 파일 목록을 사용합니다.
+async function galleryPortrait(title,roman){
+ // 1) Gallery 문서의 이미지 목록에서 기본 Portrait를 우선 찾습니다.
  const d=await api({action:'query',titles:title+'/Gallery',prop:'images',imlimit:'max'});
  const page=Object.values(d.query?.pages||{})[0];
  const files=(page?.images||[]).map(x=>x.title.replace(/^File:/,''));
- if(!files.length)return null;
  const base=norm(title.split('/')[0]);
- const portraits=files.filter(f=>/portrait/i.test(f)&&!/expression|halo|icon|sprite|live2d|animation/i.test(f));
- const file=portraits.find(f=>{
-   const stem=f.replace(/\.[^.]+$/,'');
-   const n=norm(stem);
-   return n===base+'portrait'||n===base+'portrait2'||n==='npcportrait'+base||n==='npc'+base+'portrait';
- });
+ const usable=f=>!/expression|halo|icon|sprite|live2d|animation|gacha/i.test(f);
+ let file=files.find(f=>usable(f)&&/portrait/i.test(f)&&norm(f.replace(/\.[^.]+$/,''))===base+'portrait');
+ if(!file)file=files.find(f=>usable(f)&&/portrait/i.test(f)&&norm(f.replace(/\.[^.]+$/,''))===base+'portrait2');
+ // 2) Gallery 페이지 파일 목록이 비었거나 파일명이 다르면, 기존에 일부 결과를 찾았던 파일 검색 API로 보완합니다.
+ if(!file){
+   const full=(roman||title.split('/')[0]).trim();
+   const last=full.split(/\s+/).pop();
+   for(const q of [full+' Portrait',last+' Portrait']){
+     const found=await api({action:'query',list:'search',srnamespace:6,srsearch:q,srlimit:15});
+     const hits=(found.query?.search||[]).filter(h=>/portrait/i.test(h.title)&&usable(h.title));
+     if(!hits.length)continue;
+     const exact=hits.find(h=>norm(h.title.replace(/^File:/,'').replace(/\.[^.]+$/,''))===base+'portrait');
+     const likely=exact||hits.find(h=>norm(h.title).includes(base))||hits[0];
+     file=likely.title.replace(/^File:/,'');
+     break;
+   }
+ }
  if(!file)return null;
  const info=await api({action:'query',prop:'imageinfo',iiprop:'url|size|mime',iiurlwidth:180,titles:'File:'+file});
  const imagePage=Object.values(info.query?.pages||{})[0],ii=imagePage?.imageinfo?.[0];
@@ -94,7 +104,7 @@ $('run').onclick=async()=>{
   say('캐릭터별 Gallery 문서를 직접 검색합니다.\\n0/'+rows.length+'명');
   async function worker(){while(idx<rows.length){const i=idx++,x=rows[i];try{
     const page=await findGalleryPage(x.roman);
-    if(page){x.page=page;x.score=score(x.roman,page.replace(/\/Gallery$/i,''));const p=await galleryPortrait(page);if(p)Object.assign(x,p);else x.error='문서는 찾았지만 기본 Portrait 추출 실패';}
+    if(page){x.page=page;x.score=score(x.roman,page.replace(/\/Gallery$/i,''));const p=await galleryPortrait(page,x.roman);if(p)Object.assign(x,p);else x.error='문서는 찾았지만 기본 Portrait 추출 실패';}
     else x.error='Gallery 문서 검색 결과 없음';
    }catch(e){x.error='조회 오류: '+e.message;}
    done++;say('캐릭터별 Gallery 확인: '+done+'/'+rows.length+'명\\n이미지 후보 '+rows.filter(z=>z.url).length+'개 · 추가 확인 '+rows.filter(z=>!z.url).length+'개');render();await sleep(250);

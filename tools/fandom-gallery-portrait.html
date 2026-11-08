@@ -67,27 +67,47 @@ async function findGalleryPage(roman){
  return null;
 }
 async function galleryPortrait(title,roman){
- // 기본 복장 오인 방지를 위해 파일명이 캐릭터명 + Portrait와 정확히 일치하는 경우만 자동 채택합니다.
- const base=norm(title.split('/')[0]);
- const d=await api({action:'query',titles:title+'/Gallery',prop:'images',imlimit:'max'});
- const page=Object.values(d.query?.pages||{})[0];
- const files=(page?.images||[]).map(x=>x.title.replace(/^File:/,''));
- const clean=f=>norm(f.replace(/\.[^.]+$/,''));
- const exactNames=new Set([base+'portrait','npc'+base+'portrait','npcportrait'+base]);
- let file=files.find(f=>exactNames.has(clean(f)));
- // Gallery 목록에 없을 때만 전체 캐릭터명을 사용해 파일 검색 API를 보완적으로 조회합니다.
- // 검색 결과 첫 항목이나 성씨/이름 일부만 일치하는 파일은 절대 자동 선택하지 않습니다.
- if(!file){
-   const full=(roman||title.split('/')[0]).trim();
-   const found=await api({action:'query',list:'search',srnamespace:6,srsearch:full+' Portrait',srlimit:30});
-   const hits=(found.query?.search||[]).filter(h=>/portrait/i.test(h.title));
-   const exact=hits.find(h=>exactNames.has(clean(h.title.replace(/^File:/,''))));
-   if(exact)file=exact.title.replace(/^File:/,'');
+ // Gallery의 전체 이미지 목록이 아니라 Default 구역 안에서 캡션이 정확히 Portrait인 항목만 선택합니다.
+ const pageTitle=title+'/Gallery';
+ const parsed=await api({action:'parse',page:pageTitle,prop:'text'});
+ const html=parsed.parse?.text?.['*'];
+ if(!html)return null;
+ const doc=new DOMParser().parseFromString(html,'text/html');
+ const headings=[...doc.querySelectorAll('h2,h3,h4,h5,h6')];
+ const cleanText=s=>(s||'').replace(/\[\s*\]/g,'').replace(/\s+/g,' ').trim().toLowerCase();
+ const defaultHeading=headings.find(h=>cleanText(h.textContent)==='default');
+ if(!defaultHeading)return null;
+ const level=Number(defaultHeading.tagName.slice(1));
+ const section=[];
+ for(let node=defaultHeading.nextElementSibling;node;node=node.nextElementSibling){
+   if(/^H[2-6]$/.test(node.tagName)&&Number(node.tagName.slice(1))<=level)break;
+   section.push(node);
  }
- if(!file)return null;
- const info=await api({action:'query',prop:'imageinfo',iiprop:'url|size|mime',iiurlwidth:180,titles:'File:'+file});
- const imagePage=Object.values(info.query?.pages||{})[0],ii=imagePage?.imageinfo?.[0];
- return ii?{file,url:ii.url,thumb:ii.thumburl||ii.url,width:ii.width,height:ii.height}:null;
+ const root=document.createElement('div');
+ section.forEach(node=>root.append(node.cloneNode(true)));
+ const candidates=[...root.querySelectorAll('figure,.gallerybox,.wikia-gallery-item,.gallery-item,li')];
+ for(const item of candidates){
+   const caption=item.querySelector('figcaption,.gallerytext,.lightbox-caption,.caption')||item;
+   if(cleanText(caption.textContent)!=='portrait')continue;
+   const link=item.querySelector('a[href*="File:"],a[href*="/wiki/"]');
+   const img=item.querySelector('img');
+   let file='';
+   if(link){
+     const raw=link.getAttribute('href')||'';
+     const match=raw.match(/(?:File:|Special:Redirect\/file\/)([^?#]+)/i);
+     if(match)file=decodeURIComponent(match[1].replace(/_/g,' '));
+   }
+   if(!file&&img){
+     file=img.getAttribute('data-image-name')||img.getAttribute('data-file-name')||'';
+     if(!file){const src=img.getAttribute('data-src')||img.getAttribute('src')||'';const m=src.match(/\/([^/]+\.(?:png|jpg|jpeg|webp))(?:\/|$)/i);if(m)file=decodeURIComponent(m[1]);}
+   }
+   file=file.replace(/^File:/i,'').trim();
+   if(!file)continue;
+   const info=await api({action:'query',prop:'imageinfo',iiprop:'url|size|mime',iiurlwidth:180,titles:'File:'+file});
+   const imagePage=Object.values(info.query?.pages||{})[0],ii=imagePage?.imageinfo?.[0];
+   if(ii)return {file,url:ii.url,thumb:ii.thumburl||ii.url,width:ii.width,height:ii.height,matchType:'Default / Portrait'};
+ }
+ return null;
 }
 $('run').onclick=async()=>{
  $('run').disabled=true;rows=[];$('results').replaceChildren();

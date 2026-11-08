@@ -4,7 +4,7 @@
 body{font-family:system-ui,sans-serif;max-width:1120px;margin:28px auto;padding:0 16px;line-height:1.55;color:#202124}button{padding:9px 13px;border:1px solid #999;border-radius:8px;background:white;cursor:pointer}button:disabled{opacity:.45}.bar{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.status{white-space:pre-wrap;background:#eee;padding:12px;border-radius:8px}.note{color:#555;font-size:.93rem}.item{display:grid;grid-template-columns:26px 100px minmax(160px,1fr) minmax(220px,1.4fr);gap:12px;align-items:center;padding:10px;border-bottom:1px solid #ddd;background:#fff}.item img{max-width:90px;max-height:170px;object-fit:contain;background:#eee}.candidate{overflow-wrap:anywhere;font-size:.9rem}.tag{font-size:.8rem;background:#eee;padding:2px 6px;border-radius:5px}.muted{color:#777}@media(max-width:650px){.item{grid-template-columns:24px 65px 1fr}.item img{max-width:62px}.candidate{grid-column:2/4}}
 </style></head><body>
 <h1>Fandom Gallery 기반 포트레이트 수집</h1>
-<p>기준 명단 203명과 Fandom의 <a href="https://bluearchive.fandom.com/wiki/Category:Gallery" target="_blank" rel="noopener">Gallery 분류</a>를 대조합니다. 이름을 로마자 음가로 변환해 Gallery 문서 후보를 찾고, 문서 안에서 기본(Default) 구역의 Portrait 이미지를 우선 추출합니다.</p>
+<p>기준 명단 203명과 Fandom에서 각 캐릭터 이름으로 Gallery 문서를 직접 검색하고, 문서 안에서 기본(Default) 구역의 Portrait 이미지를 우선 추출합니다. 존재하지 않는 Category:Gallery 분류에 의존하지 않습니다.</p>
 <p class="note"><b>주의:</b> 자동 이름 대조는 후보를 찾는 단계입니다. 유사도가 낮거나 기본 이미지 영역을 특정하지 못한 항목은 자동 확정하지 않습니다. 최종 선택 전에 미리보기를 확인해 주세요.</p>
 <div class="bar"><button id="run">Gallery 대조 및 이미지 조회</button><button id="select">확실한 후보 선택</button><button id="clear">선택 해제</button><button id="download" disabled>선택 이미지 다운로드</button></div>
 <div id="status" class="status">대기 중입니다.</div><div id="results"></div>
@@ -51,7 +51,21 @@ function lev(a,b){const d=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i
 function score(a,b){a=norm(a);b=norm(b);if(!a||!b)return 0;return 1-lev(a,b)/Math.max(a.length,b.length);}
 function render(){ $('results').innerHTML=rows.map((x,i)=>`<div class="item"><input type="checkbox" data-i="${i}" ${x.selected?'checked':''} ${x.url?'':'disabled'}><div>${x.url?`<img src="${x.thumb||x.url}" alt="">`:'<span class="muted">이미지 없음</span>'}</div><div><b>${x.name}</b><br><span class="tag">${x.affiliation}</span><br><small class="muted">검색명: ${x.roman}</small></div><div class="candidate">${x.page?`<a target="_blank" rel="noopener" href="https://bluearchive.fandom.com/wiki/${encodeURIComponent(x.page.replace(/ /g,'_'))}">${x.page}</a> · 일치도 ${Math.round(x.score*100)}%<br>${x.file||'Portrait 후보를 못 찾음'}`:x.error||'Gallery 문서 후보 없음'}</div></div>`).join('');$('download').disabled=!rows.some(x=>x.selected&&x.url);}
 $('results').addEventListener('change',e=>{if(e.target.matches('input[type=checkbox]')){rows[+e.target.dataset.i].selected=e.target.checked;$('download').disabled=!rows.some(x=>x.selected&&x.url);}});
-async function getCategory(){let all=[],cont=null;do{const p={action:'query',list:'categorymembers',cmtitle:'Category:Gallery',cmtype:'page',cmlimit:500};if(cont)p.cmcontinue=cont;const d=await api(p);all.push(...(d.query?.categorymembers||[]));cont=d.continue?.cmcontinue||null;}while(cont);return all.map(x=>x.title).filter(x=>x.endsWith('/Gallery')).map(x=>x.replace(/\/Gallery$/,''));}
+async function findGalleryPage(roman){
+ const exact=roman.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ')+'/Gallery';
+ const direct=await api({action:'query',titles:exact,prop:'info'});
+ const directPage=Object.values(direct.query?.pages||{})[0];
+ if(directPage&&!directPage.missing)return exact;
+ for(const q of [roman+' Portrait',roman+' Gallery',roman]){
+  const d=await api({action:'query',list:'search',srnamespace:0,srsearch:q,srlimit:12});
+  const hits=d.query?.search||[];
+  const gallery=hits.find(h=>/\\/Gallery$/i.test(h.title));
+  if(gallery)return gallery.title.replace(/\\/Gallery$/i,'');
+  const character=hits.find(h=>norm(h.title)===norm(roman)||norm(h.title).includes(norm(roman)));
+  if(character)return character.title;
+ }
+ return null;
+}
 async function galleryPortrait(title){
  const d=await api({action:'parse',page:title+'/Gallery',prop:'text|sections',disableeditsection:1});
  const html=d.parse?.text?.['*']||'';if(!html)return null;
@@ -74,10 +88,17 @@ $('run').onclick=async()=>{
  $('run').disabled=true;rows=[];$('results').replaceChildren();
  try{
   say('기준 명단과 Fandom Gallery 분류를 불러오는 중…');
-  const [rd,titles]=await Promise.all([fetch(ROSTER).then(r=>r.json()),getCategory()]);
-  const entries=rd.entries;rows=entries.map(e=>{const roman=aliases[e.name]||romanizeHangul(e.name);let best={page:null,score:0};for(const t of titles){const s=score(roman,t);if(s>best.score)best={page:t,score:s};}return {...e,roman,...best,url:null,selected:false};});
+  const rd=await fetch(ROSTER).then(r=>{if(!r.ok)throw Error('기준 명단을 불러오지 못했습니다.');return r.json();});
+  const entries=rd.entries;rows=entries.map(e=>({...e,roman:aliases[e.name]||romanizeHangul(e.name),page:null,score:0,url:null,selected:false,error:'검색 대기'}));
   render();let idx=0,done=0;
-  async function worker(){while(idx<rows.length){const i=idx++,x=rows[i];try{if(x.score>=0.78){const p=await galleryPortrait(x.page);if(p)Object.assign(x,p);else x.error='Gallery는 찾았으나 기본 Portrait 이미지 추출 실패';}else x.error='이름 일치도가 낮아 자동 연결 보류';}catch(e){x.error='조회 오류: '+e.message;}done++;say('Gallery 확인: '+done+'/'+rows.length+'명\n기본 Portrait 후보 '+rows.filter(z=>z.url).length+'개 · 이름 대조 또는 이미지 추출 보류 '+rows.filter(z=>!z.url).length+'개');render();await sleep(180);}}
+  say('캐릭터별 Gallery 문서를 직접 검색합니다.\\n0/'+rows.length+'명');
+  async function worker(){while(idx<rows.length){const i=idx++,x=rows[i];try{
+    const page=await findGalleryPage(x.roman);
+    if(page){x.page=page;x.score=1;const p=await galleryPortrait(page);if(p)Object.assign(x,p);else x.error='문서는 찾았지만 기본 Portrait 추출 실패';}
+    else x.error='Gallery 문서 검색 결과 없음';
+   }catch(e){x.error='조회 오류: '+e.message;}
+   done++;say('캐릭터별 Gallery 확인: '+done+'/'+rows.length+'명\\n이미지 후보 '+rows.filter(z=>z.url).length+'개 · 추가 확인 '+rows.filter(z=>!z.url).length+'개');render();await sleep(250);
+  }}
   await Promise.all(Array.from({length:3},worker));
   say('완료: '+done+'/'+rows.length+'명\n이미지 후보 '+rows.filter(x=>x.url).length+'개. 일치도와 미리보기를 확인하고 선택해 주세요.');
  }catch(e){say('오류: '+e.message);}

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fandom Gallery 포트레이트 수집</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:1120px;margin:28px auto;padding:0 16px;line-height:1.55;color:#202124}button{padding:9px 13px;border:1px solid #999;border-radius:8px;background:white;cursor:pointer}button:disabled{opacity:.45}.bar{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.status{white-space:pre-wrap;background:#eee;padding:12px;border-radius:8px}.note{color:#555;font-size:.93rem}.item{display:grid;grid-template-columns:26px 100px minmax(160px,1fr) minmax(220px,1.4fr);gap:12px;align-items:center;padding:10px;border-bottom:1px solid #ddd;background:#fff}.item img{max-width:90px;max-height:170px;object-fit:contain;background:#eee}.candidate{overflow-wrap:anywhere;font-size:.9rem}.tag{font-size:.8rem;background:#eee;padding:2px 6px;border-radius:5px}.muted{color:#777}@media(max-width:650px){.item{grid-template-columns:24px 65px 1fr}.item img{max-width:62px}.candidate{grid-column:2/4}}
+</style></head><body>
+<h1>Fandom Gallery 기반 포트레이트 수집</h1>
+<p>기준 명단 203명과 Fandom의 <a href="https://bluearchive.fandom.com/wiki/Category:Gallery" target="_blank" rel="noopener">Gallery 분류</a>를 대조합니다. 이름을 로마자 음가로 변환해 Gallery 문서 후보를 찾고, 문서 안에서 기본(Default) 구역의 Portrait 이미지를 우선 추출합니다.</p>
+<p class="note"><b>주의:</b> 자동 이름 대조는 후보를 찾는 단계입니다. 유사도가 낮거나 기본 이미지 영역을 특정하지 못한 항목은 자동 확정하지 않습니다. 최종 선택 전에 미리보기를 확인해 주세요.</p>
+<div class="bar"><button id="run">Gallery 대조 및 이미지 조회</button><button id="select">확실한 후보 선택</button><button id="clear">선택 해제</button><button id="download" disabled>선택 이미지 다운로드</button></div>
+<div id="status" class="status">대기 중입니다.</div><div id="results"></div>
+<script>
+const API='https://bluearchive.fandom.com/api.php';
+const ROSTER='https://raw.githubusercontent.com/treslyy/blue-archive-sorter/main/data/character-affiliations-candidate.json';
+const $=id=>document.getElementById(id),say=s=>$('status').textContent=s;
+let rows=[];
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+async function api(p){const u=new URL(API);for(const [k,v] of Object.entries({...p,origin:'*',format:'json'}))u.searchParams.set(k,v);const r=await fetch(u);if(!r.ok)throw Error('HTTP '+r.status);return r.json();}
+function romanizeHangul(str){
+ const onset=['g','kk','n','d','tt','r','m','b','pp','s','ss','','j','jj','ch','k','t','p','h'];
+ const vowel=['a','ya','eo','yeo','o','yo','u','yu','u','i','e','ye','e','ye','o','wa','wae','oe','yo','u','we','wi','yu','eu','ui','i'];
+ const coda=['','k','k','ks','n','nj','nh','t','l','lk','lm','lb','ls','lt','lp','lh','m','p','ps','t','t','ng','t','t','k','t','p','t'];
+ let out='';
+ for(const ch of str.replace(/[()（）]/g,' ').replace(/테러/g,'테러')){
+  const code=ch.charCodeAt(0)-44032;
+  if(code<0||code>11171){out+=ch;continue;}
+  const a=Math.floor(code/588),v=Math.floor((code%588)/28),c=code%28;
+  let ini=onset[a],vv=vowel[v],fin=coda[c];
+  if(a===9&&v===20)ini='j'; // ㅅ + ㅟ -> swi approximation
+  if(a===9&&v===20)vv='wi';
+  if(a===9&&v===6)ini='sh';
+  if(a===9&&v===20)ini='sh';
+  if(a===12&&v===6)ini='j';
+  if(a===14&&v===18)ini='ch';
+  if(a===14&&v===18)vv='u';
+  if(a===14&&v===6)ini='ch';
+  if(a===14&&v===6)vv='i';
+  if(a===14&&v===8){ini='ts';vv='u';}
+  if(a===9&&v===8)ini='s';
+  if(a===12&&v===8)ini='z';
+  if(a===12&&v===6)vv='i';
+  if(a===9&&v===6)vv='i';
+  out+=ini+vv+fin;
+ }
+ return out.toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
+}
+const aliases={
+ '고료 나구사':'goryou nagusa','나츠메 이로하':'natsume iroha','나카마사 이치카':'nakamasa ichika','나카츠카사 키리노':'nakatsukasa kirino','노마사 레이':'nomasa rei','렌카와 체리노':'renkawa cherino','류우게 키사키':'ryuuge kisaki','리쿠하치마 아루':'rikuhachima aru','마요이 시구레':'mayoi shigure','모리즈키 스즈미':'morizuki suzumi','모토미야 치아키':'motomiya chiaki','미사카 미코토':'misaka mikoto','미소노 미카':'misono mika','미요시 타카네':'miyoshi takane','미즈하 미모리':'mizuha mimori','사이바 모모이':'saiba momoi','사쿠라이 미요':'sakurai miyo','사텐 루이코':'saten ruiko','사토하마 우미카':'satohama umika','스나오오카미 시로코':'sunaookami shiroko','스노하라 슌':'sunohara shun','스노하라 코코나':'sunohara kokona','스미 세리나':'sumi serina','시라스 아즈사':'shirasu azusa','시라오 에리':'shirao eri','시라이시 우타하':'shiraishi utaha','시마 코노카':'shima konoka','시모에 코하루':'shimoe koharu','시모쿠라 메구':'shimokura megu','시이나 츠무기':'shiina tsumugi','시즈야마 마시로':'shizuyama mashiro','아라마키 야쿠모':'aramaki yakumo','아마미 노도카':'amami nodoka','아마우 아코':'amau ako','아마치 니야':'amachi niya','아사가오 하나에':'asagao hanae','아사기 무츠키':'asagi mutsuki','아사히나 피나':'asahina pina','아스마 토키':'asuma toki','아오모리 미네':'aomori mine','아이키요 후우카':'aikiyo fuuka','아지타니 히후미':'ajitani hifumi','아케보시 히마리':'akeboshi himari','야스모리 미노리':'yasumori minori','엔도우 시미코':'endo shimiko','오가타 칸나':'ogata kanna','오노 츠쿠요':'oono tsukuyo','오니카타 카요코':'onikata kayoko','오마가리 하레':'omagari hare','오쿠소라 아야네':'okusora ayane','오토세 코타마':'otose kotama','와라쿠 치세':'waraku chise','와카바 히나타':'wakaba hinata','와카사 후유':'wakasa fuyu','우스바 리츠':'usuba ritsu','우타즈미 사쿠라코':'utazumi sakurako','유리조노 세이아':'yurizono seia','유토리 나츠':'yutori natsu','이바라기 요시미':'ibaragi yoshimi','이자요이 노노미':'izayoi nonomi','이즈미모토 에이미':'izumimoto eimi','이치노세 아스나':'ichinose asuna','이타가키 카노에':'itagaki kanoe','치도리 미치루':'chidori michiru','카가미 치히로':'kagami chihiro','카야마 레이죠':'kayama reijo','카와와 시즈코':'kawawa shizuko','카케하시 스바루':'kakehashi subaru','켄자키 츠루기':'kenzaki tsurugi','코마카제 라브':'komakaze rabu','코사카 와카모':'kosaka wakamo','코제키 우이':'kozeki ui','쿄야마 카즈사':'kyouyama kazusa','쿠다 이즈나':'kuda izuna','쿠로다테 하루나':'kurodate haruna','쿠로미 세리카':'kuromi serika','쿠로사키 코유키':'kurosaki koyuki','쿠와카미 카호':'kuwakami kaho','키류 키쿄':'kiryuu kikyou','키리후지 나기사':'kirifuji nagisa','텐도 아리스':'tendou aris','텐진야마 오토기':'tenjin yam aotogi','토요미 코토리':'toyomi kotori','하네카와 하스미':'hanekawa hasumi','하야세 유우카':'hayase yuuka','하카리 아츠코':'hakari atsuko','후와 렌게':'fuwa renge','후치가미 코토네':'fuchigami kotone','히노미야 치나츠':'hinomiya chinatsu','프라나':'plana','총학생회장':'gsc president','나나가미 린':'nanagami rin','유라키 모모카':'yuraki momoka','하이네':'haine','스모모':'sumomo','스나오오카미 시로코(테러)':'sunaookami shiroko terror','이가라시 쇼코':'igarashi shoko','쿠즈노하':'kuzunoha','코쿠리코':'kadenokouji kokuriko','야부키 슈로':'yabuki shuro','하부 아자미':'habu azami','미야우치 카나에':'miyauchi kanae','칸바라 미스즈':'kanbara misuzu','시치도 유키노':'shichido yukino','아사기리 스오우':'asagiri suou','우미지 미나토':'umiji minato','후나모리 사나에':'funamori sanae','마키나':'makina','사유리':'sayuri','카자카미 마이':'kazemaki mai','카와루 시논':'kawaru shinon','히죽히죽 교수':'professor giggles','타카노스 스이코':'takanosu suiko','우토 요코':'uto yoko','말쿠트':'malkuth','소프':'soph','오르':'ohr','히무로 세나':'himuro sena','쿠치나시 유메':'kuchinashi yume','아인':'ein','요시노 니코':'niko','츠치나가 히요리':'tsuchinaga hiyori'
+};
+function norm(s){return s.toLowerCase().replace(/[^a-z0-9]/g,'');}
+function lev(a,b){const d=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){let prev=d[0];d[0]=i;for(let j=1;j<=b.length;j++){const tmp=d[j];d[j]=Math.min(d[j]+1,d[j-1]+1,prev+(a[i-1]===b[j-1]?0:1));prev=tmp;}}return d[b.length];}
+function score(a,b){a=norm(a);b=norm(b);if(!a||!b)return 0;return 1-lev(a,b)/Math.max(a.length,b.length);}
+function render(){ $('results').innerHTML=rows.map((x,i)=>`<div class="item"><input type="checkbox" data-i="${i}" ${x.selected?'checked':''} ${x.url?'':'disabled'}><div>${x.url?`<img src="${x.thumb||x.url}" alt="">`:'<span class="muted">이미지 없음</span>'}</div><div><b>${x.name}</b><br><span class="tag">${x.affiliation}</span><br><small class="muted">검색명: ${x.roman}</small></div><div class="candidate">${x.page?`<a target="_blank" rel="noopener" href="https://bluearchive.fandom.com/wiki/${encodeURIComponent(x.page.replace(/ /g,'_'))}">${x.page}</a> · 일치도 ${Math.round(x.score*100)}%<br>${x.file||'Portrait 후보를 못 찾음'}`:x.error||'Gallery 문서 후보 없음'}</div></div>`).join('');$('download').disabled=!rows.some(x=>x.selected&&x.url);}
+$('results').addEventListener('change',e=>{if(e.target.matches('input[type=checkbox]')){rows[+e.target.dataset.i].selected=e.target.checked;$('download').disabled=!rows.some(x=>x.selected&&x.url);}});
+async function getCategory(){let all=[],cont=null;do{const p={action:'query',list:'categorymembers',cmtitle:'Category:Gallery',cmtype:'page',cmlimit:500};if(cont)p.cmcontinue=cont;const d=await api(p);all.push(...(d.query?.categorymembers||[]));cont=d.continue?.cmcontinue||null;}while(cont);return all.map(x=>x.title).filter(x=>x.endsWith('/Gallery')).map(x=>x.replace(/\/Gallery$/,''));}
+async function galleryPortrait(title){
+ const d=await api({action:'parse',page:title+'/Gallery',prop:'text|sections',disableeditsection:1});
+ const html=d.parse?.text?.['*']||'';if(!html)return null;
+ const doc=new DOMParser().parseFromString(html,'text/html');
+ const headings=[...doc.querySelectorAll('h2,h3,h4')];
+ let root=null;
+ for(const h of headings){const t=h.textContent.toLowerCase();if(t.includes('default')){root=h.parentElement;break;}}
+ let imgs=[];
+ if(root){let node=root;while(node){imgs.push(...node.querySelectorAll?.('img')||[]);node=node.nextElementSibling;if(node&&/^H[1-4]$/.test(node.tagName))break;}}
+ if(!imgs.length)imgs=[...doc.querySelectorAll('img')].filter(im=>/portrait/i.test((im.alt||'')+' '+(im.closest('a')?.title||'')));
+ const im=imgs.find(im=>/portrait/i.test((im.alt||'')+' '+(im.closest('a')?.title||'')))||imgs[0];
+ if(!im)return null;
+ const a=im.closest('a');const file=(a?.getAttribute('title')||a?.getAttribute('href')||im.alt||'').replace(/^File:/,'').replace(/^.*\//,'');
+ if(!file)return null;
+ const info=await api({action:'query',prop:'imageinfo',iiprop:'url|size|mime',iiurlwidth:180,titles:'File:'+file});
+ const page=Object.values(info.query?.pages||{})[0],ii=page?.imageinfo?.[0];
+ return ii?{file,url:ii.url,thumb:ii.thumburl||ii.url,width:ii.width,height:ii.height}:null;
+}
+$('run').onclick=async()=>{
+ $('run').disabled=true;rows=[];$('results').replaceChildren();
+ try{
+  say('기준 명단과 Fandom Gallery 분류를 불러오는 중…');
+  const [rd,titles]=await Promise.all([fetch(ROSTER).then(r=>r.json()),getCategory()]);
+  const entries=rd.entries;rows=entries.map(e=>{const roman=aliases[e.name]||romanizeHangul(e.name);let best={page:null,score:0};for(const t of titles){const s=score(roman,t);if(s>best.score)best={page:t,score:s};}return {...e,roman,...best,url:null,selected:false};});
+  render();let idx=0,done=0;
+  async function worker(){while(idx<rows.length){const i=idx++,x=rows[i];try{if(x.score>=0.78){const p=await galleryPortrait(x.page);if(p)Object.assign(x,p);else x.error='Gallery는 찾았으나 기본 Portrait 이미지 추출 실패';}else x.error='이름 일치도가 낮아 자동 연결 보류';}catch(e){x.error='조회 오류: '+e.message;}done++;say('Gallery 확인: '+done+'/'+rows.length+'명\n기본 Portrait 후보 '+rows.filter(z=>z.url).length+'개 · 이름 대조 또는 이미지 추출 보류 '+rows.filter(z=>!z.url).length+'개');render();await sleep(180);}}
+  await Promise.all(Array.from({length:3},worker));
+  say('완료: '+done+'/'+rows.length+'명\n이미지 후보 '+rows.filter(x=>x.url).length+'개. 일치도와 미리보기를 확인하고 선택해 주세요.');
+ }catch(e){say('오류: '+e.message);}
+ finally{$('run').disabled=false;}
+};
+$('select').onclick=()=>{rows.forEach(x=>{if(x.url&&x.score>=0.9)x.selected=true;});render();};
+$('clear').onclick=()=>{rows.forEach(x=>x.selected=false);render();};
+$('download').onclick=async()=>{const selected=rows.filter(x=>x.selected&&x.url);$('download').disabled=true;let n=0;for(const x of selected){try{const r=await fetch(x.url);if(!r.ok)throw Error();const b=await r.blob(),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=x.file.replace(/[^a-z0-9._-]/gi,'_');document.body.append(a);a.click();a.remove();URL.revokeObjectURL(u);n++;}catch(e){window.open(x.url,'_blank','noopener');}say('다운로드 요청 '+n+'/'+selected.length);await sleep(400);}say('다운로드 요청 완료 '+n+'/'+selected.length+'. 브라우저 다운로드 목록에서 저장 여부를 확인해 주세요.');$('download').disabled=false;};
+</script></body></html>

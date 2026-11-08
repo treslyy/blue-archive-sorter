@@ -29,11 +29,23 @@ async function loadData() {
       label.append(checkbox, name);
       schoolContainer.append(label);
     });
+    renderRosterList();
     updateSetup();
     $("resumeButton").hidden = !localStorage.getItem(STORAGE_KEY);
     if (!allCharacters.length) $("rosterStatus").textContent = "현재 캐릭터 데이터가 비어 있습니다. characters.json에 캐릭터를 추가하면 정렬할 수 있습니다.";
     readSharedResult();
   } catch (e) { $("rosterStatus").textContent = e.message + " GitHub Pages 주소에서 접속해 주세요."; }
+}
+function renderRosterList() {
+  const bySchool = new Map();
+  [...allCharacters].sort((a,b) => (a.school||"기타").localeCompare(b.school||"기타","ko") || a.name.localeCompare(b.name,"ko")).forEach(c => {
+    const school = c.school || "기타";
+    if (!bySchool.has(school)) bySchool.set(school, []);
+    bySchool.get(school).push(c.name);
+  });
+  const lines = [];
+  bySchool.forEach((names, school) => { lines.push(`[${school}]`, ...names, ""); });
+  $("rosterText").textContent = lines.join("\\n").trim();
 }
 function getFiltered() {
   const selectedSchools = new Set([...document.querySelectorAll("#schoolCheckboxes input:checked")].map(input => input.value));
@@ -56,6 +68,9 @@ $("clearSchools").addEventListener("click", () => {
   document.querySelectorAll("#schoolCheckboxes input").forEach(input => { input.checked = false; });
   updateSetup();
 });
+
+$("showRosterButton").addEventListener("click", () => { $("rosterViewer").hidden = false; });
+$("hideRosterButton").addEventListener("click", () => { $("rosterViewer").hidden = true; });
 
 function snapshot() {
   return JSON.stringify({rankedGroups:rankedGroups.map(g=>g.map(c=>c.id)),pending:pending.map(c=>c.id),current:current?.id||null,low,high,mid,comparisonsDone});

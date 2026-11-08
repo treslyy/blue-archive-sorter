@@ -11,6 +11,7 @@ body{font-family:system-ui,sans-serif;max-width:1120px;margin:28px auto;padding:
 <script>
 const API='https://bluearchive.fandom.com/api.php';
 const ROSTER='https://raw.githubusercontent.com/treslyy/blue-archive-sorter/main/data/character-affiliations-candidate.json';
+const NAME_OVERRIDES='https://raw.githubusercontent.com/treslyy/blue-archive-sorter/main/data/portrait-name-overrides.json';
 const $=id=>document.getElementById(id),say=s=>$('status').textContent=s;
 let rows=[];
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
@@ -114,11 +115,12 @@ $('run').onclick=async()=>{
  $('run').disabled=true;rows=[];$('results').replaceChildren();
  try{
   say('기준 명단과 Fandom Gallery 분류를 불러오는 중…');
-  const rd=await fetch(ROSTER).then(r=>{if(!r.ok)throw Error('기준 명단을 불러오지 못했습니다.');return r.json();});
-  const entries=rd.entries;rows=entries.map(e=>({...e,roman:aliases[e.name]||romanizeHangul(e.name),page:null,score:0,url:null,selected:false,error:'검색 대기'}));
+  const [rd,nd]=await Promise.all([fetch(ROSTER).then(r=>{if(!r.ok)throw Error('기준 명단을 불러오지 못했습니다.');return r.json();}),fetch(NAME_OVERRIDES).then(r=>{if(!r.ok)throw Error('영문 이름 대응표를 불러오지 못했습니다.');return r.json();})]);
+  const entries=rd.entries,nameOverrides=nd.overrides||{},unresolved=nd.unresolved||{};rows=entries.map(e=>({...e,roman:nameOverrides[e.name]||aliases[e.name]||romanizeHangul(e.name),unresolved:unresolved[e.name]||'',page:null,score:0,url:null,selected:false,error:unresolved[e.name]?'영문 문서명 미확정 · 외부 출처 확인 필요':'검색 대기'}));
   render();let idx=0,done=0;
   say('캐릭터별 Gallery 문서를 직접 검색합니다.\\n0/'+rows.length+'명');
   async function worker(){while(idx<rows.length){const i=idx++,x=rows[i];try{
+    if(x.unresolved){done++;say('캐릭터별 Gallery 확인: '+done+'/'+rows.length+'명\\n이미지 후보 '+rows.filter(z=>z.url).length+'개 · 외부 출처 확인 필요 '+rows.filter(z=>z.unresolved).length+'개');render();continue;}
     const page=await findGalleryPage(x.roman);
     if(page){x.page=page;x.score=score(x.roman,page.replace(/\/Gallery$/i,''));const p=await galleryPortrait(page,x.roman);if(p)Object.assign(x,p);else x.error='기본 Portrait 파일명과 정확히 일치하는 후보 없음 (다른 복장 오인 방지를 위해 제외)';}
     else x.error='Gallery 문서 검색 결과 없음';

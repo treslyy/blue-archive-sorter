@@ -144,3 +144,15 @@ footer{text-align:center;padding:12px 0 30px;font-size:.85rem}
   .top-ranking-column .top-card .top-image-placeholder{width:76px;height:76px}
   .top-ranking-column .top-card span{font-size:.7rem}
 }
+
+
+/* Let the results panel use nearly the full desktop viewport */
+@media(min-width:651px){
+  #resultPanel{
+    width:calc(100vw - 48px);
+    margin-left:calc((1040px - 100vw + 48px)/2);
+  }
+}
+@media(max-width:650px){
+  #resultPanel{width:auto;margin-left:0}
+}

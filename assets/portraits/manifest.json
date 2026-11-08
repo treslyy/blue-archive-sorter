@@ -1,0 +1,1021 @@
+{
+  "source": "user-uploaded ZIP archives",
+  "imageCount": 203,
+  "images": [
+    {
+      "file": "Ichika_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 119214
+    },
+    {
+      "file": "Iori_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 168308
+    },
+    {
+      "file": "Iroha_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 90474
+    },
+    {
+      "file": "Izumi_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 147924
+    },
+    {
+      "file": "Izuna_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 185522
+    },
+    {
+      "file": "Junko_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 297792
+    },
+    {
+      "file": "Juri_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 114744
+    },
+    {
+      "file": "Kaede_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 127484
+    },
+    {
+      "file": "Kaguya_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 236302
+    },
+    {
+      "file": "Kaho_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 155588
+    },
+    {
+      "file": "Kai_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 121266
+    },
+    {
+      "file": "Kanae_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 111782
+    },
+    {
+      "file": "Kanna_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 82798
+    },
+    {
+      "file": "Kanoe_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 99476
+    },
+    {
+      "file": "Airi_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 152704
+    },
+    {
+      "file": "Akane_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 146364
+    },
+    {
+      "file": "Akari_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 166248
+    },
+    {
+      "file": "Akemi_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 418102
+    },
+    {
+      "file": "Akira_Mask_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 132970
+    },
+    {
+      "file": "Ako_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 83826
+    },
+    {
+      "file": "Alice_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 194190
+    },
+    {
+      "file": "Ami_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 243172
+    },
+    {
+      "file": "Anna_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 87078
+    },
+    {
+      "file": "Aoba_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 91440
+    },
+    {
+      "file": "Aoi_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 198918
+    },
+    {
+      "file": "Arata_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 253480
+    },
+    {
+      "file": "Arona_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 87328
+    },
+    {
+      "file": "Aru_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 216290
+    },
+    {
+      "file": "Asuna_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 169734
+    },
+    {
+      "file": "Atsuko_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 155978
+    },
+    {
+      "file": "Ayame_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 147576
+    },
+    {
+      "file": "Ayane_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 64206
+    },
+    {
+      "file": "Ayumu_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 129078
+    },
+    {
+      "file": "Azami_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 96274
+    },
+    {
+      "file": "Azusa_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 172836
+    },
+    {
+      "file": "Cherino_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 205550
+    },
+    {
+      "file": "Chiaki_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 256132
+    },
+    {
+      "file": "Chihiro_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 136184
+    },
+    {
+      "file": "Chinatsu_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 109230
+    },
+    {
+      "file": "Chise_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 160168
+    },
+    {
+      "file": "Eimi_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 327698
+    },
+    {
+      "file": "Ein_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 122816
+    },
+    {
+      "file": "Eri_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 123204
+    },
+    {
+      "file": "Erika_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 99500
+    },
+    {
+      "file": "Erina_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 107154
+    },
+    {
+      "file": "False_President_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 72852
+    },
+    {
+      "file": "Fubuki_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 192198
+    },
+    {
+      "file": "Fuuka_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 147120
+    },
+    {
+      "file": "Fuyu_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 84510
+    },
+    {
+      "file": "GSC_President_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 106440
+    },
+    {
+      "file": "Haine_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 524904
+    },
+    {
+      "file": "Hanae_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 282266
+    },
+    {
+      "file": "Hanako_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 151400
+    },
+    {
+      "file": "Hare_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 143196
+    },
+    {
+      "file": "Haruka_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 84420
+    },
+    {
+      "file": "Haruna_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 133734
+    },
+    {
+      "file": "Hasumi_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 143164
+    },
+    {
+      "file": "Hibiki_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 147966
+    },
+    {
+      "file": "Hifumi_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 75018
+    },
+    {
+      "file": "Hikari_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 226562
+    },
+    {
+      "file": "Himari_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 175572
+    },
+    {
+      "file": "Hina_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 200940
+    },
+    {
+      "file": "Hinata_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 136678
+    },
+    {
+      "file": "Hiromi_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 85424
+    },
+    {
+      "file": "Hiyori_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 187178
+    },
+    {
+      "file": "Hoshino_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 334752
+    },
+    {
+      "file": "Ibuki_Portrait.png",
+      "sourceArchive": "portrait-part-1.zip",
+      "bytes": 331880
+    },
+    {
+      "file": "Karen_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 293704
+    },
+    {
+      "file": "Karin_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 165082
+    },
+    {
+      "file": "Kasumi_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 149410
+    },
+    {
+      "file": "Kaya_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 148982
+    },
+    {
+      "file": "Kayoko_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 78440
+    },
+    {
+      "file": "Kazusa_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 258244
+    },
+    {
+      "file": "Kei_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 129740
+    },
+    {
+      "file": "Kikyou_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 122254
+    },
+    {
+      "file": "Kirara_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 133940
+    },
+    {
+      "file": "Kirino_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 93214
+    },
+    {
+      "file": "Kisaki_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 95650
+    },
+    {
+      "file": "Koharu_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 90206
+    },
+    {
+      "file": "Kokona_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 292002
+    },
+    {
+      "file": "Kokoro_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 110402
+    },
+    {
+      "file": "Kokuriko_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 140560
+    },
+    {
+      "file": "Konoka_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 246338
+    },
+    {
+      "file": "Kotama_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 113062
+    },
+    {
+      "file": "Kotone_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 93794
+    },
+    {
+      "file": "Kotori_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 128302
+    },
+    {
+      "file": "Koyuki_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 166696
+    },
+    {
+      "file": "Kurumi_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 127100
+    },
+    {
+      "file": "Kuzunoha_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 125352
+    },
+    {
+      "file": "Mai_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 102270
+    },
+    {
+      "file": "Maia_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 93676
+    },
+    {
+      "file": "Maki_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 119396
+    },
+    {
+      "file": "Makina_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 255056
+    },
+    {
+      "file": "Makoto_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 98256
+    },
+    {
+      "file": "Malkuth_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 208212
+    },
+    {
+      "file": "Mari_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 96376
+    },
+    {
+      "file": "Marina_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 105208
+    },
+    {
+      "file": "Mashiro_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 148548
+    },
+    {
+      "file": "Mayumi_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 204892
+    },
+    {
+      "file": "Megu_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 217584
+    },
+    {
+      "file": "Meru_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 313816
+    },
+    {
+      "file": "Michiru_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 144424
+    },
+    {
+      "file": "Midori_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 134080
+    },
+    {
+      "file": "Mika_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 172932
+    },
+    {
+      "file": "Miku_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 215142
+    },
+    {
+      "file": "Mimori_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 158374
+    },
+    {
+      "file": "Mina_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 121610
+    },
+    {
+      "file": "Minato_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 392304
+    },
+    {
+      "file": "Mine_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 246818
+    },
+    {
+      "file": "Minori_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 714338
+    },
+    {
+      "file": "Mirai_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 99836
+    },
+    {
+      "file": "Misaka_Mikoto_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 176144
+    },
+    {
+      "file": "Misaki_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 150318
+    },
+    {
+      "file": "Misuzu_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 105618
+    },
+    {
+      "file": "Mitsuki_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 251030
+    },
+    {
+      "file": "Miyako_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 127788
+    },
+    {
+      "file": "Miyo_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 111372
+    },
+    {
+      "file": "Miyu_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 134846
+    },
+    {
+      "file": "Moe_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 229410
+    },
+    {
+      "file": "Momiji_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 260220
+    },
+    {
+      "file": "Momoi_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 136704
+    },
+    {
+      "file": "Momoka_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 137604
+    },
+    {
+      "file": "Mutsuki_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 155086
+    },
+    {
+      "file": "Nagisa_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 236680
+    },
+    {
+      "file": "Nagomi_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 90252
+    },
+    {
+      "file": "Nagusa_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 368270
+    },
+    {
+      "file": "Nanami_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 411936
+    },
+    {
+      "file": "Natsu_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 262314
+    },
+    {
+      "file": "Natsuki_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 975626
+    },
+    {
+      "file": "Neru_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 147204
+    },
+    {
+      "file": "Niko_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 116702
+    },
+    {
+      "file": "Niya_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 126586
+    },
+    {
+      "file": "Noa_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 120432
+    },
+    {
+      "file": "Nodoka_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 124968
+    },
+    {
+      "file": "Nonomi_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 125090
+    },
+    {
+      "file": "Nozomi_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 239968
+    },
+    {
+      "file": "Ohr_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 147242
+    },
+    {
+      "file": "Otogi_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 147714
+    },
+    {
+      "file": "Pina_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 140676
+    },
+    {
+      "file": "Plana_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 195062
+    },
+    {
+      "file": "Rabu_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 127406
+    },
+    {
+      "file": "Rana_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 80578
+    },
+    {
+      "file": "Rei_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 118050
+    },
+    {
+      "file": "Reijo_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 108608
+    },
+    {
+      "file": "Reisa_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 92130
+    },
+    {
+      "file": "Rena_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 114492
+    },
+    {
+      "file": "Renge_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 170524
+    },
+    {
+      "file": "Rin_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 204554
+    },
+    {
+      "file": "Rio_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 283456
+    },
+    {
+      "file": "Ritsu_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 91940
+    },
+    {
+      "file": "Rumi_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 125812
+    },
+    {
+      "file": "Saki_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 129464
+    },
+    {
+      "file": "Sakurako_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 147096
+    },
+    {
+      "file": "Sanae_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 260146
+    },
+    {
+      "file": "Saori_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 157708
+    },
+    {
+      "file": "Saten_Ruiko_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 188006
+    },
+    {
+      "file": "Satsuki_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 329306
+    },
+    {
+      "file": "Saya_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 166928
+    },
+    {
+      "file": "Sayuri_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 219194
+    },
+    {
+      "file": "Seia_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 108662
+    },
+    {
+      "file": "Sena_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 128306
+    },
+    {
+      "file": "Serika_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 185476
+    },
+    {
+      "file": "Serina_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 252256
+    },
+    {
+      "file": "Shigure_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 113946
+    },
+    {
+      "file": "Shimiko_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 156128
+    },
+    {
+      "file": "Shinon_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 127164
+    },
+    {
+      "file": "Shiroko_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 362000
+    },
+    {
+      "file": "Shiroko_Terror_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 185264
+    },
+    {
+      "file": "Shizuko_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 185050
+    },
+    {
+      "file": "Shokuhou_Misaki_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 205954
+    },
+    {
+      "file": "Shouko_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 190832
+    },
+    {
+      "file": "Shun_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 119366
+    },
+    {
+      "file": "Shuro_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 219436
+    },
+    {
+      "file": "Smiling_Professor_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 197848
+    },
+    {
+      "file": "Sof_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 124764
+    },
+    {
+      "file": "Sora_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 98384
+    },
+    {
+      "file": "Subaru_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 100858
+    },
+    {
+      "file": "Suiko_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 93784
+    },
+    {
+      "file": "Sumika_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 175326
+    },
+    {
+      "file": "Sumire_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 125252
+    },
+    {
+      "file": "Sumomo_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 541188
+    },
+    {
+      "file": "Suou_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 196954
+    },
+    {
+      "file": "Suzumi_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 125598
+    },
+    {
+      "file": "Takane_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 103244
+    },
+    {
+      "file": "Toki_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 101418
+    },
+    {
+      "file": "Tomoe_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 170262
+    },
+    {
+      "file": "Tsubaki_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 165570
+    },
+    {
+      "file": "Tsubasa_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 83018
+    },
+    {
+      "file": "Tsukuyo_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 127010
+    },
+    {
+      "file": "Tsumugi_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 102160
+    },
+    {
+      "file": "Tsurugi_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 193466
+    },
+    {
+      "file": "Ui_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 179552
+    },
+    {
+      "file": "Umika_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 128496
+    },
+    {
+      "file": "Utaha_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 146504
+    },
+    {
+      "file": "Wakamo_Unmask_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 214312
+    },
+    {
+      "file": "Yakumo_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 84922
+    },
+    {
+      "file": "Yoshimi_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 126132
+    },
+    {
+      "file": "Youko_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 86026
+    },
+    {
+      "file": "Yukari_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 107238
+    },
+    {
+      "file": "Yukino_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 113090
+    },
+    {
+      "file": "Yume_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 298866
+    },
+    {
+      "file": "Yuuka_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 273772
+    },
+    {
+      "file": "Yuzu_Portrait.png",
+      "sourceArchive": "portrait-part-2.zip",
+      "bytes": 136588
+    }
+  ]
+}

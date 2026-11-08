@@ -45,7 +45,7 @@ function renderRosterList() {
   });
   const lines = [];
   bySchool.forEach((names, school) => { lines.push(`[${school}]`, ...names, ""); });
-  $("rosterText").textContent = lines.join("\\n").trim();
+  $("rosterText").textContent = lines.join("\n").trim();
 }
 function getFiltered() {
   const selectedSchools = new Set([...document.querySelectorAll("#schoolCheckboxes input:checked")].map(input => input.value));

@@ -145,6 +145,15 @@ async function galleryPortrait(title,roman){
          }
        }
      }
+     // Some overview infoboxes expose the image label only through img alt/title metadata.
+     const portraitImages=[...root.querySelectorAll('img')].filter(img=>{
+       const label=[img.getAttribute('alt'),img.getAttribute('title'),img.getAttribute('data-image-name'),img.getAttribute('data-file-name')].join(' ');
+       return /portrait/i.test(label)&&!/expression|swimsuit|new year|kimono|miko/i.test(label);
+     });
+     for(const img of portraitImages){
+       const result=await imageInfoFromItem(img.parentElement||img,'Overview / Portrait (image metadata)');
+       if(result)return result;
+     }
    }
    return null;
  }

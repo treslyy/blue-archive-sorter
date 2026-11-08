@@ -138,10 +138,12 @@ function finishSort() {
   let rank=1;
   rankedGroups.forEach(group=>{
     group.forEach(c=>{
-      const li=document.createElement("li");
-      li.textContent=rank+"위 · "+c.name;
-      if(group.length>1)li.textContent+=" (공동 "+group.length+"명)";
-      $("rankingList").append(li);
+      if(rank>10){
+        const li=document.createElement("li");
+        li.textContent=rank+"위 · "+c.name;
+        if(group.length>1)li.textContent+=" (공동 "+group.length+"명)";
+        $("rankingList").append(li);
+      }
       if(rank<=10){
         const card=document.createElement("article");card.className="top-card";
         if(c.image){

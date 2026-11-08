@@ -1335,14 +1335,14 @@
     {
       "id": "roster-191",
       "name": "카자마키 마이",
-      "school": "크로노스",
+      "school": "기타",
       "type": "student",
       "image": "assets/portraits/Mai_Portrait.png"
     },
     {
       "id": "roster-192",
       "name": "카와루 시논",
-      "school": "크로노스",
+      "school": "기타",
       "type": "student",
       "image": "assets/portraits/Shinon_Portrait.png"
     },

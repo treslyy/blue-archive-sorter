@@ -1568,10 +1568,10 @@
     {
       "id": "roster-195",
       "name": "히죽히죽 교수",
-      "affiliation": "칠수인",
+      "affiliation": "기타",
       "sourceName": "ニヤニヤ教授",
-      "reviewStatus": "source-crosschecked",
-      "affiliationNote": "일본어 Wikiru NPC一覧의 기타 학생/칠수인 항목에서 확인. 사용자 명단 분류는 칠수인."
+      "reviewStatus": "special-affiliation-uncertain",
+      "affiliationNote": "칠수인 탈옥 사건과 관련된 인물이지만 칠수인 구성원은 아니며, 칠수인을 석방한 배후 인물로 묘사됨. 학교 또는 공식 소속 단체가 확인되지 않아 기타로 분류. Wikiru의 NPC 목록은 칠수인 항목 아래 함께 기재하지만, Blue Archive Wiki의 Seven Prisoners 문서는 별도 associates로 구분."
     },
     {
       "id": "roster-196",

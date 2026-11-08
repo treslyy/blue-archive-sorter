@@ -34,3 +34,18 @@ footer{text-align:center;padding:12px 0 30px;font-size:.85rem}
 .top-card img,.top-image-placeholder{width:100%;height:190px;object-fit:contain;border-radius:8px}.top-image-placeholder{display:flex;align-items:center;justify-content:center;background:#edf7fc;color:var(--muted);font-size:.85rem}
 .top-card strong{color:#2189ba}.top-card span{overflow-wrap:anywhere;color:#254f70;font-weight:750}
 @media(max-width:650px){.wrap{width:min(100% - 24px,560px)}.site-header{padding:34px 0 24px}.site-header:after{right:-110px;top:-120px}.filters{grid-template-columns:1fr}.versus{grid-template-columns:1fr;gap:9px}.vs{width:42px;height:42px;margin:auto}.character-choice{min-height:260px;padding:12px}.character-choice img{height:220px}.panel{padding:20px 16px;border-radius:17px}.panel:before{left:16px}.top-ranking-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.top-card img,.top-image-placeholder{height:160px}.progress-row{font-size:.8rem}}
+
+
+/* Multi-select school filters */
+.filters{grid-template-columns:1fr}
+.school-filter{min-width:0;margin:0;padding:14px;border:1px solid #c8e2f1;border-radius:13px;background:rgba(248,252,255,.82)}
+.school-filter legend{padding:0 7px;color:#54748e;font-size:.9rem;font-weight:800}
+.school-filter-actions{display:flex;gap:8px;margin:0 0 12px}
+.school-filter-actions button{padding:6px 10px;font-size:.82rem}
+.school-checkboxes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.filters .school-option{display:flex;grid-template-columns:none;align-items:center;gap:8px;min-width:0;padding:8px 10px;border:1px solid #d7eaf4;border-radius:9px;background:#fff;color:#355d79;font-size:.88rem;font-weight:650;cursor:pointer}
+.filters .school-option input{flex:0 0 auto;width:16px;height:16px;margin:0;accent-color:#258fcb}
+.filters .school-option span{overflow-wrap:anywhere}
+.filters .search-filter{max-width:480px}
+@media(max-width:850px){.school-checkboxes{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.school-checkboxes{grid-template-columns:repeat(2,minmax(0,1fr))}.school-filter{padding:12px}}

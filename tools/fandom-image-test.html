@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fandom 포트레이트 다운로드 테스트</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:760px;margin:32px auto;padding:0 16px;line-height:1.55;color:#222}
+button{padding:10px 14px;border:1px solid #aaa;border-radius:8px;background:#f6f6f6;cursor:pointer}
+#status{white-space:pre-wrap;background:#f4f4f4;padding:12px;border-radius:8px;margin:16px 0}
+img{max-width:240px;max-height:480px;object-fit:contain;background:#ddd;border:1px solid #ccc}
+a{overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<h1>Fandom 포트레이트 다운로드 테스트</h1>
+<p>Fandom의 MediaWiki API에서 아로나 포트레이트 파일을 검색하고, 원본 이미지 URL을 가져와 브라우저에서 다운로드를 시도합니다. 이 페이지는 이미지 업로드나 GitHub 변경 권한을 요구하지 않습니다.</p>
+<button id="run">아로나 이미지 조회 및 다운로드 테스트</button>
+<div id="status">대기 중입니다.</div>
+<div id="result"></div>
+<script>
+const api='https://bluearchive.fandom.com/api.php';
+const status=document.getElementById('status');
+const result=document.getElementById('result');
+const say=s=>status.textContent=s;
+document.getElementById('run').addEventListener('click',async()=>{
+  result.replaceChildren();
+  say('1/3 Fandom API에서 Arona Portrait 파일 검색 중...');
+  try{
+    const q=new URLSearchParams({action:'query',format:'json',origin:'*',list:'search',srnamespace:'6',srlimit:'20',srsearch:'Arona Portrait'});
+    const search=await fetch(api+'?'+q);
+    if(!search.ok) throw new Error('검색 API HTTP '+search.status);
+    const sj=await search.json();
+    const hits=sj?.query?.search||[];
+    const match=hits.find(x=>/Arona.*Portrait|Portrait.*Arona/i.test(x.title))||hits[0];
+    if(!match) throw new Error('검색 결과에서 포트레이트 파일을 찾지 못했습니다.');
+    say('2/3 파일 정보 조회 중...\n검색 결과: '+match.title);
+    const p=new URLSearchParams({action:'query',format:'json',origin:'*',prop:'imageinfo',iiprop:'url|size|mime',titles:match.title});
+    const info=await fetch(api+'?'+p);
+    if(!info.ok) throw new Error('이미지 정보 API HTTP '+info.status);
+    const ij=await info.json();
+    const page=Object.values(ij?.query?.pages||{})[0];
+    const ii=page?.imageinfo?.[0];
+    if(!ii?.url) throw new Error('API 응답에 원본 이미지 URL이 없습니다.');
+    const link=document.createElement('a'); link.href=ii.url; link.target='_blank'; link.rel='noopener'; link.textContent='Fandom 원본 이미지 열기';
+    const meta=document.createElement('p'); meta.textContent='파일: '+page.title+' | '+ii.width+'×'+ii.height+' | '+ii.mime;
+    result.append(meta,link);
+    const preview=document.createElement('p'); const img=document.createElement('img'); img.src=ii.url; img.alt=page.title; preview.append(img); result.append(preview);
+    say('3/3 원본 URL 확보 성공. 브라우저에서 파일 다운로드 시도 중...');
+    try{
+      const file=await fetch(ii.url);
+      if(!file.ok) throw new Error('이미지 HTTP '+file.status);
+      const blob=await file.blob();
+      const objectUrl=URL.createObjectURL(blob);
+      const a=document.createElement('a'); a.href=objectUrl; a.download='Arona_Portrait.'+((ii.mime||'image/png').split('/')[1]||'png').replace('jpeg','jpg'); document.body.append(a); a.click(); a.remove();
+      setTimeout(()=>URL.revokeObjectURL(objectUrl),60000);
+      say('성공: API 조회와 브라우저 다운로드가 모두 완료됐습니다. 다운로드 폴더에서 파일을 확인해 주세요.\n'+page.title+' ('+ii.width+'×'+ii.height+')');
+    }catch(downloadError){
+      say('부분 성공: API 조회와 원본 URL 확보는 성공했지만, 브라우저 fetch 다운로드는 실패했습니다.\n원인: '+downloadError.message+'\n아래 “Fandom 원본 이미지 열기” 링크에서 이미지 저장을 시도해 주세요.');
+    }
+  }catch(e){say('실패: '+e.message+'\n브라우저의 개발자 도구 콘솔에 자세한 오류가 있을 수 있습니다.');}
+});
+</script>
+</body>
+</html>

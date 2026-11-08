@@ -67,27 +67,22 @@ async function findGalleryPage(roman){
  return null;
 }
 async function galleryPortrait(title,roman){
- // 1) Gallery 문서의 이미지 목록에서 기본 Portrait를 우선 찾습니다.
+ // 기본 복장 오인 방지를 위해 파일명이 캐릭터명 + Portrait와 정확히 일치하는 경우만 자동 채택합니다.
+ const base=norm(title.split('/')[0]);
  const d=await api({action:'query',titles:title+'/Gallery',prop:'images',imlimit:'max'});
  const page=Object.values(d.query?.pages||{})[0];
  const files=(page?.images||[]).map(x=>x.title.replace(/^File:/,''));
- const base=norm(title.split('/')[0]);
- const usable=f=>!/expression|halo|icon|sprite|live2d|animation|gacha/i.test(f);
- let file=files.find(f=>usable(f)&&/portrait/i.test(f)&&norm(f.replace(/\.[^.]+$/,''))===base+'portrait');
- if(!file)file=files.find(f=>usable(f)&&/portrait/i.test(f)&&norm(f.replace(/\.[^.]+$/,''))===base+'portrait2');
- // 2) Gallery 페이지 파일 목록이 비었거나 파일명이 다르면, 기존에 일부 결과를 찾았던 파일 검색 API로 보완합니다.
+ const clean=f=>norm(f.replace(/\.[^.]+$/,''));
+ const exactNames=new Set([base+'portrait','npc'+base+'portrait','npcportrait'+base]);
+ let file=files.find(f=>exactNames.has(clean(f)));
+ // Gallery 목록에 없을 때만 전체 캐릭터명을 사용해 파일 검색 API를 보완적으로 조회합니다.
+ // 검색 결과 첫 항목이나 성씨/이름 일부만 일치하는 파일은 절대 자동 선택하지 않습니다.
  if(!file){
    const full=(roman||title.split('/')[0]).trim();
-   const last=full.split(/\s+/).pop();
-   for(const q of [full+' Portrait',last+' Portrait']){
-     const found=await api({action:'query',list:'search',srnamespace:6,srsearch:q,srlimit:15});
-     const hits=(found.query?.search||[]).filter(h=>/portrait/i.test(h.title)&&usable(h.title));
-     if(!hits.length)continue;
-     const exact=hits.find(h=>norm(h.title.replace(/^File:/,'').replace(/\.[^.]+$/,''))===base+'portrait');
-     const likely=exact||hits.find(h=>norm(h.title).includes(base))||hits[0];
-     file=likely.title.replace(/^File:/,'');
-     break;
-   }
+   const found=await api({action:'query',list:'search',srnamespace:6,srsearch:full+' Portrait',srlimit:30});
+   const hits=(found.query?.search||[]).filter(h=>/portrait/i.test(h.title));
+   const exact=hits.find(h=>exactNames.has(clean(h.title.replace(/^File:/,''))));
+   if(exact)file=exact.title.replace(/^File:/,'');
  }
  if(!file)return null;
  const info=await api({action:'query',prop:'imageinfo',iiprop:'url|size|mime',iiurlwidth:180,titles:'File:'+file});
@@ -104,7 +99,7 @@ $('run').onclick=async()=>{
   say('캐릭터별 Gallery 문서를 직접 검색합니다.\\n0/'+rows.length+'명');
   async function worker(){while(idx<rows.length){const i=idx++,x=rows[i];try{
     const page=await findGalleryPage(x.roman);
-    if(page){x.page=page;x.score=score(x.roman,page.replace(/\/Gallery$/i,''));const p=await galleryPortrait(page,x.roman);if(p)Object.assign(x,p);else x.error='문서는 찾았지만 기본 Portrait 추출 실패';}
+    if(page){x.page=page;x.score=score(x.roman,page.replace(/\/Gallery$/i,''));const p=await galleryPortrait(page,x.roman);if(p)Object.assign(x,p);else x.error='기본 Portrait 파일명과 정확히 일치하는 후보 없음 (다른 복장 오인 방지를 위해 제외)';}
     else x.error='Gallery 문서 검색 결과 없음';
    }catch(e){x.error='조회 오류: '+e.message;}
    done++;say('캐릭터별 Gallery 확인: '+done+'/'+rows.length+'명\\n이미지 후보 '+rows.filter(z=>z.url).length+'개 · 추가 확인 '+rows.filter(z=>!z.url).length+'개');render();await sleep(250);

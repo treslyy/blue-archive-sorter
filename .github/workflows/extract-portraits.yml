@@ -22,31 +22,19 @@ jobs:
           import json, zipfile
           from pathlib import Path, PurePosixPath
 
-          repo = Path(".")
-          archives = [repo / "portrait-part-1.zip", repo / "portrait-part-2.zip"]
+          archives = [Path("portrait-part-1.zip"), Path("portrait-part-2.zip")]
           for archive in archives:
               if not archive.is_file():
                   raise SystemExit(f"Missing archive: {archive.name}")
 
-          output = repo / "assets" / "portraits"
+          output = Path("assets/portraits")
           output.mkdir(parents=True, exist_ok=True)
           allowed = {".png", ".jpg", ".jpeg", ".webp"}
-          all_entries = []
+          extracted = []
           seen = set()
-          total_images = 0
-          failures = 0
 
           for archive in archives:
               with zipfile.ZipFile(archive) as z:
-                  names = z.namelist()
-                  manifest_names = [n for n in names if PurePosixPath(n).name.lower() == "manifest.json"]
-                  if not manifest_names:
-                      raise SystemExit(f"{archive.name}: manifest.json not found")
-                  manifest = json.loads(z.read(manifest_names[0]).decode("utf-8"))
-                  chars = manifest.get("characters", [])
-                  failures += int(manifest.get("failed", 0) or 0)
-                  all_entries.extend(chars)
-
                   for info in z.infolist():
                       if info.is_dir():
                           continue
@@ -54,30 +42,33 @@ jobs:
                       if p.suffix.lower() not in allowed:
                           continue
                       name = p.name
-                      if not name or name in seen:
-                          raise SystemExit(f"Duplicate or invalid image filename: {name}")
+                      if not name or name in seen or (output / name).exists():
+                          raise SystemExit(f"Duplicate image filename: {name}")
                       seen.add(name)
-                      (output / name).write_bytes(z.read(info))
-                      total_images += 1
+                      data = z.read(info)
+                      (output / name).write_bytes(data)
+                      extracted.append({
+                          "file": name,
+                          "sourceArchive": archive.name,
+                          "bytes": len(data)
+                      })
 
-          if total_images == 0:
-              raise SystemExit("No portrait images were found in the ZIP archives.")
+          if not extracted:
+              raise SystemExit("No PNG/JPG/JPEG/WEBP images found in the ZIP archives.")
 
           (output / "manifest.json").write_text(
               json.dumps({
-                  "source": "portrait-part-1.zip + portrait-part-2.zip",
-                  "imageCount": total_images,
-                  "reportedFailures": failures,
-                  "characters": all_entries
-              }, ensure_ascii=False, indent=2) + "\n",
+                  "source": "user-uploaded ZIP archives",
+                  "imageCount": len(extracted),
+                  "images": extracted
+              }, ensure_ascii=False, indent=2) + "\\n",
               encoding="utf-8"
           )
 
-          print(f"Extracted images: {total_images}")
-          print(f"Manifest character records: {len(all_entries)}")
-          print(f"Reported download failures: {failures}")
+          print(f"Extracted images: {len(extracted)}")
+          print(f"Archive 1: {sum(x['sourceArchive'] == archives[0].name for x in extracted)}")
+          print(f"Archive 2: {sum(x['sourceArchive'] == archives[1].name for x in extracted)}")
 
-          # Remove the temporary archives only after successful extraction.
           for archive in archives:
               archive.unlink()
           PY

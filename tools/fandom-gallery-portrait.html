@@ -6,8 +6,9 @@ body{font-family:system-ui,sans-serif;max-width:1120px;margin:28px auto;padding:
 <h1>Fandom Gallery 기반 포트레이트 수집</h1>
 <p>기준 명단 203명과 Fandom에서 각 캐릭터 이름으로 Gallery 문서를 직접 검색하고, 문서 안에서 기본(Default) 구역의 Portrait 이미지를 우선 추출합니다. 존재하지 않는 Category:Gallery 분류에 의존하지 않습니다.</p>
 <p class="note"><b>주의:</b> 자동 이름 대조는 후보를 찾는 단계입니다. 유사도가 낮거나 기본 이미지 영역을 특정하지 못한 항목은 자동 확정하지 않습니다. 최종 선택 전에 미리보기를 확인해 주세요.</p>
-<div class="bar"><button id="run">Gallery 대조 및 이미지 조회</button><button id="select">확실한 후보 선택</button><button id="clear">선택 해제</button><button id="download" disabled>선택 이미지 다운로드</button></div>
+<div class="bar"><button id="run">Gallery 대조 및 이미지 조회</button><button id="select">이미지 전체 선택</button><button id="clear">선택 해제</button><button id="download" disabled>선택 이미지 ZIP 다운로드</button></div>
 <div id="status" class="status">대기 중입니다.</div><div id="results"></div>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script>
 const API='https://bluearchive.fandom.com/api.php';
 const ROSTER='https://raw.githubusercontent.com/treslyy/blue-archive-sorter/main/data/character-affiliations-candidate.json';
@@ -203,7 +204,40 @@ $('run').onclick=async()=>{
  }catch(e){say('오류: '+e.message);}
  finally{$('run').disabled=false;}
 };
-$('select').onclick=()=>{rows.forEach(x=>{if(x.url&&x.score>=0.9)x.selected=true;});render();};
+$('select').onclick=()=>{rows.forEach(x=>{x.selected=!!x.url;});render();};
 $('clear').onclick=()=>{rows.forEach(x=>x.selected=false);render();};
-$('download').onclick=async()=>{const selected=rows.filter(x=>x.selected&&x.url);$('download').disabled=true;let n=0;for(const x of selected){try{const r=await fetch(x.url);if(!r.ok)throw Error();const b=await r.blob(),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=x.file.replace(/[^a-z0-9._-]/gi,'_');document.body.append(a);a.click();a.remove();URL.revokeObjectURL(u);n++;}catch(e){window.open(x.url,'_blank','noopener');}say('다운로드 요청 '+n+'/'+selected.length);await sleep(400);}say('다운로드 요청 완료 '+n+'/'+selected.length+'. 브라우저 다운로드 목록에서 저장 여부를 확인해 주세요.');$('download').disabled=false;};
+$('download').onclick=async()=>{
+ const selected=rows.filter(x=>x.selected&&x.url);
+ if(!selected.length)return;
+ if(typeof JSZip==='undefined'){say('ZIP 라이브러리를 불러오지 못했습니다. 페이지를 새로고침한 뒤 다시 시도해 주세요.');return;}
+ $('download').disabled=true;
+ const zip=new JSZip(),folder=zip.folder('portraits'),manifest=[];
+ let done=0,failed=0,next=0;
+ async function worker(){
+  while(next<selected.length){
+   const x=selected[next++];
+   const ext=(x.file.match(/\.(png|jpe?g|webp)$/i)||[])[0]||'.png';
+   const filename=(x.id||('character-'+String(rows.indexOf(x)+1).padStart(3,'0')))+'_'+(x.name||'character').replace(/[^가-힣a-zA-Z0-9_-]/g,'_')+ext.toLowerCase();
+   try{
+    const response=await fetch(x.url);
+    if(!response.ok)throw Error('HTTP '+response.status);
+    const blob=await response.blob();
+    folder.file(filename,blob);
+    manifest.push({id:x.id||null,name:x.name,affiliation:x.affiliation,file:'portraits/'+filename,fandomPage:x.page,sourceFile:x.file,sourceUrl:x.url});
+   }catch(e){failed++;manifest.push({id:x.id||null,name:x.name,affiliation:x.affiliation,file:null,fandomPage:x.page,sourceFile:x.file,sourceUrl:x.url,error:String(e)});}
+   done++;
+   say('이미지 압축 준비: '+done+'/'+selected.length+'명 · 실패 '+failed+'명');
+  }
+ }
+ await Promise.all(Array.from({length:4},worker));
+ zip.file('manifest.json',JSON.stringify({createdAt:new Date().toISOString(),total:selected.length,downloaded:done-failed,failed,characters:manifest},null,2));
+ if(done===failed){say('이미지를 하나도 가져오지 못했습니다. 브라우저의 네트워크 제한 또는 원본 이미지 접근을 확인해 주세요.');$('download').disabled=false;return;}
+ say('ZIP 파일을 만드는 중입니다…');
+ const blob=await zip.generateAsync({type:'blob',compression:'DEFLATE',compressionOptions:{level:5}},meta=>say('ZIP 압축 중: '+Math.round(meta.percent)+'%'));
+ const url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='blue-archive-portraits.zip';document.body.append(a);a.click();a.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),30000);
+ say('완료: '+(done-failed)+'개 이미지 저장, '+failed+'개 실패. ZIP 안의 manifest.json에 캐릭터별 파일 대응 정보가 들어 있습니다.');
+ $('download').disabled=false;
+};
 </script></body></html>

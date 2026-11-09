@@ -190,3 +190,18 @@ footer{text-align:center;padding:12px 0 30px;font-size:.85rem}
  .ranking-columns .ranking{flex-basis:155px;width:155px}
  .ranking-columns .ranking li{grid-template-columns:29px minmax(0,1fr);min-height:21px;font-size:.66rem;padding:1px 3px}
 }
+
+
+/* Match the height of TOP 10 columns and 40-row text columns */
+.top-ranking-column{height:800px}
+.top-ranking-column .top-card{flex:1 1 0;min-height:0;height:auto;grid-template-rows:minmax(0,1fr) 25px}
+.top-ranking-column .top-card img,.top-ranking-column .top-card .top-image-placeholder{height:100%;max-height:100%;object-fit:cover}
+.ranking-columns .ranking{height:800px}
+.ranking-columns .ranking li{flex:1 1 0;min-height:0;height:auto;padding:0 4px;overflow:hidden}
+.ranking-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;overflow-wrap:normal}
+@media(max-width:650px){
+ .top-ranking-column{height:680px}
+ .top-ranking-column .top-card{grid-template-rows:minmax(0,1fr) 24px}
+ .ranking-columns .ranking{height:680px}
+ .ranking-columns .ranking li{padding:0 3px}
+}

@@ -156,3 +156,37 @@ footer{text-align:center;padding:12px 0 30px;font-size:.85rem}
 @media(max-width:650px){
   #resultPanel{width:auto;margin-left:0}
 }
+
+
+/* Reference-inspired dense, table-like result layout */
+#resultPanel{padding:16px 14px;border-radius:8px;box-shadow:none;background:rgba(255,255,255,.96)}
+#resultPanel:before{display:none}
+#resultPanel h2{margin:0 0 6px}
+#resultPanel .top-ranking-title{margin:8px 0 6px;font-size:1rem}
+.ranking-layout{display:flex;align-items:flex-start;gap:6px;width:100%;max-width:100%;overflow-x:auto;padding:0 0 8px}
+.top-ranking-grid{display:flex;flex:0 0 auto;gap:5px}
+.top-ranking-column{display:flex;flex:0 0 205px;width:205px;flex-direction:column;gap:0;border:1px solid #83c6ef;background:#fff}
+.top-ranking-column .top-card{display:grid;grid-template-columns:32px minmax(0,1fr);grid-template-rows:132px 25px;align-items:center;justify-items:center;gap:0;min-height:157px;padding:3px 4px;border:0;border-bottom:1px solid #83c6ef;border-radius:0;background:#fff;box-shadow:none;text-align:center}
+.top-ranking-column .top-card:last-child{border-bottom:0}
+.top-ranking-column .top-card strong{grid-column:1;grid-row:1/3;align-self:stretch;display:flex;align-items:center;justify-content:center;width:100%;white-space:nowrap;font-size:.78rem;color:#315a7a;border-right:1px solid #b5d9f2}
+.top-ranking-column .top-card img,.top-ranking-column .top-card .top-image-placeholder{grid-column:2;grid-row:1;width:112px;height:132px;object-fit:cover;object-position:center 8%;border-radius:0}
+.top-ranking-column .top-card span{grid-column:2;grid-row:2;align-self:center;width:100%;min-width:0;padding:2px 3px;overflow-wrap:anywhere;white-space:normal;font-size:.72rem;line-height:1.15;font-weight:600;color:#31516d}
+.ranking-columns{display:flex;align-items:flex-start;gap:5px;flex:0 0 auto;margin:0}
+.ranking-columns .ranking{display:flex;flex:0 0 190px;width:190px;flex-direction:column;gap:0;margin:0;padding:0;border:1px solid #83c6ef;background:#fff;list-style:none}
+.ranking-columns .ranking li{display:grid;grid-template-columns:34px minmax(0,1fr);align-items:center;min-height:22px;padding:1px 4px;border:0;border-bottom:1px solid #a8d4f2;border-radius:0;background:#fff;font-size:.72rem;line-height:1.2;color:#31516d}
+.ranking-columns .ranking li:last-child{border-bottom:0}
+.ranking-rank{display:block;text-align:center;white-space:nowrap;border-right:1px solid #b5d9f2;padding-right:4px;font-variant-numeric:tabular-nums;color:#315a7a}
+.ranking-name{display:block;min-width:0;text-align:center;overflow-wrap:anywhere;padding:0 3px}
+@media(min-width:651px){#resultPanel{width:calc(100vw - 32px);margin-left:calc((1040px - 100vw + 32px)/2)}}
+@media(max-width:650px){
+ #resultPanel{width:auto;margin-left:0;padding:14px 10px}
+ .ranking-layout{gap:5px}
+ .top-ranking-grid,.ranking-columns{gap:4px}
+ .top-ranking-column{flex-basis:160px;width:160px}
+ .top-ranking-column .top-card{grid-template-columns:27px minmax(0,1fr);grid-template-rows:112px 24px;min-height:136px}
+ .top-ranking-column .top-card strong{font-size:.68rem}
+ .top-ranking-column .top-card img,.top-ranking-column .top-card .top-image-placeholder{width:94px;height:112px}
+ .top-ranking-column .top-card span{font-size:.66rem}
+ .ranking-columns .ranking{flex-basis:155px;width:155px}
+ .ranking-columns .ranking li{grid-template-columns:29px minmax(0,1fr);min-height:21px;font-size:.66rem;padding:1px 3px}
+}

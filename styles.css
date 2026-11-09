@@ -221,3 +221,7 @@ footer{text-align:center;padding:12px 0 30px;font-size:.85rem}
 /* Include the text table's outer border in TOP 10's matching height */
 .top-ranking-column{height:882px}
 @media(max-width:650px){.top-ranking-column{height:842px}}
+
+
+/* Remove the legacy top gap so both result tables start on the same line */
+#rankingList{margin-top:0}

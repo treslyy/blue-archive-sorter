@@ -161,8 +161,13 @@ function finishSort() {
           textColumnCount=0;
         }
         const li=document.createElement("li");
-        li.textContent=rank+"위 · "+c.name;
-        if(group.length>1)li.textContent+=" (공동 "+group.length+"명)";
+        const rankLabel=document.createElement("span");
+        rankLabel.className="ranking-rank";
+        rankLabel.textContent=rank+"";
+        const nameLabel=document.createElement("span");
+        nameLabel.className="ranking-name";
+        nameLabel.textContent=c.name+(group.length>1?" (공동 "+group.length+"명)":"");
+        li.append(rankLabel,nameLabel);
         textColumn.append(li);
         textColumnCount++;
       }

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#edf8ff">
+  <title>얼굴 크롭 조정 · 블루 아카이브 캐릭터 소트</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;padding:24px;background:#edf8ff;color:#173653;font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;line-height:1.5}
+    main{max-width:900px;margin:0 auto}
+    h1{margin:0 0 6px;color:#17456c;font-size:1.65rem}
+    .muted{color:#66849d}
+    .panel{padding:22px;background:#fff;border:1px solid #c9e4f4;border-radius:16px;box-shadow:0 8px 24px rgba(42,117,157,.09)}
+    .toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:18px 0}
+    select,button{font:inherit;border:1px solid #c3deef;border-radius:10px;padding:9px 12px;background:#f3faff;color:#286087}
+    button{font-weight:700;cursor:pointer}
+    button:disabled{opacity:.45;cursor:not-allowed}
+    .primary{background:#258fcb;color:#fff;border-color:#258fcb}
+    .workspace{display:grid;grid-template-columns:minmax(250px,330px) minmax(260px,1fr);gap:26px;align-items:start}
+    .preview-wrap{width:100%;aspect-ratio:112/132;overflow:hidden;background:#edf7fc;border:1px solid #c9e4f4;border-radius:10px;display:grid;place-items:center}
+    #preview{width:100%;height:100%;object-fit:cover;transform:scale(1);transform-origin:center}
+    .preview-caption{text-align:center;font-weight:750;margin:10px 0 0}
+    .control{margin:0 0 22px}
+    .control-head{display:flex;justify-content:space-between;gap:10px;margin-bottom:6px;font-weight:700}
+    input[type=range]{width:100%;accent-color:#258fcb}
+    .help{padding:12px 14px;border-radius:10px;background:#f3faff;color:#54748e;font-size:.9rem}
+    .footer{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:20px}
+    @media(max-width:650px){body{padding:14px}.panel{padding:16px}.workspace{grid-template-columns:1fr}.preview-wrap{max-width:280px;margin:auto}}
+  </style>
+</head>
+<body>
+<main>
+  <h1>얼굴 크롭 조정 도구</h1>
+  <p class="muted">전체 명단에서 고른 10명의 이미지 크롭 위치를 시험 조정합니다. 이 페이지의 조정은 정식 소트 화면에 아직 반영되지 않습니다.</p>
+  <section class="panel">
+    <div class="toolbar">
+      <label for="characterSelect">테스트 캐릭터</label>
+      <select id="characterSelect" disabled><option>불러오는 중…</option></select>
+      <span id="progress" class="muted"></span>
+    </div>
+    <div class="workspace">
+      <div>
+        <div class="preview-wrap"><img id="preview" alt=""></div>
+        <p id="characterName" class="preview-caption"></p>
+      </div>
+      <div>
+        <div class="control">
+          <div class="control-head"><label for="xRange">가로 위치</label><output id="xValue">50%</output></div>
+          <input id="xRange" type="range" min="0" max="100" value="50">
+        </div>
+        <div class="control">
+          <div class="control-head"><label for="yRange">세로 위치</label><output id="yValue">50%</output></div>
+          <input id="yRange" type="range" min="0" max="100" value="50">
+        </div>
+        <div class="control">
+          <div class="control-head"><label for="zoomRange">확대</label><output id="zoomValue">1.00배</output></div>
+          <input id="zoomRange" type="range" min="100" max="300" value="100">
+        </div>
+        <p class="help">이미지 안에서 얼굴이 가운데 오도록 가로·세로 위치를 조절하고, 확대 비율을 맞춰 주세요. 미리보기는 정식 결과 화면의 초상화 비율(112:132)에 맞췄습니다.</p>
+        <div class="toolbar">
+          <button id="resetButton" type="button">이 캐릭터 초기화</button>
+          <button id="prevButton" type="button">이전</button>
+          <button id="nextButton" type="button">다음</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <span id="saveStatus" class="muted">조정값은 이 브라우저에 자동 저장됩니다.</span>
+      <button id="downloadButton" class="primary" type="button" disabled>조정 데이터 다운로드</button>
+    </div>
+  </section>
+  <p class="muted">다운로드한 JSON 파일을 이 대화에 첨부해 주시면, 결과 화면에 적용하고 나머지 캐릭터로 확장하겠습니다.</p>
+</main>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const STORAGE_KEY = "ba-sorter-crop-test-v1";
+  let characters = [];
+  let settings = {};
+  let index = 0;
+
+  function current() { return characters[index]; }
+  function defaults() { return {x:50,y:50,zoom:1}; }
+  function getSetting(c) { return settings[c.id] || defaults(); }
+  function save() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(settings)); } catch {}
+    $("saveStatus").textContent = "조정값이 이 브라우저에 자동 저장되었습니다.";
+  }
+  function render() {
+    const c = current();
+    if (!c) return;
+    const s = getSetting(c);
+    $("characterSelect").value = c.id;
+    $("preview").src = c.image || "";
+    $("preview").alt = c.name;
+    $("characterName").textContent = c.name;
+    $("xRange").value = s.x;
+    $("yRange").value = s.y;
+    $("zoomRange").value = Math.round(s.zoom * 100);
+    $("xValue").textContent = s.x + "%";
+    $("yValue").textContent = s.y + "%";
+    $("zoomValue").textContent = s.zoom.toFixed(2) + "배";
+    $("preview").style.objectPosition = s.x + "% " + s.y + "%";
+    $("preview").style.transform = "scale(" + s.zoom + ")";
+    $("progress").textContent = (index + 1) + " / " + characters.length;
+    $("prevButton").disabled = index === 0;
+    $("nextButton").disabled = index === characters.length - 1;
+  }
+  function update(key, value) {
+    const c = current();
+    const s = {...getSetting(c)};
+    s[key] = key === "zoom" ? value / 100 : value;
+    settings[c.id] = s;
+    save();
+    render();
+  }
+  async function init() {
+    try {
+      const response = await fetch("characters.json");
+      if (!response.ok) throw new Error("characters.json을 불러오지 못했습니다.");
+      const raw = await response.json();
+      const all = (Array.isArray(raw) ? raw : raw.characters || []).filter(c => c && c.id && c.name && c.image);
+      if (!all.length) throw new Error("이미지가 등록된 캐릭터가 없습니다.");
+      const count = Math.min(10, all.length);
+      characters = Array.from({length:count}, (_,i) => all[Math.round(i * (all.length - 1) / Math.max(1,count - 1))]);
+      try { settings = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}") || {}; } catch { settings = {}; }
+      $("characterSelect").replaceChildren(...characters.map((c,i) => {
+        const option = document.createElement("option");
+        option.value = c.id;
+        option.textContent = (i+1) + ". " + c.name;
+        return option;
+      }));
+      $("characterSelect").disabled = false;
+      $("downloadButton").disabled = false;
+      render();
+    } catch (error) {
+      $("characterSelect").replaceChildren(new Option(error.message));
+      $("saveStatus").textContent = error.message;
+    }
+  }
+  $("characterSelect").addEventListener("change", e => {
+    index = characters.findIndex(c => c.id === e.target.value);
+    render();
+  });
+  $("xRange").addEventListener("input", e => update("x", Number(e.target.value)));
+  $("yRange").addEventListener("input", e => update("y", Number(e.target.value)));
+  $("zoomRange").addEventListener("input", e => update("zoom", Number(e.target.value)));
+  $("resetButton").addEventListener("click", () => {
+    delete settings[current().id];
+    save();
+    render();
+  });
+  $("prevButton").addEventListener("click", () => { index = Math.max(0,index-1); render(); });
+  $("nextButton").addEventListener("click", () => { index = Math.min(characters.length-1,index+1); render(); });
+  $("downloadButton").addEventListener("click", () => {
+    const output = {
+      version: 1,
+      note: "Pilot crop settings; values are normalized percentages and zoom multiplier.",
+      crops: Object.fromEntries(characters.filter(c => settings[c.id]).map(c => [c.id, settings[c.id]]))
+    };
+    const blob = new Blob([JSON.stringify(output,null,2)], {type:"application/json"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "crop-settings-test.json";
+    a.click();
+    URL.revokeObjectURL(url);
+    $("saveStatus").textContent = "테스트 조정 데이터 파일을 다운로드했습니다.";
+  });
+  init();
+})();
+</script>
+</body>
+</html>

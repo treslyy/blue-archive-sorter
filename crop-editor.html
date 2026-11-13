@@ -18,8 +18,8 @@
     button:disabled{opacity:.45;cursor:not-allowed}
     .primary{background:#258fcb;color:#fff;border-color:#258fcb}
     .workspace{display:grid;grid-template-columns:minmax(250px,330px) minmax(260px,1fr);gap:26px;align-items:start}
-    .preview-wrap{width:100%;aspect-ratio:112/132;overflow:hidden;background:#edf7fc;border:1px solid #c9e4f4;border-radius:10px;display:grid;place-items:center}
-    #preview{width:100%;height:100%;object-fit:cover;transform:scale(1);transform-origin:center}
+    .preview-wrap{position:relative;width:100%;aspect-ratio:112/132;overflow:hidden;background:#edf7fc;border:1px solid #c9e4f4;border-radius:10px}
+    #preview{position:absolute;display:block;max-width:none;max-height:none;object-fit:cover;transform-origin:top left;pointer-events:none}
     .preview-caption{text-align:center;font-weight:750;margin:10px 0 0}
     .control{margin:0 0 22px}
     .control-head{display:flex;justify-content:space-between;gap:10px;margin-bottom:6px;font-weight:700}
@@ -81,7 +81,7 @@
   let index = 0;
 
   function current() { return characters[index]; }
-  function defaults() { return {x:50,y:50,zoom:1}; }
+  function defaults() { return {x:50,y:50,zoom:1.5}; }
   function getSetting(c) { return settings[c.id] || defaults(); }
   function save() {
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(settings)); } catch {}
@@ -101,8 +101,12 @@
     $("xValue").textContent = s.x + "%";
     $("yValue").textContent = s.y + "%";
     $("zoomValue").textContent = s.zoom.toFixed(2) + "배";
-    $("preview").style.objectPosition = s.x + "% " + s.y + "%";
-    $("preview").style.transform = "scale(" + s.zoom + ")";
+    const size = (s.zoom * 100) + "%";
+    $("preview").style.width = size;
+    $("preview").style.height = size;
+    $("preview").style.left = s.x + "%";
+    $("preview").style.top = s.y + "%";
+    $("preview").style.transform = "translate(-" + s.x + "%,-" + s.y + "%)";
     $("progress").textContent = (index + 1) + " / " + characters.length;
     $("prevButton").disabled = index === 0;
     $("nextButton").disabled = index === characters.length - 1;

@@ -195,12 +195,18 @@ function finishSort() {
         }
         const card=document.createElement("article");card.className="top-card";
         if(c.image){
-          const frame=document.createElement("div");frame.className="top-card-portrait";
-          const img=document.createElement("img");img.src=c.image;img.alt=c.name;img.loading="lazy";
+          const img=document.createElement("img");img.alt=c.name;img.loading="lazy";
           const crop=TOP_CROPS[c.id];
-          if(crop){img.addEventListener("load",()=>applyPortraitCrop(frame,img,crop));}
-          img.onerror=()=>{const placeholder=document.createElement("div");placeholder.className="top-image-placeholder";placeholder.textContent="이미지 없음";frame.replaceWith(placeholder);};
-          frame.append(img);card.append(frame);
+          if(crop){
+            const frame=document.createElement("div");frame.className="top-card-portrait";
+            img.addEventListener("load",()=>applyPortraitCrop(frame,img,crop));
+            img.onerror=()=>{const placeholder=document.createElement("div");placeholder.className="top-image-placeholder";placeholder.textContent="이미지 없음";frame.replaceWith(placeholder);};
+            frame.append(img);card.append(frame);
+          }else{
+            img.onerror=()=>{const placeholder=document.createElement("div");placeholder.className="top-image-placeholder";placeholder.textContent="이미지 없음";img.replaceWith(placeholder);};
+            card.append(img);
+          }
+          img.src=c.image;
         }else{
           const placeholder=document.createElement("div");placeholder.className="top-image-placeholder";placeholder.textContent="이미지 없음";card.append(placeholder);
         }

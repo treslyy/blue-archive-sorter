@@ -32,10 +32,10 @@
 <body>
 <main>
   <h1>얼굴 크롭 조정 도구</h1>
-  <p class="muted">전체 명단에서 고른 10명의 이미지 크롭 위치를 시험 조정합니다. 이 페이지의 조정은 정식 소트 화면에 아직 반영되지 않습니다.</p>
+  <p class="muted">전체 203명 중 원하는 캐릭터를 선택해 얼굴 크롭 위치를 개별 조정합니다. 조정값은 브라우저에 저장되며, 다운로드한 데이터로 정식 소트 화면에 반영합니다.</p>
   <section class="panel">
     <div class="toolbar">
-      <label for="characterSelect">테스트 캐릭터</label>
+      <label for="characterSelect">캐릭터 선택</label>
       <select id="characterSelect" disabled><option>불러오는 중…</option></select>
       <span id="progress" class="muted"></span>
     </div>
@@ -70,7 +70,7 @@
       <button id="downloadButton" class="primary" type="button" disabled>조정 데이터 다운로드</button>
     </div>
   </section>
-  <p class="muted">다운로드한 JSON 파일을 이 대화에 첨부해 주시면, 결과 화면에 적용하고 나머지 캐릭터로 확장하겠습니다.</p>
+  <p class="muted">203명의 조정을 마친 뒤 JSON 파일을 다운로드해 이 대화에 첨부해 주세요. 기존 10명의 조정값도 함께 포함됩니다.</p>
 </main>
 <script>
 (() => {
@@ -102,7 +102,7 @@
     $("yValue").textContent = s.y + "%";
     $("zoomValue").textContent = s.zoom.toFixed(2) + "배";
     applyCrop(s);
-    $("progress").textContent = (index + 1) + " / " + characters.length;
+    $("progress").textContent = (index + 1) + " / " + characters.length + " · 조정 완료 " + characters.filter(ch => !!settings[ch.id]).length + "명";
     $("prevButton").disabled = index === 0;
     $("nextButton").disabled = index === characters.length - 1;
   }
@@ -140,8 +140,7 @@
       const raw = await response.json();
       const all = (Array.isArray(raw) ? raw : raw.characters || []).filter(c => c && c.id && c.name && c.image);
       if (!all.length) throw new Error("이미지가 등록된 캐릭터가 없습니다.");
-      const count = Math.min(10, all.length);
-      characters = Array.from({length:count}, (_,i) => all[Math.round(i * (all.length - 1) / Math.max(1,count - 1))]);
+      characters = all;
       try { settings = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}") || {}; } catch { settings = {}; }
       $("characterSelect").replaceChildren(...characters.map((c,i) => {
         const option = document.createElement("option");
@@ -176,14 +175,14 @@
   $("downloadButton").addEventListener("click", () => {
     const output = {
       version: 1,
-      note: "Pilot crop settings; values are normalized percentages and zoom multiplier.",
+      note: "Individual portrait crop settings; values are normalized percentages and zoom multiplier.",
       crops: Object.fromEntries(characters.filter(c => settings[c.id]).map(c => [c.id, settings[c.id]]))
     };
     const blob = new Blob([JSON.stringify(output,null,2)], {type:"application/json"});
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "crop-settings-test.json";
+    a.download = "crop-settings-all.json";
     a.click();
     URL.revokeObjectURL(url);
     $("saveStatus").textContent = "테스트 조정 데이터 파일을 다운로드했습니다.";

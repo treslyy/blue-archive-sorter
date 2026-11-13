@@ -194,6 +194,7 @@ function finishSort() {
           $("topRanking").append(column);
         }
         const card=document.createElement("article");card.className="top-card";
+        let imageToLoad=null;
         if(c.image){
           const img=document.createElement("img");img.alt=c.name;img.loading="lazy";
           const crop=TOP_CROPS[c.id];
@@ -206,7 +207,7 @@ function finishSort() {
             img.onerror=()=>{const placeholder=document.createElement("div");placeholder.className="top-image-placeholder";placeholder.textContent="이미지 없음";img.replaceWith(placeholder);};
             card.append(img);
           }
-          img.src=c.image;
+          imageToLoad=img;
         }else{
           const placeholder=document.createElement("div");placeholder.className="top-image-placeholder";placeholder.textContent="이미지 없음";card.append(placeholder);
         }

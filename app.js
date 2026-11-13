@@ -213,7 +213,9 @@ function finishSort() {
         }
         const label=document.createElement("strong");label.textContent=rank+"위"+(group.length>1?" (공동 "+group.length+"명)":"");
         const name=document.createElement("span");name.textContent=c.name;
-        card.append(label,name);column.append(card);topCardCount++;
+        card.append(label,name);column.append(card);
+        if(imageToLoad) imageToLoad.src=c.image;
+        topCardCount++;
       }
     });
     rank+=group.length;

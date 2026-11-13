@@ -1,6 +1,7 @@
 const TEST_MODE = new URLSearchParams(location.search).get("dataset") === "npc-mob-test";
 const DATA_URL = TEST_MODE ? "data/npc-mob-sort-test.json" : "characters.json";
 const STORAGE_KEY = TEST_MODE ? "ba-sorter-progress-npc-mob-test-v1" : "ba-sorter-progress-v2";
+const TOP_CROPS = {"roster-001":{"x":32,"y":23,"zoom":5},"roster-023":{"x":55,"y":13,"zoom":4.41},"roster-046":{"x":33,"y":9,"zoom":3.77},"roster-068":{"x":93,"y":3,"zoom":3.41},"roster-091":{"x":29,"y":7,"zoom":3.58},"roster-113":{"x":77,"y":10,"zoom":3.3},"roster-136":{"x":87,"y":3,"zoom":3.75},"roster-158":{"x":60,"y":5,"zoom":4.12},"roster-181":{"x":52,"y":14,"zoom":4.36},"roster-203":{"x":35,"y":11,"zoom":3.56}};
 const $ = id => document.getElementById(id);
 let allCharacters = [], activeCharacters = [], rankedGroups = [];
 let pending = [], current = null, low = 0, high = 0, mid = 0;
@@ -144,6 +145,19 @@ function nextItem() {
   if(!current){finishSort();return;}
   mid=Math.floor((low+high)/2);showComparison();
 }
+function applyPortraitCrop(frame,img,crop) {
+  if(!crop || !img.naturalWidth || !img.naturalHeight) return;
+  const frameW=frame.clientWidth,frameH=frame.clientHeight;
+  const fit=Math.min(frameW/img.naturalWidth,frameH/img.naturalHeight);
+  const imageW=img.naturalWidth*fit*crop.zoom;
+  const imageH=img.naturalHeight*fit*crop.zoom;
+  const left=imageW<=frameW?(frameW-imageW)/2:-(crop.x/100)*(imageW-frameW);
+  const top=imageH<=frameH?(frameH-imageH)/2:-(crop.y/100)*(imageH-frameH);
+  img.style.width=imageW+"px";
+  img.style.height=imageH+"px";
+  img.style.left=left+"px";
+  img.style.top=top+"px";
+}
 function finishSort() {
   $("sortPanel").hidden=true;$("resultPanel").hidden=false;
   const total=rankedGroups.reduce((n,g)=>n+g.length,0);
@@ -181,9 +195,12 @@ function finishSort() {
         }
         const card=document.createElement("article");card.className="top-card";
         if(c.image){
+          const frame=document.createElement("div");frame.className="top-card-portrait";
           const img=document.createElement("img");img.src=c.image;img.alt=c.name;img.loading="lazy";
-          img.onerror=()=>{const placeholder=document.createElement("div");placeholder.className="top-image-placeholder";placeholder.textContent="이미지 없음";img.replaceWith(placeholder);};
-          card.append(img);
+          const crop=TOP_CROPS[c.id];
+          if(crop){img.addEventListener("load",()=>applyPortraitCrop(frame,img,crop));}
+          img.onerror=()=>{const placeholder=document.createElement("div");placeholder.className="top-image-placeholder";placeholder.textContent="이미지 없음";frame.replaceWith(placeholder);};
+          frame.append(img);card.append(frame);
         }else{
           const placeholder=document.createElement("div");placeholder.className="top-image-placeholder";placeholder.textContent="이미지 없음";card.append(placeholder);
         }

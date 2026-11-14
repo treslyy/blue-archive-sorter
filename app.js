@@ -6,6 +6,8 @@ const $ = id => document.getElementById(id);
 let allCharacters = [], activeCharacters = [], rankedGroups = [];
 let pending = [], current = null, low = 0, high = 0, mid = 0;
 let comparisonsDone = 0, history = [], sortName = "";
+const preloadedImageUrls = new Set();
+const IMAGE_PRELOAD_AHEAD = 3;
 
 async function loadData() {
   try {
@@ -121,9 +123,22 @@ function beginSort(items) {
   if(current){mid=Math.floor((low+high)/2);showComparison();}else finishSort();
   saveProgress();
 }
+function preloadUpcomingImages() {
+  // 현재 비교 중인 캐릭터 다음에 등장할 이미지만 소량 미리 불러옵니다.
+  // 전체 이미지를 한꺼번에 요청하지 않아 초기 네트워크 부담을 제한합니다.
+  pending.slice(0, IMAGE_PRELOAD_AHEAD).forEach(character => {
+    if (!character.image || preloadedImageUrls.has(character.image)) return;
+    const image = new Image();
+    image.decoding = "async";
+    image.fetchPriority = "low";
+    preloadedImageUrls.add(character.image);
+    image.onerror = () => preloadedImageUrls.delete(character.image);
+    image.src = character.image;
+  });
+}
 function showCharacter(id,c,group=null) {
   const b=$(id);b.replaceChildren();
-  if(c.image){const img=document.createElement("img");img.src=c.image;img.alt=c.name;img.onerror=()=>img.remove();b.append(img);}
+  if(c.image){const img=document.createElement("img");img.alt=c.name;img.decoding="async";img.fetchPriority="high";img.src=c.image;img.onerror=()=>img.remove();b.append(img);}
   const n=document.createElement("strong");n.textContent=c.name;b.append(n);
   if(c.school){const s=document.createElement("small");s.textContent=c.school;b.append(s);}
   if(group && group.length>1){
@@ -135,6 +150,7 @@ function showComparison() {
   const group=rankedGroups[mid];
   showCharacter("leftChoice",group[0],group);
   showCharacter("rightChoice",current);
+  preloadUpcomingImages();
   $("progressText").textContent="캐릭터 비교 중";
   $("progressCount").textContent=`비교 ${comparisonsDone}회 · 남은 캐릭터 ${pending.length+1}명 · 현재 공동 순위 그룹 ${group.length}명`;
   $("progressBar").style.width=Math.min(100,comparisonsDone/Math.max(1,activeCharacters.length*Math.ceil(Math.log2(activeCharacters.length)))*100)+"%";

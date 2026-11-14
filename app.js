@@ -280,121 +280,160 @@ $("copyButton").addEventListener("click",async()=>{
   try{await navigator.clipboard.writeText(url.toString());$("copyStatus").textContent="결과 링크를 복사했습니다.";}catch{$("copyStatus").textContent="브라우저에서 클립보드 복사를 허용해 주세요.";}
 });
 
-function copyComputedStyles(source, target) {
-  if (source.nodeType !== Node.ELEMENT_NODE || target.nodeType !== Node.ELEMENT_NODE) return;
-  const computed = getComputedStyle(source);
-  let css = "";
-  for (const property of computed) css += property + ":" + computed.getPropertyValue(property) + ";";
-  target.setAttribute("style", css);
-  const sourceChildren = source.children;
-  const targetChildren = target.children;
-  for (let i = 0; i < sourceChildren.length; i++) {
-    if (targetChildren[i]) copyComputedStyles(sourceChildren[i], targetChildren[i]);
-  }
-}
-async function saveResultPng() {
+function saveResultPng() {
   const button = $("pngButton");
   const status = $("copyStatus");
   button.disabled = true;
   status.textContent = "PNG 이미지를 만드는 중입니다...";
-  let svgUrl = null;
   try {
-    await document.fonts.ready;
     const panel = $("resultPanel");
-    const panelWidth = Math.ceil(panel.scrollWidth);
-    const panelHeight = Math.ceil(panel.scrollHeight);
-    const layoutWidth = Math.ceil($("rankingLayout").scrollWidth);
-    const clone = panel.cloneNode(true);
-    copyComputedStyles(panel, clone);
-    // Remove external CSS image resources (e.g. decorative UI pattern) from the
-    // export clone; otherwise they taint the canvas even when portraits are embedded.
-    [clone, ...clone.querySelectorAll("*")].forEach(el => {
-      const style = getComputedStyle(el);
-      if (style.backgroundImage && style.backgroundImage !== "none") el.style.backgroundImage = "none";
-      if (style.maskImage && style.maskImage !== "none") el.style.maskImage = "none";
-      if (style.webkitMaskImage && style.webkitMaskImage !== "none") el.style.webkitMaskImage = "none";
-      if (style.borderImageSource && style.borderImageSource !== "none") el.style.borderImageSource = "none";
-      if (style.listStyleImage && style.listStyleImage !== "none") el.style.listStyleImage = "none";
-    });
-    clone.querySelectorAll(".actions, #copyStatus").forEach(el => el.style.display = "none");
-    const layout = clone.querySelector("#rankingLayout");
-    if (layout) {
-      layout.style.width = layoutWidth + "px";
-      layout.style.maxWidth = "none";
-      layout.style.overflow = "visible";
-    }
-    clone.style.display = "block";
-    clone.style.position = "static";
-    clone.style.boxSizing = "border-box";
-    clone.style.width = panelWidth + "px";
-    clone.style.maxWidth = "none";
-    clone.style.height = "auto";
-    clone.style.maxHeight = "none";
-    clone.style.overflow = "visible";
-    clone.style.margin = "0";
-    const clonedImages = [...clone.querySelectorAll("img")];
-    await Promise.all(clonedImages.map(async img => {
-      const source = img.currentSrc || img.src;
-      if (!source) return;
-      const response = await fetch(source, {mode:"cors", credentials:"same-origin"});
-      if (!response.ok) throw new Error("초상화 이미지를 불러오지 못했습니다: " + source);
-      const blob = await response.blob();
-      const dataUrl = await new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = () => resolve(reader.result);
-        reader.onerror = () => reject(new Error("초상화 이미지를 내보내기용으로 변환하지 못했습니다."));
-        reader.readAsDataURL(blob);
-      });
-      img.removeAttribute("srcset");
-      img.setAttribute("src", dataUrl);
-    }));
-    const width = panelWidth;
-    const height = panelHeight;
+    const layout = $("rankingLayout");
+    const panelRect = panel.getBoundingClientRect();
+    const layoutRect = layout.getBoundingClientRect();
+    const panelStyle = getComputedStyle(panel);
+    const padRight = parseFloat(panelStyle.paddingRight) || 0;
+    const layoutOffsetX = layoutRect.left - panelRect.left;
+    const width = Math.ceil(Math.max(panel.clientWidth, layoutOffsetX + layout.scrollWidth + padRight));
+    const height = Math.ceil(panel.scrollHeight);
     if (!width || !height) throw new Error("결과 화면의 크기를 확인할 수 없습니다.");
-    const wrapper = document.createElement("div");
-    wrapper.setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
-    wrapper.append(clone);
-    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-    svg.setAttribute("width", width);
-    svg.setAttribute("height", height);
-    const foreign = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
-    foreign.setAttribute("width", "100%");
-    foreign.setAttribute("height", "100%");
-    foreign.append(wrapper);
-    svg.append(foreign);
-    const svgBlob = new Blob([new XMLSerializer().serializeToString(svg)], {type:"image/svg+xml;charset=utf-8"});
-    svgUrl = URL.createObjectURL(svgBlob);
-    const image = new Image();
-    image.src = svgUrl;
-    await new Promise((resolve, reject) => {
-      image.onload = resolve;
-      image.onerror = () => reject(new Error("결과 화면을 이미지로 변환하지 못했습니다."));
-    });
-    const scale = width * 2 > 12000 || height * 2 > 12000 ? 1 : 2;
+
+    const scale = 2;
     const canvas = document.createElement("canvas");
     canvas.width = width * scale;
     canvas.height = height * scale;
-    const context = canvas.getContext("2d");
-    if (!context) throw new Error("이미지 캔버스를 만들 수 없습니다.");
-    context.fillStyle = "#ffffff";
-    context.fillRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(image, 0, 0, canvas.width, canvas.height);
-    const png = await new Promise((resolve, reject) => canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error("PNG 파일 생성에 실패했습니다.")), "image/png"));
-    const downloadUrl = URL.createObjectURL(png);
-    const link = document.createElement("a");
-    link.href = downloadUrl;
-    link.download = "blue-archive-ranking.png";
-    document.body.append(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(downloadUrl);
-    status.textContent = "결과를 PNG 파일로 저장했습니다.";
+    const ctx = canvas.getContext("2d");
+    if (!ctx) throw new Error("이미지 캔버스를 만들 수 없습니다.");
+    ctx.scale(scale, scale);
+
+    const point = (element, inLayout = false) => {
+      const rect = element.getBoundingClientRect();
+      return {
+        x: rect.left - panelRect.left + (inLayout ? layout.scrollLeft : 0),
+        y: rect.top - panelRect.top,
+        width: rect.width,
+        height: rect.height
+      };
+    };
+    const drawBox = (rect, fill, stroke, lineWidth = 1) => {
+      if (fill) {
+        ctx.fillStyle = fill;
+        ctx.fillRect(rect.x, rect.y, rect.width, rect.height);
+      }
+      if (stroke) {
+        ctx.strokeStyle = stroke;
+        ctx.lineWidth = lineWidth;
+        ctx.strokeRect(rect.x + lineWidth / 2, rect.y + lineWidth / 2,
+          Math.max(0, rect.width - lineWidth), Math.max(0, rect.height - lineWidth));
+      }
+    };
+    const drawText = (element, rect) => {
+      if (!element) return;
+      const style = getComputedStyle(element);
+      const text = element.textContent.trim();
+      if (!text) return;
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(rect.x, rect.y, rect.width, rect.height);
+      ctx.clip();
+      ctx.font = style.font || "14px system-ui, sans-serif";
+      ctx.fillStyle = style.color || "#31516d";
+      ctx.textAlign = style.textAlign === "start" ? "left" : style.textAlign;
+      if (ctx.textAlign === "inherit") ctx.textAlign = "left";
+      ctx.textBaseline = "middle";
+      const x = ctx.textAlign === "center" ? rect.x + rect.width / 2 :
+        ctx.textAlign === "right" ? rect.x + rect.width - 3 : rect.x + 3;
+      ctx.fillText(text, x, rect.y + rect.height / 2, Math.max(1, rect.width - 6));
+      ctx.restore();
+    };
+
+    // Match the compact result panel's light background and heading.
+    drawBox({x:0,y:0,width,height}, "#ffffff", null);
+    const heading = panel.querySelector("h2");
+    const summary = $("resultSummary");
+    if (heading) drawText(heading, point(heading));
+    if (summary) drawText(summary, point(summary));
+
+    // TOP 10: use the live DOM geometry, including each student's individual crop.
+    const topRoot = $("topRanking");
+    for (const column of topRoot.children) {
+      const columnRect = point(column, true);
+      drawBox(columnRect, "#ffffff", "#83c6ef");
+      for (const card of column.children) {
+        const cardRect = point(card, true);
+        drawBox(cardRect, "#ffffff", "#83c6ef");
+        const rank = card.querySelector("strong");
+        const name = card.querySelector("span");
+        if (rank) {
+          const r = point(rank, true);
+          drawBox(r, null, "#b5d9f2");
+          drawText(rank, r);
+        }
+        const frame = card.querySelector(".top-card-portrait");
+        const image = card.querySelector("img");
+        const placeholder = card.querySelector(".top-image-placeholder");
+        if (frame && image && image.complete && image.naturalWidth) {
+          const fr = point(frame, true);
+          const ir = point(image, true);
+          const source = new URL(image.currentSrc || image.src, location.href);
+          if (source.origin !== location.origin) {
+            throw new Error("외부 이미지가 포함되어 있습니다. 현재 저장 방식은 같은 사이트의 이미지가 필요합니다.");
+          }
+          ctx.save();
+          ctx.beginPath();
+          ctx.rect(fr.x, fr.y, fr.width, fr.height);
+          ctx.clip();
+          ctx.drawImage(image, ir.x, ir.y, ir.width, ir.height);
+          ctx.restore();
+        } else if (placeholder) {
+          const pr = point(placeholder, true);
+          drawBox(pr, "#edf7fc", null);
+          drawText(placeholder, pr);
+        } else if (image && !image.complete) {
+          throw new Error("초상화 이미지가 아직 모두 불러와지지 않았습니다. 잠시 후 다시 저장해 주세요.");
+        }
+        if (name) drawText(name, point(name, true));
+      }
+    }
+
+    // Remaining ranks: reproduce each fixed-width ranking column and its cells.
+    const listRoot = $("rankingList");
+    for (const column of listRoot.children) {
+      const columnRect = point(column, true);
+      drawBox(columnRect, "#ffffff", "#83c6ef");
+      for (const item of column.children) {
+        const itemRect = point(item, true);
+        drawBox(itemRect, "#ffffff", "#a8d4f2");
+        const rank = item.querySelector(".ranking-rank");
+        const name = item.querySelector(".ranking-name");
+        if (rank) {
+          const r = point(rank, true);
+          drawBox(r, null, "#b5d9f2");
+          drawText(rank, r);
+        }
+        if (name) drawText(name, point(name, true));
+      }
+    }
+
+    canvas.toBlob(blob => {
+      if (!blob) {
+        status.textContent = "PNG 파일 생성에 실패했습니다.";
+        button.disabled = false;
+        return;
+      }
+      const downloadUrl = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = downloadUrl;
+      link.download = "blue-archive-ranking.png";
+      document.body.append(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
+      status.textContent = "결과를 PNG 파일로 저장했습니다.";
+      button.disabled = false;
+    }, "image/png");
   } catch (error) {
     console.error("PNG 저장 실패:", error);
     status.textContent = error.message || "PNG 저장에 실패했습니다.";
-  } finally {
-    if (svgUrl) URL.revokeObjectURL(svgUrl);
     button.disabled = false;
   }
 }

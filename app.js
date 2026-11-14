@@ -13,7 +13,7 @@ async function loadData() {
     if (!response.ok) throw new Error("캐릭터 데이터를 불러오지 못했습니다.");
     const data = await response.json();
     try {
-      const cropResponse = await fetch("crop-settings-all.json?v=2");
+      const cropResponse = await fetch("crop-settings-all.json?v=3");
       if (!cropResponse.ok) throw new Error("크롭 설정 파일을 불러오지 못했습니다.");
       const cropData = await cropResponse.json();
       const cropEntries = Object.entries(cropData.crops || {});
@@ -280,7 +280,7 @@ $("copyButton").addEventListener("click",async()=>{
   try{await navigator.clipboard.writeText(url.toString());$("copyStatus").textContent="결과 링크를 복사했습니다.";}catch{$("copyStatus").textContent="브라우저에서 클립보드 복사를 허용해 주세요.";}
 });
 
-function saveResultPng() {
+async function saveResultPng() {
   const button = $("pngButton");
   const status = $("copyStatus");
   button.disabled = true;
@@ -296,6 +296,16 @@ function saveResultPng() {
     const width = Math.ceil(Math.max(panel.clientWidth, layoutOffsetX + layout.scrollWidth + padRight));
     const height = Math.ceil(panel.scrollHeight);
     if (!width || !height) throw new Error("결과 화면의 크기를 확인할 수 없습니다.");
+
+    const portraitImages = [...panel.querySelectorAll(".top-card img")];
+    await Promise.all(portraitImages.map(img => {
+      img.loading = "eager";
+      if (img.complete) return Promise.resolve();
+      return new Promise(resolve => {
+        img.addEventListener("load", resolve, {once:true});
+        img.addEventListener("error", resolve, {once:true});
+      });
+    }));
 
     const scale = 2;
     const canvas = document.createElement("canvas");

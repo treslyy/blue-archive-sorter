@@ -322,9 +322,22 @@ async function saveResultPng() {
     clone.style.maxHeight = "none";
     clone.style.overflow = "visible";
     clone.style.margin = "0";
-    clone.querySelectorAll("img").forEach(img => {
-      if (img.currentSrc || img.src) img.setAttribute("src", img.currentSrc || img.src);
-    });
+    const clonedImages = [...clone.querySelectorAll("img")];
+    await Promise.all(clonedImages.map(async img => {
+      const source = img.currentSrc || img.src;
+      if (!source) return;
+      const response = await fetch(source, {mode:"cors", credentials:"same-origin"});
+      if (!response.ok) throw new Error("초상화 이미지를 불러오지 못했습니다: " + source);
+      const blob = await response.blob();
+      const dataUrl = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = () => reject(new Error("초상화 이미지를 내보내기용으로 변환하지 못했습니다."));
+        reader.readAsDataURL(blob);
+      });
+      img.removeAttribute("srcset");
+      img.setAttribute("src", dataUrl);
+    }));
     const width = panelWidth;
     const height = panelHeight;
     if (!width || !height) throw new Error("결과 화면의 크기를 확인할 수 없습니다.");

@@ -279,6 +279,101 @@ $("copyButton").addEventListener("click",async()=>{
   const url=new URL(location.href);url.searchParams.set("result",encoded);
   try{await navigator.clipboard.writeText(url.toString());$("copyStatus").textContent="결과 링크를 복사했습니다.";}catch{$("copyStatus").textContent="브라우저에서 클립보드 복사를 허용해 주세요.";}
 });
+
+function copyComputedStyles(source, target) {
+  if (source.nodeType !== Node.ELEMENT_NODE || target.nodeType !== Node.ELEMENT_NODE) return;
+  const computed = getComputedStyle(source);
+  let css = "";
+  for (const property of computed) css += property + ":" + computed.getPropertyValue(property) + ";";
+  target.setAttribute("style", css);
+  const sourceChildren = source.children;
+  const targetChildren = target.children;
+  for (let i = 0; i < sourceChildren.length; i++) {
+    if (targetChildren[i]) copyComputedStyles(sourceChildren[i], targetChildren[i]);
+  }
+}
+async function saveResultPng() {
+  const button = $("pngButton");
+  const status = $("copyStatus");
+  button.disabled = true;
+  status.textContent = "PNG 이미지를 만드는 중입니다...";
+  let svgUrl = null;
+  try {
+    await document.fonts.ready;
+    const panel = $("resultPanel");
+    const clone = panel.cloneNode(true);
+    copyComputedStyles(panel, clone);
+    clone.querySelectorAll(".actions, #copyStatus").forEach(el => el.style.display = "none");
+    const layout = clone.querySelector("#rankingLayout");
+    if (layout) {
+      layout.style.width = layout.scrollWidth + "px";
+      layout.style.maxWidth = "none";
+      layout.style.overflow = "visible";
+    }
+    clone.style.display = "block";
+    clone.style.position = "static";
+    clone.style.boxSizing = "border-box";
+    clone.style.width = Math.max(panel.scrollWidth, panel.clientWidth) + "px";
+    clone.style.maxWidth = "none";
+    clone.style.height = "auto";
+    clone.style.maxHeight = "none";
+    clone.style.overflow = "visible";
+    clone.style.margin = "0";
+    clone.querySelectorAll("img").forEach(img => {
+      if (img.currentSrc || img.src) img.setAttribute("src", img.currentSrc || img.src);
+    });
+    const width = Math.ceil(clone.scrollWidth);
+    const height = Math.ceil(clone.scrollHeight);
+    if (!width || !height) throw new Error("결과 화면의 크기를 확인할 수 없습니다.");
+    const wrapper = document.createElement("div");
+    wrapper.setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
+    wrapper.append(clone);
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+    svg.setAttribute("width", width);
+    svg.setAttribute("height", height);
+    const foreign = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
+    foreign.setAttribute("width", "100%");
+    foreign.setAttribute("height", "100%");
+    foreign.append(wrapper);
+    svg.append(foreign);
+    const svgBlob = new Blob([new XMLSerializer().serializeToString(svg)], {type:"image/svg+xml;charset=utf-8"});
+    svgUrl = URL.createObjectURL(svgBlob);
+    const image = new Image();
+    image.src = svgUrl;
+    await new Promise((resolve, reject) => {
+      image.onload = resolve;
+      image.onerror = () => reject(new Error("결과 화면을 이미지로 변환하지 못했습니다."));
+    });
+    const scale = width * 2 > 12000 || height * 2 > 12000 ? 1 : 2;
+    const canvas = document.createElement("canvas");
+    canvas.width = width * scale;
+    canvas.height = height * scale;
+    const context = canvas.getContext("2d");
+    if (!context) throw new Error("이미지 캔버스를 만들 수 없습니다.");
+    context.fillStyle = "#ffffff";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(image, 0, 0, canvas.width, canvas.height);
+    const png = await new Promise((resolve, reject) => canvas.toBlob(blob => blob ? resolve(blob) : reject(new Error("PNG 파일 생성에 실패했습니다.")), "image/png"));
+    const downloadUrl = URL.createObjectURL(png);
+    const link = document.createElement("a");
+    link.href = downloadUrl;
+    link.download = "blue-archive-ranking.png";
+    document.body.append(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(downloadUrl);
+    status.textContent = "결과를 PNG 파일로 저장했습니다.";
+  } catch (error) {
+    console.error("PNG 저장 실패:", error);
+    status.textContent = error.message || "PNG 저장에 실패했습니다.";
+  } finally {
+    if (svgUrl) URL.revokeObjectURL(svgUrl);
+    button.disabled = false;
+  }
+}
+$("pngButton").addEventListener("click", saveResultPng);
+
 $("textButton").addEventListener("click",async()=>{
   let rank=1;const lines=[];
   rankedGroups.forEach(group=>{

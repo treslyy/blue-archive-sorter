@@ -5,7 +5,7 @@ let TOP_CROPS = {};
 const $ = id => document.getElementById(id);
 let allCharacters = [], activeCharacters = [], rankedGroups = [];
 let pending = [], current = null, low = 0, high = 0, mid = 0;
-let comparisonsDone = 0, history = [];
+let comparisonsDone = 0, history = [], sortName = "";
 
 async function loadData() {
   try {
@@ -101,7 +101,7 @@ function restoreSnapshot(s) {
 }
 function saveProgress() {
   if(!current){localStorage.removeItem(STORAGE_KEY);$("resumeButton").hidden=true;return;}
-  try { localStorage.setItem(STORAGE_KEY,JSON.stringify({ids:activeCharacters.map(c=>c.id),state:snapshot(),history}));$("resumeButton").hidden=false; } catch {}
+  try { localStorage.setItem(STORAGE_KEY,JSON.stringify({ids:activeCharacters.map(c=>c.id),state:snapshot(),history,sortName}));$("resumeButton").hidden=false; } catch {}
 }
 function shuffleCharacters(items) {
   const shuffled=items.slice();
@@ -175,6 +175,7 @@ function applyPortraitCrop(frame,img,crop) {
 }
 function finishSort() {
   $("sortPanel").hidden=true;$("resultPanel").hidden=false;
+  $("resultTitle").textContent = sortName ? `${sortName}의 소트 결과` : "소트 결과";
   const total=rankedGroups.reduce((n,g)=>n+g.length,0);
   $("resultSummary").textContent=`${total}명의 정렬이 완료되었습니다. 공동 순위는 같은 순위로 표시됩니다.`;
   $("topRanking").replaceChildren();
@@ -244,6 +245,8 @@ function resumeSort() {
     restoreSnapshot(saved.state);
     if(!current)throw new Error();
     history=Array.isArray(saved.history)?saved.history:[];
+    sortName=typeof saved.sortName==="string"?saved.sortName:"";
+    $("sortNameInput").value=sortName;
     $("setup").hidden=true;$("resultPanel").hidden=true;$("sortPanel").hidden=false;showComparison();
   } catch { alert("저장된 진행 상황을 불러오지 못했습니다. 캐릭터 데이터가 변경되었을 수 있습니다."); }
 }
@@ -254,10 +257,12 @@ function readSharedResult() {
     const map=new Map(allCharacters.map(c=>[c.id,c]));
     const groups=data.groups ? data.groups.map(g=>g.map(id=>map.get(id)).filter(Boolean)) : (data.ids||[]).map(id=>[map.get(id)]).filter(g=>g[0]);
     rankedGroups=groups.filter(g=>g.length);
+    sortName=typeof data.name==="string"?data.name.trim().slice(0,30):"";
+    $("sortNameInput").value=sortName;
     if(rankedGroups.length){$("setup").hidden=true;finishSort();}
   } catch { /* 잘못된 공유 링크는 무시 */ }
 }
-$("startButton").addEventListener("click",()=>beginSort(activeCharacters));
+$("startButton").addEventListener("click",()=>{sortName=$("sortNameInput").value.trim().slice(0,30);beginSort(activeCharacters);});
 $("resumeButton").addEventListener("click",resumeSort);
 $("leftChoice").addEventListener("click",()=>choose("left"));
 $("rightChoice").addEventListener("click",()=>choose("right"));
@@ -275,7 +280,7 @@ $("resetButton").addEventListener("click",()=>{if(confirm("저장된 진행 상�
 $("restartButton").addEventListener("click",()=>{$("resultPanel").hidden=true;$("setup").hidden=false;});
 $("copyButton").addEventListener("click",async()=>{
   const groups=rankedGroups.map(g=>g.map(c=>c.id));
-  const encoded=btoa(unescape(encodeURIComponent(JSON.stringify({v:2,groups}))));
+  const encoded=btoa(unescape(encodeURIComponent(JSON.stringify({v:2,groups,name:sortName}))));
   const url=new URL(location.href);url.searchParams.set("result",encoded);
   try{await navigator.clipboard.writeText(url.toString());$("copyStatus").textContent="결과 링크를 복사했습니다.";}catch{$("copyStatus").textContent="브라우저에서 클립보드 복사를 허용해 주세요.";}
 });

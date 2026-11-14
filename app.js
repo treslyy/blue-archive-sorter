@@ -13,7 +13,7 @@ async function loadData() {
     if (!response.ok) throw new Error("캐릭터 데이터를 불러오지 못했습니다.");
     const data = await response.json();
     try {
-      const cropResponse = await fetch("crop-settings-all.json");
+      const cropResponse = await fetch("crop-settings-all.json?v=2");
       if (!cropResponse.ok) throw new Error("크롭 설정 파일을 불러오지 못했습니다.");
       const cropData = await cropResponse.json();
       const cropEntries = Object.entries(cropData.crops || {});

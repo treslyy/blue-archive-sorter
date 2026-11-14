@@ -368,13 +368,21 @@ async function saveResultPng() {
     for (const column of topRoot.children) {
       const columnRect = point(column, true);
       drawBox(columnRect, "#ffffff", "#83c6ef");
-      for (const card of column.children) {
+      const cards = [...column.children];
+      cards.forEach((card, index) => {
         const cardRect = point(card, true);
-        drawBox(cardRect, "#ffffff", "#83c6ef");
         const rank = card.querySelector("strong");
         const name = card.querySelector("span");
         if (rank) {
           const r = point(rank, true);
+          // Original TOP 10 table: a single outer frame and a divider
+          // between the rank cell and the portrait/name area.
+          ctx.beginPath();
+          ctx.strokeStyle = "#b5d9f2";
+          ctx.lineWidth = 1;
+          ctx.moveTo(r.x + r.width - 0.5, cardRect.y);
+          ctx.lineTo(r.x + r.width - 0.5, cardRect.y + cardRect.height);
+          ctx.stroke();
           drawText(rank, r);
         }
         const frame = card.querySelector(".top-card-portrait");
@@ -401,7 +409,15 @@ async function saveResultPng() {
           throw new Error("초상화 이미지가 아직 모두 불러와지지 않았습니다. 잠시 후 다시 저장해 주세요.");
         }
         if (name) drawText(name, point(name, true));
-      }
+        if (index < cards.length - 1) {
+          ctx.beginPath();
+          ctx.strokeStyle = "#83c6ef";
+          ctx.lineWidth = 1;
+          ctx.moveTo(cardRect.x, cardRect.y + cardRect.height - 0.5);
+          ctx.lineTo(cardRect.x + cardRect.width, cardRect.y + cardRect.height - 0.5);
+          ctx.stroke();
+        }
+      });
     }
 
     // Remaining ranks: reproduce each fixed-width ranking column and its cells.

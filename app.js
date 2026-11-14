@@ -301,19 +301,22 @@ async function saveResultPng() {
   try {
     await document.fonts.ready;
     const panel = $("resultPanel");
+    const panelWidth = Math.ceil(panel.scrollWidth);
+    const panelHeight = Math.ceil(panel.scrollHeight);
+    const layoutWidth = Math.ceil($("rankingLayout").scrollWidth);
     const clone = panel.cloneNode(true);
     copyComputedStyles(panel, clone);
     clone.querySelectorAll(".actions, #copyStatus").forEach(el => el.style.display = "none");
     const layout = clone.querySelector("#rankingLayout");
     if (layout) {
-      layout.style.width = layout.scrollWidth + "px";
+      layout.style.width = layoutWidth + "px";
       layout.style.maxWidth = "none";
       layout.style.overflow = "visible";
     }
     clone.style.display = "block";
     clone.style.position = "static";
     clone.style.boxSizing = "border-box";
-    clone.style.width = Math.max(panel.scrollWidth, panel.clientWidth) + "px";
+    clone.style.width = panelWidth + "px";
     clone.style.maxWidth = "none";
     clone.style.height = "auto";
     clone.style.maxHeight = "none";
@@ -322,8 +325,8 @@ async function saveResultPng() {
     clone.querySelectorAll("img").forEach(img => {
       if (img.currentSrc || img.src) img.setAttribute("src", img.currentSrc || img.src);
     });
-    const width = Math.ceil(clone.scrollWidth);
-    const height = Math.ceil(clone.scrollHeight);
+    const width = panelWidth;
+    const height = panelHeight;
     if (!width || !height) throw new Error("결과 화면의 크기를 확인할 수 없습니다.");
     const wrapper = document.createElement("div");
     wrapper.setAttribute("xmlns", "http://www.w3.org/1999/xhtml");

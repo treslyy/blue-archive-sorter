@@ -345,7 +345,7 @@ async function saveResultPng() {
       ctx.beginPath();
       ctx.rect(rect.x, rect.y, rect.width, rect.height);
       ctx.clip();
-      ctx.font = style.font || "14px system-ui, sans-serif";
+      ctx.font = `${style.fontStyle} ${style.fontVariant} ${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
       ctx.fillStyle = style.color || "#31516d";
       ctx.textAlign = style.textAlign === "start" ? "left" : style.textAlign;
       if (ctx.textAlign === "inherit") ctx.textAlign = "left";
@@ -410,18 +410,31 @@ async function saveResultPng() {
     for (const column of listRoot.children) {
       const columnRect = point(column, true);
       drawBox(columnRect, "#ffffff", "#83c6ef");
-      for (const item of column.children) {
+      const items = [...column.children];
+      items.forEach((item, index) => {
         const itemRect = point(item, true);
-        drawBox(itemRect, "#ffffff", "#a8d4f2");
         const rank = item.querySelector(".ranking-rank");
         const name = item.querySelector(".ranking-name");
         if (rank) {
           const r = point(rank, true);
-          drawBox(r, null, "#b5d9f2");
+          ctx.beginPath();
+          ctx.strokeStyle = "#b5d9f2";
+          ctx.lineWidth = 1;
+          ctx.moveTo(r.x + r.width - 0.5, itemRect.y);
+          ctx.lineTo(r.x + r.width - 0.5, itemRect.y + itemRect.height);
+          ctx.stroke();
           drawText(rank, r);
         }
         if (name) drawText(name, point(name, true));
-      }
+        if (index < items.length - 1) {
+          ctx.beginPath();
+          ctx.strokeStyle = "#a8d4f2";
+          ctx.lineWidth = 1;
+          ctx.moveTo(itemRect.x, itemRect.y + itemRect.height - 0.5);
+          ctx.lineTo(itemRect.x + itemRect.width, itemRect.y + itemRect.height - 0.5);
+          ctx.stroke();
+        }
+      });
     }
 
     canvas.toBlob(blob => {

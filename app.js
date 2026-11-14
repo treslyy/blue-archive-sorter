@@ -18,7 +18,7 @@ async function loadData() {
       const cropData = await cropResponse.json();
       const cropEntries = Object.entries(cropData.crops || {});
       const validCrops = cropData.version === 1 && cropEntries.length === 203 &&
-        cropEntries.every(([id, crop]) => /^roster-\\d{3}$/.test(id) &&
+        cropEntries.every(([id, crop]) => /^roster-\d{3}$/.test(id) &&
           Number.isFinite(crop.x) && Number.isFinite(crop.y) &&
           Number.isFinite(crop.zoom) && crop.zoom > 0);
       if (!validCrops) throw new Error("크롭 설정 파일의 형식이 올바르지 않습니다.");

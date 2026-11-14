@@ -306,6 +306,16 @@ async function saveResultPng() {
     const layoutWidth = Math.ceil($("rankingLayout").scrollWidth);
     const clone = panel.cloneNode(true);
     copyComputedStyles(panel, clone);
+    // Remove external CSS image resources (e.g. decorative UI pattern) from the
+    // export clone; otherwise they taint the canvas even when portraits are embedded.
+    [clone, ...clone.querySelectorAll("*")].forEach(el => {
+      const style = getComputedStyle(el);
+      if (style.backgroundImage && style.backgroundImage !== "none") el.style.backgroundImage = "none";
+      if (style.maskImage && style.maskImage !== "none") el.style.maskImage = "none";
+      if (style.webkitMaskImage && style.webkitMaskImage !== "none") el.style.webkitMaskImage = "none";
+      if (style.borderImageSource && style.borderImageSource !== "none") el.style.borderImageSource = "none";
+      if (style.listStyleImage && style.listStyleImage !== "none") el.style.listStyleImage = "none";
+    });
     clone.querySelectorAll(".actions, #copyStatus").forEach(el => el.style.display = "none");
     const layout = clone.querySelector("#rankingLayout");
     if (layout) {

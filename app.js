@@ -153,7 +153,8 @@ function showComparison() {
   preloadUpcomingImages();
   $("progressText").textContent="캐릭터 비교 중";
   $("progressCount").textContent=`비교 ${comparisonsDone}회 · 남은 캐릭터 ${pending.length+1}명 · 현재 공동 순위 그룹 ${group.length}명`;
-  $("progressBar").style.width=Math.min(100,comparisonsDone/Math.max(1,activeCharacters.length*Math.ceil(Math.log2(activeCharacters.length)))*100)+"%";
+  const rankedCount=rankedGroups.reduce((total,items)=>total+items.length,0);
+  $("progressBar").style.width=Math.min(100,rankedCount/Math.max(1,activeCharacters.length)*100)+"%";
 }
 function choose(side) {
   if(!current)return;
@@ -190,6 +191,7 @@ function applyPortraitCrop(frame,img,crop) {
   img.style.top=top+"px";
 }
 function finishSort() {
+  $("progressBar").style.width="100%";
   $("sortPanel").hidden=true;$("resultPanel").hidden=false;
   $("resultTitle").textContent = sortName ? `${sortName}의 소트 결과` : "소트 결과";
   const total=rankedGroups.reduce((n,g)=>n+g.length,0);

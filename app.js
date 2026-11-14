@@ -296,10 +296,11 @@ async function saveResultPng() {
     const panelRect = panel.getBoundingClientRect();
     const layoutRect = layout.getBoundingClientRect();
     const panelStyle = getComputedStyle(panel);
-    const padRight = parseFloat(panelStyle.paddingRight) || 0;
     const padBottom = parseFloat(panelStyle.paddingBottom) || 0;
     const layoutOffsetX = layoutRect.left - panelRect.left;
-    const width = Math.ceil(Math.max(panel.clientWidth, layoutOffsetX + layout.scrollWidth + padRight));
+    // Crop the export at the actual right edge of the result layout,
+    // rather than extending it to the full-width result panel.
+    const width = Math.ceil(layoutOffsetX + layout.scrollWidth);
     // Export only the result content; panel.scrollHeight also includes the
     // action buttons below the ranking, leaving a large unused white area.
     const contentBottom = Math.max(

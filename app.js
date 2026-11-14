@@ -292,9 +292,16 @@ async function saveResultPng() {
     const layoutRect = layout.getBoundingClientRect();
     const panelStyle = getComputedStyle(panel);
     const padRight = parseFloat(panelStyle.paddingRight) || 0;
+    const padBottom = parseFloat(panelStyle.paddingBottom) || 0;
     const layoutOffsetX = layoutRect.left - panelRect.left;
     const width = Math.ceil(Math.max(panel.clientWidth, layoutOffsetX + layout.scrollWidth + padRight));
-    const height = Math.ceil(panel.scrollHeight);
+    // Export only the result content; panel.scrollHeight also includes the
+    // action buttons below the ranking, leaving a large unused white area.
+    const contentBottom = Math.max(
+      layoutRect.bottom,
+      ...[...panel.querySelectorAll("h2, #resultSummary")].map(el => el.getBoundingClientRect().bottom)
+    );
+    const height = Math.ceil(contentBottom - panelRect.top + padBottom);
     if (!width || !height) throw new Error("결과 화면의 크기를 확인할 수 없습니다.");
 
     const portraitImages = [...panel.querySelectorAll(".top-card img")];

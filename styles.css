@@ -239,3 +239,31 @@ footer{text-align:center;padding:12px 0 30px;font-size:.85rem}
 @media(max-width:650px){
   .top-ranking-column .top-card .top-card-portrait{max-width:94px;max-height:112px}
 }
+
+
+/* Final TOP 10 layout adjustments: compact partial columns and taller portraits */
+.top-ranking-column{
+  height:auto;
+  align-self:flex-start;
+}
+.top-ranking-column .top-card{
+  flex:0 0 auto;
+  height:auto;
+  min-height:0;
+  grid-template-rows:150px 25px;
+}
+.top-ranking-column .top-card .top-card-portrait{
+  height:150px;
+  min-height:150px;
+  max-height:150px;
+}
+@media(max-width:650px){
+  .top-ranking-column .top-card{
+    grid-template-rows:128px 24px;
+  }
+  .top-ranking-column .top-card .top-card-portrait{
+    height:128px;
+    min-height:128px;
+    max-height:128px;
+  }
+}

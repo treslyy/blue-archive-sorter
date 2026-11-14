@@ -428,9 +428,18 @@ async function saveResultPng() {
     const panelStyle = getComputedStyle(panel);
     const padBottom = parseFloat(panelStyle.paddingBottom) || 0;
     const layoutOffsetX = layoutRect.left - panelRect.left;
-    // Crop the export at the actual right edge of the result layout,
-    // rather than extending it to the full-width result panel.
-    const width = Math.ceil(layoutOffsetX + layout.scrollWidth);
+    // The layout itself expands to the panel width on wide screens.
+    // Measure the right edge of the actual ranking columns instead, so
+    // unused responsive space is never included in the exported image.
+    const rankingColumns = [
+      ...$("topRanking").children,
+      ...$("rankingList").children
+    ];
+    const contentRight = rankingColumns.reduce((right, column) => {
+      const rect = column.getBoundingClientRect();
+      return Math.max(right, rect.right - panelRect.left + layout.scrollLeft);
+    }, layoutOffsetX);
+    const width = Math.ceil(contentRight);
     // Export only the result content; panel.scrollHeight also includes the
     // action buttons below the ranking, leaving a large unused white area.
     const contentBottom = Math.max(

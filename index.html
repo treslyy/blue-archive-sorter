@@ -17,7 +17,10 @@
   </header>
   <main class="wrap">
     <section id="setup" class="panel">
-      <h2>정렬 설정</h2>
+      <h2>소트 설정</h2>
+      <label class="search-filter">이름 입력
+        <input id="sortNameInput" type="text" maxlength="30" placeholder="이름 (선택 사항)">
+      </label>
       <div class="filters">
         <fieldset class="school-filter">
           <legend>학교 선택</legend>
@@ -34,7 +37,7 @@
       <p id="rosterStatus" class="muted"></p>
       <div class="actions">
         <button type="button" id="showRosterButton">전체 학생 목록 보기</button>
-        <button id="startButton" class="primary" disabled>정렬 시작</button>
+        <button id="startButton" class="primary" disabled>소트 시작</button>
         <button id="resumeButton" hidden>이어서 하기</button>
         <button id="resetButton" class="quiet">진행 상황 초기화</button>
       </div>
@@ -72,7 +75,7 @@
     </section>
 
     <section id="resultPanel" class="panel" hidden>
-      <h2>정렬 결과</h2>
+      <h2 id="resultTitle">소트 결과</h2>
       <p id="resultSummary" class="muted"></p>
       <div id="rankingLayout" class="ranking-layout">
         <div id="topRanking" class="top-ranking-grid"></div>

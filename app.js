@@ -375,7 +375,6 @@ async function saveResultPng() {
         const name = card.querySelector("span");
         if (rank) {
           const r = point(rank, true);
-          drawBox(r, null, "#b5d9f2");
           drawText(rank, r);
         }
         const frame = card.querySelector(".top-card-portrait");

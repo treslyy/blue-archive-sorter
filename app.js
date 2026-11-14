@@ -1,7 +1,7 @@
 const TEST_MODE = new URLSearchParams(location.search).get("dataset") === "npc-mob-test";
 const DATA_URL = TEST_MODE ? "data/npc-mob-sort-test.json" : "characters.json";
 const STORAGE_KEY = TEST_MODE ? "ba-sorter-progress-npc-mob-test-v1" : "ba-sorter-progress-v2";
-const TOP_CROPS = {"roster-001":{"x":32,"y":23,"zoom":5},"roster-023":{"x":55,"y":13,"zoom":4.41},"roster-046":{"x":33,"y":9,"zoom":3.77},"roster-068":{"x":93,"y":3,"zoom":3.41},"roster-091":{"x":29,"y":7,"zoom":3.58},"roster-113":{"x":77,"y":10,"zoom":3.3},"roster-136":{"x":87,"y":3,"zoom":3.75},"roster-158":{"x":60,"y":5,"zoom":4.12},"roster-181":{"x":52,"y":14,"zoom":4.36},"roster-203":{"x":35,"y":11,"zoom":3.56}};
+let TOP_CROPS = {};
 const $ = id => document.getElementById(id);
 let allCharacters = [], activeCharacters = [], rankedGroups = [];
 let pending = [], current = null, low = 0, high = 0, mid = 0;
@@ -12,6 +12,21 @@ async function loadData() {
     const response = await fetch(DATA_URL);
     if (!response.ok) throw new Error("캐릭터 데이터를 불러오지 못했습니다.");
     const data = await response.json();
+    try {
+      const cropResponse = await fetch("crop-settings-all.json");
+      if (!cropResponse.ok) throw new Error("크롭 설정 파일을 불러오지 못했습니다.");
+      const cropData = await cropResponse.json();
+      const cropEntries = Object.entries(cropData.crops || {});
+      const validCrops = cropData.version === 1 && cropEntries.length === 203 &&
+        cropEntries.every(([id, crop]) => /^roster-\\d{3}$/.test(id) &&
+          Number.isFinite(crop.x) && Number.isFinite(crop.y) &&
+          Number.isFinite(crop.zoom) && crop.zoom > 0);
+      if (!validCrops) throw new Error("크롭 설정 파일의 형식이 올바르지 않습니다.");
+      TOP_CROPS = cropData.crops;
+    } catch (cropError) {
+      console.warn("개별 얼굴 크롭 설정을 적용하지 못했습니다.", cropError);
+      TOP_CROPS = {};
+    }
     allCharacters = (Array.isArray(data) ? data : data.characters || []).filter(c => c && c.id && c.name);
     const ids = allCharacters.map(c => c.id);
     if (new Set(ids).size !== ids.length) throw new Error("캐릭터 데이터에 중복된 id가 있습니다.");
